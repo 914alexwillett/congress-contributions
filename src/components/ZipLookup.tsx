@@ -14,11 +14,12 @@ export function ZipLookup({
   return (
     <section className="panel hero-panel">
       <div className="eyebrow">Proof of concept</div>
-      <h1>What did your representative actually do to shape legislation?</h1>
+      <h1>What did your representative actually do in Congress?</h1>
       <p className="hero-copy">
-        This demo follows a narrow, evidence-first path from ZIP code to
-        delegation, then from legislator to documented sponsorships and text
-        changes. Every substantial claim is paired with an official source.
+        This demo turns official congressional records into plain-language civic
+        context without turning them into opinion. It leads with what happened,
+        what the member did, what that means procedurally, what happened next,
+        and which official records support that explanation.
       </p>
 
       <div className="lookup-row">

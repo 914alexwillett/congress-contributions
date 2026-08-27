@@ -1,10 +1,14 @@
-import type { LegislativeContribution, Legislator } from "../models/legislative";
+import type { LegislativeContribution, Legislator } from "../domain/models";
 import {
   formatDisplayDate,
-  getLineageStages,
+  getConfidenceLabel,
+  getContributionLineageStages,
+  getContributionTypeLabel,
+  getGlossaryTerms,
   getOutcomeLabel,
-  getTypeLabel,
-} from "../utils/contributions";
+} from "../domain/presentation";
+import { EvidencePanel } from "./EvidencePanel";
+import { LineageTrack } from "./LineageTrack";
 
 interface ContributionDetailProps {
   legislator: Legislator;
@@ -19,18 +23,67 @@ export function ContributionDetail({
     return (
       <section className="panel detail-panel empty-detail">
         <h3>Select a contribution</h3>
-        <p>Choose an entry from the feed to inspect the record and source trail.</p>
+        <p>Choose a record from the feed to inspect what happened, what it means, and the evidence behind that explanation.</p>
       </section>
     );
   }
 
-  const lineage = getLineageStages(contribution);
+  const glossaryTerms = getGlossaryTerms(contribution.glossaryTermIds);
 
   return (
     <section className="panel detail-panel">
       <div className="eyebrow">Contribution detail</div>
-      <h3>{contribution.title}</h3>
-      <p className="detail-summary">{contribution.summary}</p>
+      <h3>{contribution.headline}</h3>
+
+      <div className="outcome-banner">
+        <div>
+          <span className="label">Outcome</span>
+          <strong>{getOutcomeLabel(contribution.outcome)}</strong>
+        </div>
+        <div>
+          <span className="label">Confidence</span>
+          <strong className={`confidence confidence-${contribution.attribution.confidence}`}>
+            {getConfidenceLabel(contribution.attribution.confidence)}
+          </strong>
+        </div>
+      </div>
+
+      <div className="explanation-stack">
+        <section className="explanation-card">
+          <span className="explanation-label">What happened?</span>
+          <p>{contribution.headline}</p>
+        </section>
+        <section className="explanation-card">
+          <span className="explanation-label">What did the member actually do?</span>
+          <p>{contribution.context.plainEnglishAction}</p>
+        </section>
+        <section className="explanation-card">
+          <span className="explanation-label">What does that mean procedurally?</span>
+          <p>{contribution.context.proceduralMeaning}</p>
+        </section>
+        <section className="explanation-card">
+          <span className="explanation-label">What happened because of it?</span>
+          <p>{contribution.context.immediateConsequence}</p>
+        </section>
+        {contribution.context.laterOutcome ? (
+          <section className="explanation-card">
+            <span className="explanation-label">What happened next?</span>
+            <p>{contribution.context.laterOutcome}</p>
+          </section>
+        ) : null}
+        {contribution.context.nextStep ? (
+          <section className="explanation-card">
+            <span className="explanation-label">What is the next procedural step?</span>
+            <p>{contribution.context.nextStep}</p>
+          </section>
+        ) : null}
+      </div>
+
+      <LineageTrack
+        title="Legislative path"
+        subtitle="The app shows known and unknown stages separately rather than filling gaps with guesses."
+        stages={getContributionLineageStages(contribution)}
+      />
 
       <dl className="detail-grid">
         <div>
@@ -38,10 +91,10 @@ export function ContributionDetail({
           <dd>{legislator.name}</dd>
         </div>
         <div>
-          <dt>Bill or measure</dt>
+          <dt>Measure</dt>
           <dd>
-            {contribution.billOrMeasure.id ?? "Unnumbered"}:{" "}
-            {contribution.billOrMeasure.title}
+            {contribution.measure.id} -{" "}
+            {contribution.measure.shortTitle ?? contribution.measure.title}
           </dd>
         </div>
         <div>
@@ -50,82 +103,74 @@ export function ContributionDetail({
         </div>
         <div>
           <dt>Venue</dt>
-          <dd>{contribution.venue?.name ?? "Not specified"}</dd>
+          <dd>{contribution.venue?.name ?? "Unknown"}</dd>
         </div>
         <div>
           <dt>Contribution type</dt>
-          <dd>{getTypeLabel(contribution.type)}</dd>
+          <dd>{getContributionTypeLabel(contribution.type)}</dd>
         </div>
         <div>
-          <dt>Outcome</dt>
-          <dd>{getOutcomeLabel(contribution.outcome)}</dd>
-        </div>
-        <div>
-          <dt>Confidence</dt>
-          <dd className={`confidence confidence-${contribution.confidence}`}>
-            {contribution.confidence}
+          <dt>Drafting authorship known</dt>
+          <dd>
+            {contribution.attribution.literalDraftingKnown === true
+              ? "Yes"
+              : contribution.attribution.literalDraftingKnown === false
+                ? "No"
+                : "Unknown"}
           </dd>
-        </div>
-        <div>
-          <dt>Attribution note</dt>
-          <dd>{contribution.attributionNote}</dd>
         </div>
       </dl>
 
-      {(contribution.proposedText || contribution.affectedText) && (
+      {contribution.textChange ? (
         <div className="detail-block">
           <div className="block-heading">
             <strong>Text change snapshot</strong>
-            <span>Evidence-backed excerpt or paraphrase from the record</span>
+            <span>
+              This is shown only where the available record supports a text-change description.
+            </span>
           </div>
           <pre className="diff-card">
-            {contribution.affectedText
-              ? `- ${contribution.affectedText}\n+ ${
-                  contribution.proposedText ?? "Proposed text not captured"
+            {contribution.textChange.previousText
+              ? `- ${contribution.textChange.previousText}\n+ ${
+                  contribution.textChange.proposedText ?? "Proposed text not captured"
                 }`
-              : `+ ${contribution.proposedText ?? "Proposed text not captured"}`}
+              : `+ ${contribution.textChange.proposedText ?? "Proposed text not captured"}`}
+            {contribution.textChange.resultingText
+              ? `\n\nResulting text:\n${contribution.textChange.resultingText}`
+              : ""}
           </pre>
+          <p className="reconstruction-note">
+            Reconstruction method: {contribution.textChange.reconstructionMethod ?? "unknown"}.
+            Confidence: {getConfidenceLabel(contribution.textChange.confidence ?? "unknown")}.
+          </p>
         </div>
-      )}
+      ) : null}
 
       <div className="detail-block">
         <div className="block-heading">
-          <strong>Future lineage placeholder</strong>
-          <span>This POC leaves room for text-survival tracking.</span>
+          <strong>What do these procedural terms mean?</strong>
+          <span>Definitions come from a shared glossary rather than one-off component text.</span>
         </div>
-        <div className="lineage-row">
-          {lineage.map((stage) => (
-            <div key={stage.label} className="lineage-stage">
-              <span>{stage.label}</span>
-              <strong>
-                {stage.reached === true
-                  ? "Yes"
-                  : stage.reached === false
-                    ? "No"
-                    : "Unknown"}
-              </strong>
-            </div>
+        <div className="glossary-grid">
+          {glossaryTerms.map((term) => (
+            <article key={term.id} className="glossary-card">
+              <strong>{term.label}</strong>
+              <p>{term.conciseDefinition}</p>
+              <span>{term.beginnerExplanation}</span>
+            </article>
           ))}
         </div>
       </div>
 
-      <details className="evidence-panel" open>
-        <summary>Why are we saying this?</summary>
-        <p>
-          These are the primary sources backing the displayed claim. Users should
-          be able to inspect them directly and make their own judgment.
-        </p>
-        <ul className="evidence-list">
-          {contribution.evidence.map((source) => (
-            <li key={source.url}>
-              <a href={source.url} target="_blank" rel="noreferrer">
-                {source.label}
-              </a>
-              <span>{source.sourceType.replaceAll("_", " ")}</span>
-            </li>
-          ))}
-        </ul>
-      </details>
+      <div className="detail-block">
+        <div className="block-heading">
+          <strong>Attribution caveat</strong>
+          <span>The app separates formal action from unsupported assumptions about authorship.</span>
+        </div>
+        <p className="attribution-copy">{contribution.attribution.statement}</p>
+      </div>
+
+      <EvidencePanel evidence={contribution.evidence} />
     </section>
   );
 }

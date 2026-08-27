@@ -1,9 +1,9 @@
-import type { LegislativeContribution } from "../models/legislative";
+import type { LegislativeContribution } from "../domain/models";
 import {
   formatDisplayDate,
+  getContributionTypeLabel,
   getOutcomeLabel,
-  getTypeLabel,
-} from "../utils/contributions";
+} from "../domain/presentation";
 
 interface ContributionListProps {
   entries: LegislativeContribution[];
@@ -27,16 +27,16 @@ export function ContributionList({
         >
           <div className="feed-item-top">
             <span className="date-pill">{formatDisplayDate(entry.date)}</span>
-            <span className="type-pill">{getTypeLabel(entry.type)}</span>
+            <span className="type-pill">{getContributionTypeLabel(entry.type)}</span>
             <span className={`outcome-pill outcome-${entry.outcome}`}>
               {getOutcomeLabel(entry.outcome)}
             </span>
           </div>
-          <strong>{entry.title}</strong>
+          <strong>{entry.headline}</strong>
           <span className="feed-bill">
-            {entry.billOrMeasure.id}: {entry.billOrMeasure.title}
+            {entry.measure.id}: {entry.measure.shortTitle ?? entry.measure.title}
           </span>
-          <p>{entry.summary}</p>
+          <p>{entry.context.plainEnglishAction}</p>
         </button>
       ))}
     </div>

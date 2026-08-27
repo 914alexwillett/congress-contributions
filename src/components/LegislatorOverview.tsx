@@ -2,8 +2,8 @@ import type {
   ContributionFilter,
   LegislativeContribution,
   Legislator,
-} from "../models/legislative";
-import { getContributionCounts } from "../utils/contributions";
+} from "../domain/models";
+import { getContributionCounts } from "../domain/presentation";
 import { ContributionFilters } from "./ContributionFilters";
 import { ContributionList } from "./ContributionList";
 
@@ -33,10 +33,10 @@ export function LegislatorOverview({
       <div className="legislator-header">
         <img src={legislator.imageUrl} alt={legislator.name} />
         <div>
-          <div className="eyebrow">Legislator overview</div>
+          <div className="eyebrow">Member overview</div>
           <h2>{legislator.name}</h2>
           <p>
-            {legislator.officeTitle} ·{" "}
+            {legislator.officeTitle} -{" "}
             {legislator.chamber === "house"
               ? `${legislator.state} ${legislator.district}`
               : legislator.state}
@@ -47,7 +47,7 @@ export function LegislatorOverview({
 
       <div className="stats-grid">
         <article>
-          <span>Total seeded records</span>
+          <span>Loaded records</span>
           <strong>{counts.total}</strong>
         </article>
         <article>
@@ -55,13 +55,31 @@ export function LegislatorOverview({
           <strong>{counts.bills}</strong>
         </article>
         <article>
-          <span>Amendment records</span>
+          <span>Amendments</span>
           <strong>{counts.amendments}</strong>
         </article>
         <article>
-          <span>Adopted in seed data</span>
+          <span>Recorded votes</span>
+          <strong>{counts.votes}</strong>
+        </article>
+        <article>
+          <span>Adopted</span>
           <strong>{counts.adopted}</strong>
         </article>
+      </div>
+
+      <div className="detail-block">
+        <div className="block-heading">
+          <strong>Current committee memberships</strong>
+          <span>Drawn from official member office pages or chamber records.</span>
+        </div>
+        <ul className="committee-list">
+          {legislator.committeeMemberships.map((committee) => (
+            <li key={committee.committeeName}>
+              <strong>{committee.role}</strong> - {committee.committeeName}
+            </li>
+          ))}
+        </ul>
       </div>
 
       <ContributionFilters

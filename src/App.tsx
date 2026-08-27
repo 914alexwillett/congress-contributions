@@ -1,30 +1,31 @@
 import { useEffect, useMemo, useState } from "react";
+import { BillContextPanel } from "./components/BillContextPanel";
 import { ContributionDetail } from "./components/ContributionDetail";
 import { DelegationList } from "./components/DelegationList";
+import { GlossarySidebar } from "./components/GlossarySidebar";
+import { InfluencePanel } from "./components/InfluencePanel";
 import { LegislatorOverview } from "./components/LegislatorOverview";
 import { ZipLookup } from "./components/ZipLookup";
-import { contributions as allContributions } from "./data/contributions";
-import { delegationByZip, legislators } from "./data/legislators";
-import type { ContributionFilter } from "./models/legislative";
-import { filterContributions } from "./utils/contributions";
+import { filterContributions } from "./domain/presentation";
+import type { ContributionFilter } from "./domain/models";
+import {
+  getBillForContribution,
+  getContributionsByMember,
+  getDelegationByZip,
+  getRelatedContributionsForMemberAndBill,
+  isSupportedZip,
+} from "./services/curatedRepository";
 
 const defaultZip = "20852";
 
 function App() {
   const [zip, setZip] = useState(defaultZip);
   const [submittedZip, setSubmittedZip] = useState(defaultZip);
-  const supportedDelegation = delegationByZip[submittedZip] ?? [];
-  const [selectedLegislatorId, setSelectedLegislatorId] = useState(
-    supportedDelegation[0] ?? "",
-  );
+  const [selectedLegislatorId, setSelectedLegislatorId] = useState("");
   const [filter, setFilter] = useState<ContributionFilter>("all");
   const [selectedContributionId, setSelectedContributionId] = useState("");
 
-  const delegation = useMemo(
-    () =>
-      legislators.filter((legislator) => supportedDelegation.includes(legislator.id)),
-    [supportedDelegation],
-  );
+  const delegation = useMemo(() => getDelegationByZip(submittedZip), [submittedZip]);
 
   useEffect(() => {
     if (!delegation.length) {
@@ -40,10 +41,7 @@ function App() {
   const legislator = delegation.find((entry) => entry.id === selectedLegislatorId);
 
   const allLegislatorContributions = useMemo(
-    () =>
-      allContributions
-      .filter((entry) => entry.memberId === selectedLegislatorId)
-      .sort((left, right) => right.date.localeCompare(left.date)),
+    () => getContributionsByMember(selectedLegislatorId),
     [selectedLegislatorId],
   );
 
@@ -66,8 +64,11 @@ function App() {
   const selectedContribution = legislatorContributions.find(
     (entry) => entry.id === selectedContributionId,
   );
-
-  const isSupported = zip === defaultZip;
+  const selectedBill = getBillForContribution(selectedContribution);
+  const relatedBillContributions =
+    selectedBill && legislator
+      ? getRelatedContributionsForMemberAndBill(legislator.id, selectedBill.id)
+      : [];
 
   return (
     <div className="app-shell">
@@ -75,8 +76,8 @@ function App() {
         <div>
           <div className="eyebrow">Congress Contributions</div>
           <p>
-            Actions before interpretation. Evidence before scoring. Unknown is an
-            acceptable answer.
+            Actions before interpretation. Context before jargon. Evidence before
+            scoring. Unknown is an acceptable answer.
           </p>
         </div>
       </header>
@@ -85,7 +86,7 @@ function App() {
         <ZipLookup
           value={zip}
           onChange={setZip}
-          isSupported={isSupported}
+          isSupported={isSupportedZip(zip)}
           onSubmit={() => {
             setSubmittedZip(zip);
             setFilter("all");
@@ -114,19 +115,31 @@ function App() {
                   onFilterChange={setFilter}
                   onContributionSelect={setSelectedContributionId}
                 />
-                <ContributionDetail
-                  legislator={legislator}
-                  contribution={selectedContribution}
-                />
+                <div className="detail-column">
+                  <ContributionDetail
+                    legislator={legislator}
+                    contribution={selectedContribution}
+                  />
+                  <BillContextPanel
+                    bill={selectedBill}
+                    relatedContributions={relatedBillContributions}
+                  />
+                  <InfluencePanel
+                    legislator={legislator}
+                    bill={selectedBill}
+                  />
+                </div>
               </div>
             ) : null}
+
+            <GlossarySidebar />
           </>
         ) : (
           <section className="panel">
             <h2>ZIP code not yet supported</h2>
             <p>
               This proof of concept intentionally supports only 20852 so the
-              evidence and delegation mapping stay narrow and inspectable.
+              delegation and evidence remain easy to inspect.
             </p>
           </section>
         )}

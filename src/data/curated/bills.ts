@@ -1,0 +1,420 @@
+import type { BillContext } from "../../domain/models";
+
+export const curatedBills: BillContext[] = [
+  {
+    id: "bill-hr4330",
+    measure: {
+      id: "H.R.4330",
+      congress: 117,
+      type: "bill",
+      number: "4330",
+      title: "Protect Reporters from Exploitative State Spying Act",
+      shortTitle: "PRESS Act",
+    },
+    originChamber: "house",
+    broadPurpose:
+      "A press-freedom bill concerning federal limits on compelling journalists and service providers to disclose protected information.",
+    currentState:
+      "Passed the House. This POC does not load a later Senate enactment because the official sources in the seed set do not establish one.",
+    legislativeState: "passed_chamber",
+    committeeNames: ["House Judiciary Committee"],
+    majorVersions: ["Introduced in House", "Passed House"],
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: true,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for H.R.4330",
+        url: "https://www.congress.gov/bill/117th-congress/house-bill/4330",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-hr4330",
+        supports: "Sponsor, title, and House-passage status.",
+      },
+    ],
+  },
+  {
+    id: "bill-hres21",
+    measure: {
+      id: "H.Res.21",
+      congress: 117,
+      type: "resolution",
+      number: "21",
+      title:
+        "Calling on Vice President Michael R. Pence to convene and mobilize the principal officers of the executive departments of the Cabinet to activate section 4 of the 25th Amendment",
+      shortTitle: "H.Res.21",
+    },
+    originChamber: "house",
+    broadPurpose:
+      "A House resolution calling on the Vice President and Cabinet to invoke section 4 of the 25th Amendment.",
+    currentState: "Agreed to in the House on January 12, 2021.",
+    legislativeState: "passed_chamber",
+    committeeNames: [],
+    majorVersions: ["Introduced", "Agreed to in House"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: true,
+      senate: null,
+      enacted: null,
+    },
+    becameLaw: null,
+    evidence: [
+      {
+        label: "Congress.gov resolution page for H.Res.21",
+        url: "https://www.congress.gov/bill/117th-congress/house-resolution/21",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-hres21",
+        supports: "Sponsor, text, and House agreement.",
+      },
+    ],
+  },
+  {
+    id: "bill-hr3617",
+    measure: {
+      id: "H.R.3617",
+      congress: 117,
+      type: "bill",
+      number: "3617",
+      title: "Marijuana Opportunity Reinvestment and Expungement Act",
+      shortTitle: "MORE Act",
+    },
+    originChamber: "house",
+    broadPurpose:
+      "A bill addressing federal marijuana policy, including decriminalization and related justice and regulatory changes.",
+    currentState:
+      "Passed the House on April 1, 2022. This POC does not claim a later enacted status because the loaded source set focuses on the House vote and amendment record.",
+    legislativeState: "passed_chamber",
+    committeeNames: ["House Judiciary Committee"],
+    majorVersions: ["Introduced", "House floor consideration", "Passed House"],
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: true,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov all actions for H.R.3617",
+        url: "https://www.congress.gov/bill/117th-congress/house-bill/3617/all-actions",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-hr3617-actions",
+        supports: "House floor actions and amendment context.",
+      },
+      {
+        label: "House Roll Call 107 on final passage",
+        url: "https://clerk.house.gov/Votes/2022107",
+        sourceType: "house",
+        sourceRecordId: "source-house-vote-2022107",
+        supports: "Recorded House passage and member vote positions.",
+      },
+    ],
+  },
+  {
+    id: "bill-hr3055",
+    measure: {
+      id: "H.R.3055",
+      congress: 116,
+      type: "bill",
+      number: "3055",
+      title:
+        "Further Continuing Appropriations Act, 2020, and Further Health Extenders Act of 2019",
+      shortTitle: "Further Continuing Appropriations Act, 2020",
+    },
+    originChamber: "house",
+    broadPurpose:
+      "An appropriations and health extenders package used to continue federal funding and carry additional legislative provisions.",
+    currentState: "Became law as Public Law 116-69.",
+    legislativeState: "became_law",
+    committeeNames: ["House Appropriations Committee"],
+    majorVersions: ["House floor consideration", "Public Law 116-69"],
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: true,
+      senate: true,
+      enacted: true,
+    },
+    becameLaw: true,
+    evidence: [
+      {
+        label: "Congress.gov all actions for H.R.3055",
+        url: "https://www.congress.gov/bill/116th-congress/house-bill/3055/all-actions",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-hr3055-actions",
+        supports: "House action history and amendment context.",
+      },
+      {
+        label: "GovInfo statute compilation for Public Law 116-69",
+        url: "https://www.govinfo.gov/app/details/COMPS-15520",
+        sourceType: "govinfo",
+        sourceRecordId: "source-govinfo-comps-15520",
+        supports: "Public law status for the enacted measure.",
+      },
+    ],
+  },
+  {
+    id: "bill-s51",
+    measure: {
+      id: "S.51",
+      congress: 119,
+      type: "bill",
+      number: "51",
+      title: "Washington, D.C. Admission Act",
+      shortTitle: "Washington, D.C. Admission Act",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill concerning the admission of Washington, D.C., as a state.",
+    currentState: "Introduced in the Senate and referred to committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Homeland Security and Governmental Affairs Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.51",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/51",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s51",
+        supports: "Sponsor and committee referral.",
+      },
+    ],
+  },
+  {
+    id: "bill-s123",
+    measure: {
+      id: "S.123",
+      congress: 119,
+      type: "bill",
+      number: "123",
+      title: "Handgun Permit to Purchase Act",
+      shortTitle: "Handgun Permit to Purchase Act",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill concerning handgun purchase permit requirements at the federal level.",
+    currentState: "Introduced in the Senate and referred to the Judiciary Committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Judiciary Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.123",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/123",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s123",
+        supports: "Sponsor and latest recorded committee referral.",
+      },
+    ],
+  },
+  {
+    id: "bill-s1932",
+    measure: {
+      id: "S.1932",
+      congress: 119,
+      type: "bill",
+      number: "1932",
+      title: "VALID Act of 2025",
+      shortTitle: "VALID Act of 2025",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill concerning stablecoin regulation and oversight.",
+    currentState:
+      "Introduced in the Senate and referred to the Banking, Housing, and Urban Affairs Committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Banking, Housing, and Urban Affairs Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.1932",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/1932",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s1932",
+        supports: "Sponsor and committee referral.",
+      },
+    ],
+  },
+  {
+    id: "bill-hr1968",
+    measure: {
+      id: "H.R.1968",
+      congress: 119,
+      type: "bill",
+      number: "1968",
+      title:
+        "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      shortTitle: "Full-Year Continuing Appropriations and Extensions Act, 2025",
+    },
+    originChamber: "house",
+    broadPurpose:
+      "A continuing appropriations bill funding government operations and carrying extensions and policy provisions.",
+    currentState: "Became law on March 15, 2025, as Public Law 119-4.",
+    legislativeState: "became_law",
+    committeeNames: ["House Appropriations Committee", "House Budget Committee"],
+    majorVersions: ["Introduced in House", "Placed on Calendar Senate", "Enrolled bill", "Public Law 119-4"],
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: true,
+      senate: true,
+      enacted: true,
+    },
+    becameLaw: true,
+    evidence: [
+      {
+        label: "GovInfo enrolled bill entry for H.R.1968",
+        url: "https://www.govinfo.gov/app/details/BILLS-119hr1968enr",
+        sourceType: "govinfo",
+        sourceRecordId: "source-hr1968-enr",
+        supports: "Official enrolled bill version after congressional passage.",
+      },
+      {
+        label: "GovInfo statute compilation linking H.R.1968 to Public Law 119-4",
+        url: "https://www.govinfo.gov/app/details/COMPS-15644",
+        sourceType: "govinfo",
+        sourceRecordId: "source-hr1968-law",
+        supports: "Enacted law status and public law citation.",
+      },
+    ],
+  },
+  {
+    id: "bill-s3556",
+    measure: {
+      id: "S.3556",
+      congress: 119,
+      type: "bill",
+      number: "3556",
+      title: "Wildlife Crossings Program Reauthorization Act of 2025",
+      shortTitle: "Wildlife Crossings Program Reauthorization Act of 2025",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill to reauthorize a wildlife crossings program related to transportation and habitat safety.",
+    currentState: "Introduced in the Senate and referred to committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Environment and Public Works Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.3556",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/3556",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s3556",
+        supports: "Sponsor and committee referral.",
+      },
+    ],
+  },
+  {
+    id: "bill-s3844",
+    measure: {
+      id: "S.3844",
+      congress: 119,
+      type: "bill",
+      number: "3844",
+      title:
+        "A bill to require the Comptroller General of the United States to conduct a study of the impact of Federal reductions in force on State and local governments, and for other purposes",
+      shortTitle: "GAO study on federal reductions in force",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill requiring a GAO study on how federal workforce reductions affect state and local governments.",
+    currentState:
+      "Introduced in the Senate and referred to the Homeland Security and Governmental Affairs Committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Homeland Security and Governmental Affairs Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.3844",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/3844",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s3844",
+        supports: "Sponsor and committee referral.",
+      },
+    ],
+  },
+  {
+    id: "bill-s3890",
+    measure: {
+      id: "S.3890",
+      congress: 119,
+      type: "bill",
+      number: "3890",
+      title:
+        "A bill to establish a National Council on African American History and Culture within the National Endowment for the Humanities, and for other purposes",
+      shortTitle: "National Council on African American History and Culture bill",
+    },
+    originChamber: "senate",
+    broadPurpose:
+      "A bill to establish a National Council on African American History and Culture within the National Endowment for the Humanities.",
+    currentState:
+      "Introduced in the Senate and referred to the Health, Education, Labor, and Pensions Committee.",
+    legislativeState: "introduced",
+    committeeNames: ["Senate Health, Education, Labor, and Pensions Committee"],
+    majorVersions: ["Introduced in Senate"],
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    becameLaw: false,
+    evidence: [
+      {
+        label: "Congress.gov bill page for S.3890",
+        url: "https://www.congress.gov/bill/119th-congress/senate-bill/3890",
+        sourceType: "congress_gov",
+        sourceRecordId: "source-s3890",
+        supports: "Sponsor and committee referral.",
+      },
+    ],
+  },
+];

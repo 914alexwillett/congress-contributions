@@ -1,10 +1,11 @@
-import type { ContributionFilter } from "../models/legislative";
+import type { ContributionFilter } from "../domain/models";
 
 const filterOptions: Array<{ value: ContributionFilter; label: string }> = [
   { value: "all", label: "All" },
   { value: "bills", label: "Bills" },
   { value: "amendments", label: "Amendments" },
   { value: "committee", label: "Committee activity" },
+  { value: "votes", label: "Votes" },
   { value: "adopted", label: "Adopted" },
   { value: "became_law", label: "Became law" },
 ];

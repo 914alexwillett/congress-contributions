@@ -1,4 +1,4 @@
-import type { Legislator } from "../models/legislative";
+import type { Legislator } from "../domain/models";
 
 interface DelegationListProps {
   legislators: Legislator[];
@@ -38,6 +38,11 @@ export function DelegationList({
                 {legislator.chamber === "house"
                   ? `${legislator.state} ${legislator.district}`
                   : legislator.state}
+              </span>
+              <span>
+                {legislator.committeeMemberships[0]?.role ?? "Member"} -{" "}
+                {legislator.committeeMemberships[0]?.committeeName ??
+                  "Committee not loaded"}
               </span>
             </div>
           </button>
