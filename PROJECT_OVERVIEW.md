@@ -1,62 +1,53 @@
 # Congress Contributions
 
-## What This Project Is
+## Mission
 
-Congress Contributions is an evidence-first civic application for helping an ordinary constituent answer:
+Congress Contributions is an evidence-first civic application for making political representation observable between elections.
 
-> What did my representative actually do in Congress, what does that action mean, what happened because of it, and what evidence supports that conclusion?
+Its purpose is to help an ordinary constituent answer questions like:
 
-The project begins with legislative activity, especially actions that help reveal how members shaped legislation.
+- What is my representative doing right now?
+- What changed since I last looked?
+- What are they trying to change in legislation?
+- Did those attempts succeed?
+- What happened to the underlying bill?
+- What issues are receiving their legislative attention?
+- What committees and positions give them influence?
+- What money, lobbying, or spending context surrounds the legislation they are working on?
 
-It is not meant to be just another voting tracker.
+The application should clarify observable political activity without telling the citizen what political judgment to make.
 
-## Core Product Thesis
+## Core Thesis
 
-The app should translate congressional records into understandable civic context without translating them into opinion.
+Congressional records are not enough on their own.
 
-The intended flow is:
+The deeper problem is that representatives act continuously while citizens exercise formal electoral power intermittently.
 
-`ZIP code -> federal delegation -> member -> legislative contributions -> contribution detail -> bill context -> evidence`
+The product aims to shorten that feedback loop:
 
-The long-term differentiator is:
+```text
+Representative acts
+        ->
+Action becomes understandable
+        ->
+Citizen can inspect consequences
+        ->
+Citizen develops an ongoing picture of representation
+        ->
+Election arrives with an accumulated factual record
+```
 
-`Member -> Amendment -> Text Change -> Outcome`
+This project is a persistent civic magnifying glass.
 
-In its strongest form, the product should help a user answer:
+## Core Principle
 
-- What exact language did this member try to add, remove, or alter?
-- Was the amendment adopted?
-- Did the language survive into later versions?
-- Did the bill pass the House?
-- Did it pass the Senate?
-- Did it ultimately become law?
+Congressional records translated into context, without translating them into opinion.
 
-## Product Principles
-
-1. Actions before interpretation.
-2. Context before jargon.
-3. Evidence before scoring.
-4. Sponsorship is not literal authorship.
-5. Cosponsorship is formal support, not necessarily drafting.
-6. Amendments are especially valuable evidence of text-shaping.
-7. Observable relationships are not automatically causal relationships.
-8. Unknown is an acceptable answer.
-9. Every important claim should be auditable.
-10. Teach through consistent structure, not personalized UI.
-11. Primary sources should remain accessible even when the interface simplifies them.
-12. The citizen should make the political judgment; the application should clarify the factual record.
-
-## What The App Must Not Do
-
-- Do not create partisan scores or performance rankings.
-- Do not infer ideology, intent, virtue, corruption, or effectiveness from sparse records.
-- Do not say a member wrote all legislative text unless the evidence supports that.
-- Do not collapse weak contextual relationships into strong claims.
-- Do not use an LLM as the source of record.
+The app is an evidence interface, not a political recommender.
 
 ## Current Scope
 
-The current proof of concept supports only ZIP code `20852`.
+The current vertical slice supports only ZIP code `20852`.
 
 That ZIP maps to:
 
@@ -64,45 +55,156 @@ That ZIP maps to:
 - Chris Van Hollen, Senate, Maryland
 - Angela Alsobrooks, Senate, Maryland
 
-This is intentionally narrow. The code should not be hard-coded in ways that make broader expansion difficult, but geographic generalization is not the priority yet.
+This limited geography is intentional. The product should expand vertically before expanding universally.
 
-## Central Domain Concept
+## Current Product Shape
 
-The most important object in the system is a `LegislativeContribution`.
+The V3 application is no longer primarily a profile browser.
 
-A contribution represents an observable, evidence-backed congressional action by a member.
+It now emphasizes:
+
+- delegation-wide recent activity
+- what changed in the observable record
+- active bills touched by the delegation
+- issue attention across the loaded dataset
+- member detail and contribution detail
+- bill context
+- committee power
+- visible but non-accusatory money and influence context
+
+The core user path is still rooted in:
+
+`ZIP -> delegation -> contribution -> bill context -> evidence`
+
+But the main experience now increasingly answers:
+
+`What has my representation been doing?`
+
+## Primary Concepts
+
+### LegislativeContribution
+
+The most important domain object remains `LegislativeContribution`.
+
+A contribution is an observable, evidence-backed congressional action by a member.
 
 Examples:
 
-- introducing a bill
-- cosponsoring a bill
-- offering a floor amendment
-- offering a committee amendment
-- proposing a substitute amendment
-- making an appropriations-related text change
-- participating in a meaningful committee action
-- casting a procedural vote
-- casting a final-passage vote
+- bill sponsorship
+- cosponsorship
+- floor amendment
+- committee amendment
+- substitute amendment
+- appropriations-related change
+- committee action
+- procedural vote
+- final-passage vote
 
-The distinction between these ideas must remain explicit:
+The project must preserve the distinction between:
 
 - formal sponsorship
-- observable legislative text-shaping
+- observable text-shaping
 - literal drafting authorship
+
+### Contribution Outcome vs Bill Outcome
+
+The app now treats these as distinct concepts.
+
+Examples:
+
+```text
+Contribution: Amendment adopted
+Bill: Passed House, passed Senate, did not become law
+```
+
+```text
+Contribution: Amendment rejected
+Bill: Continued and later passed
+```
+
+Users should not be forced to infer this distinction from raw legislative data.
+
+### Legislative Attention
+
+The project now includes issue tagging so users can see which subjects appear repeatedly in a member's or delegation's legislative record.
+
+Examples:
+
+- appropriations
+- judiciary
+- press freedom
+- D.C. governance
+- gun policy
+- financial regulation
+- transportation and environment
+
+This represents observed legislative attention, not ideology or approval.
+
+### Committee Power
+
+Committee membership is not merely decorative profile metadata.
+
+The product should increasingly communicate:
+
+```text
+Institutional position
+        ->
+Opportunity to influence legislation
+        ->
+Observable member action
+```
+
+Committee context should explain:
+
+- what the committee does
+- why membership matters
+- how the member's activity connects to that institutional position
+
+## Explanation Hierarchy
+
+Contribution detail should generally follow this order:
+
+1. What happened?
+2. What did the member actually do?
+3. What does that congressional procedure mean?
+4. What immediate consequence did the action have?
+5. What happened to the bill afterward?
+6. What is the contribution lineage?
+7. What is the bill's broader status?
+8. What are the detailed records?
+9. Why are we saying this?
+
+A beginner should be able to understand the upper portion without already knowing Congress.
 
 ## Evidence Model
 
-The preferred information flow is:
+The intended data flow remains:
 
-`official source -> source record -> normalization -> domain object -> deterministic interpretation -> interface`
+```text
+Official source
+        ->
+Source record
+        ->
+Normalization
+        ->
+Canonical entity
+        ->
+Derived contribution or context
+        ->
+UI explanation
+```
 
 Not:
 
-`LLM reads a website -> app asserts a conclusion`
+```text
+LLM reads a website
+        ->
+App asserts a conclusion
+```
 
-Every meaningful claim shown in the UI should trace back to evidence.
+Every important claim in the UI should remain auditable.
 
-Preferred source types:
+Preferred evidence sources:
 
 - Congress.gov
 - GovInfo
@@ -111,29 +213,14 @@ Preferred source types:
 - official committee records
 - official member office pages
 - eventually FEC / OpenFEC
-- eventually Lobbying Disclosure Act data
+- eventually Lobbying Disclosure Act records
 - eventually USAspending
-
-## Explanation Hierarchy
-
-Contribution detail should generally follow this order:
-
-1. What happened?
-2. What did the member actually do?
-3. What does that mean procedurally?
-4. What happened because of it?
-5. What happened next?
-6. What is the legislative path?
-7. What are the detailed records?
-8. Why are we saying this?
-
-This hierarchy exists so a beginner can understand the top half without already knowing Congress.
 
 ## Shared Glossary Requirement
 
-Procedural explanations should come from a centralized glossary layer rather than being redefined in random components.
+Procedural explanations must come from a centralized glossary, not ad hoc strings scattered across components.
 
-Examples of glossary concepts:
+Examples:
 
 - markup
 - committee hearing
@@ -141,63 +228,93 @@ Examples of glossary concepts:
 - floor amendment
 - committee amendment
 - substitute amendment
-- motion to recommit
 - cloture
 - unanimous consent
 - final passage
-- conference committee
 - appropriations
 - authorization
-- cosponsorship
 - bill sponsorship
+- cosponsorship
 - roll call vote
 
 ## Bill Context Requirement
 
-Legislative actions should be legible within the broader bill context.
+Bill views should help a user understand:
 
-For a bill, the user should be able to understand:
-
-- what the bill broadly does
+- what the legislation broadly does
 - where it is in the process
 - which chamber originated it
 - which committees handled it
-- what the selected member did in relation to it
+- what the user's delegation did on it
 - whether it became law
-- which major versions are known
+- what major versions are known
+
+Bill views should not devolve into raw action-log dumps.
 
 ## Money, Lobbying, and Spending Context
 
-This project is no longer only about legislative records.
-
-The broader product vision is an evidence-based interface for understanding how federal political power operates.
-
-That means the system should eventually incorporate context such as:
+The broader product vision includes:
 
 - campaign finance
-- lobbying activity
-- federal spending relationships
+- lobbying context
+- federal spending context
 
 Important rule:
 
-These relationships provide context, not accusations.
+These provide context, not accusations.
 
-Relationship strength must remain explicit. For example:
+The application must keep relationship strength explicit. For example:
 
 - `DIRECT_BILL_MATCH`
 - `POLICY_AREA_MATCH`
 - `INDUSTRY_CONTEXT`
 
-Only the first supports a strong statement like:
+Only direct evidence should support claims like:
 
 > Organization X reported lobbying on H.R.1234.
 
-## Target Architecture Direction
+It does not automatically support:
 
-The project should be able to evolve toward:
+> Organization X caused Member Y to support H.R.1234.
+
+The current UI includes a visible money-and-influence panel even when no verified finance or lobbying records are loaded yet, so the product direction remains visible without fake certainty.
+
+## Current Codebase Shape
+
+Important folders:
+
+- `src/domain/`
+  - Canonical models and derived presentation logic.
+- `src/data/curated/`
+  - Manually curated members, bills, issues, committees, contributions, source records, and influence placeholders.
+- `src/services/`
+  - Repository-style access to normalized curated data.
+- `src/glossary/`
+  - Shared procedural definitions.
+- `src/components/`
+  - UI building blocks for activity, bills, issues, committee power, evidence, and detail views.
+
+## Current V3 Screens and Views
+
+The app now supports top-level views oriented around understanding representation over time:
+
+- `Overview`
+  - Delegation summary, recent activity, what changed, active bills, issue attention.
+- `Delegation`
+  - Member selection, member overview, filtered contributions, committee power, influence panel.
+- `Activity`
+  - Chronological delegation-wide feed of structured congressional actions.
+- `Bills`
+  - Measures touched by the delegation and their broader legislative status.
+- `Issues`
+  - Issue-linked contribution browsing driven by observed legislative attention.
+
+## Architecture Direction
+
+The long-term architecture still aims toward:
 
 ```text
-Congress.gov / GovInfo / House / Senate / Committees
+Congress.gov / GovInfo / House / Senate / Committees / FEC / LDA / USAspending
         ->
 Raw source records
         ->
@@ -209,77 +326,94 @@ Relationship builder
         ->
 Legislative contribution builder
         ->
-Application data store / API
+Derived context
+        ->
+Application store or backend
         ->
 Frontend
 ```
 
-The frontend should consume stable project-owned domain models, not raw third-party response shapes.
+The frontend should continue consuming project-owned domain models rather than raw third-party response shapes.
 
-## Current Codebase Shape
+## AI Guidance
 
-Important folders:
+AI must not become the source of record.
 
-- `src/domain/`
-  - Core domain models and presentation helpers.
-- `src/data/curated/`
-  - Manually curated source records, members, bills, contributions, and future-facing influence placeholders.
-- `src/services/`
-  - Repository-like access to the curated domain data.
-- `src/components/`
-  - UI components for member views, contribution detail, bill context, evidence, glossary, and influence context.
-- `src/glossary/`
-  - Centralized procedural definitions.
+AI may eventually help with:
+
+- summarizing difficult bill text
+- explaining legal or procedural language
+- assisting with issue classification
+- identifying possible relationships that humans or deterministic logic can verify
+
+But authoritative factual claims must come from source data.
+
+Prefer deterministic interpretation when possible.
+
+## What This Project Must Not Do
+
+- Do not create partisan scores.
+- Do not rank politicians.
+- Do not infer ideology from sparse records.
+- Do not infer corruption from contextual relationships.
+- Do not collapse weak relationship types into strong claims.
+- Do not present uncertainty as certainty.
+- Do not build gamification.
+- Do not personalize the UI based on inferred expertise.
 
 ## Guidance For Humans Extending This Project
 
+- Preserve the distinction between evidence and interpretation.
 - Keep the code understandable.
-- Prefer small components.
-- Prefer explicit types over clever abstraction.
-- Prefer deterministic explanation builders where possible.
-- Keep evidence visible in the UI.
-- If a field is not reliably known, represent it as unknown.
-- Expand vertically before expanding universally.
+- Prefer small components and explicit types.
+- Use domain or service layers for derived context instead of embedding everything in UI components.
+- If adding new contribution types, update explanation logic and glossary together.
+- If adding money or lobbying context, keep confidence and relationship strength explicit.
+- If a fact is not well supported, say unknown.
 
 ## Guidance For AI Agents Working On This Project
 
 When modifying this repo:
 
-1. Preserve the distinction between evidence and interpretation.
-2. Do not invent legislative facts to fill UI space.
-3. Do not replace curated domain models with raw API-shaped objects in components.
-4. Prefer deterministic logic for procedural explanations before introducing AI-generated summaries.
-5. Keep source provenance attached to claims.
-6. If adding finance or lobbying context, model relationship strength explicitly.
-7. If adding new contribution types, update the glossary and explanation logic together.
-8. If adding new data, prefer a smaller number of well-sourced records over a large number of weak records.
-9. Avoid premature backend complexity unless the work truly requires it.
-10. Preserve political neutrality in language and design.
+1. Preserve `LegislativeContribution` as a central domain concept.
+2. Do not invent legislative facts to fill gaps.
+3. Do not wire raw external API response shapes directly into components.
+4. Keep evidence attached to important claims.
+5. Maintain the distinction between contribution outcome and bill outcome.
+6. Treat committee position as part of political-power context where supported.
+7. Treat issue attention as observed activity, not ideology.
+8. Treat finance and lobbying context as contextual relationships, not causal proof.
+9. Prefer a smaller number of well-sourced records over a large number of weak ones.
+10. Keep the interface politically neutral and evidence-oriented.
 
-## Near-Term Good Next Steps
+## Good Next Steps
 
-- Add one real, source-backed lobbying or campaign-finance slice for a selected bill or member.
-- Improve text-change capture for amendments using official text where available.
-- Add more committee-action examples backed by official records.
-- Add a clearer comparison between amendment outcome and bill outcome.
-- Introduce a lightweight source-record normalization layer for future ingestion.
+- Add one real, source-backed lobbying or campaign-finance slice.
+- Improve amendment text-change capture where official text supports it.
+- Add more committee-backed contribution examples.
+- Add clearer provision-level lineage groundwork.
+- Expand the “what changed” derivation logic.
+- Add better bill-level explanation of contested points derived from observable amendment or vote activity.
 
-## Non-Goals For The Current Iteration
+## Non-Goals For The Current Stage
 
-- Full national ZIP-to-district resolution
+- National ZIP resolution
 - All members of Congress
 - Full historical ingestion
 - Comprehensive committee scraping
-- Full bill-text lineage reconstruction
+- Full amendment execution
+- Perfect bill-text lineage
 - Full FEC ingestion
 - Full lobbying ingestion
 - Full USAspending ingestion
+- Constituent commenting or polling
+- Social features
 - Corruption detection
 - Ideological scoring
-- Performance rankings
+- Politician rankings
 
-## Short Positioning Summary
+## Positioning Summary
 
-Congress Contributions is a civic evidence interface.
+Congress Contributions is a civic evidence interface for continuous political observation.
 
-It helps people inspect what their federal representatives actually did inside the legislative process, understand what those actions mean, and trace the explanation back to official records.
+It helps citizens inspect what their federal representatives are doing inside the legislative process, understand what those actions mean, see what changed, follow what happened to the legislation, and trace the explanation back to primary evidence.
