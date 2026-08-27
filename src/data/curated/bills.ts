@@ -17,6 +17,8 @@ export const curatedBills: BillContext[] = [
     currentState:
       "Passed the House. This POC does not load a later Senate enactment because the official sources in the seed set do not establish one.",
     legislativeState: "passed_chamber",
+    issueIds: ["press-freedom", "judiciary", "civil-rights"],
+    committeeIds: ["house-judiciary"],
     committeeNames: ["House Judiciary Committee"],
     majorVersions: ["Introduced in House", "Passed House"],
     lineage: {
@@ -53,6 +55,7 @@ export const curatedBills: BillContext[] = [
       "A House resolution calling on the Vice President and Cabinet to invoke section 4 of the 25th Amendment.",
     currentState: "Agreed to in the House on January 12, 2021.",
     legislativeState: "passed_chamber",
+    issueIds: ["judiciary"],
     committeeNames: [],
     majorVersions: ["Introduced", "Agreed to in House"],
     lineage: {
@@ -89,6 +92,8 @@ export const curatedBills: BillContext[] = [
     currentState:
       "Passed the House on April 1, 2022. This POC does not claim a later enacted status because the loaded source set focuses on the House vote and amendment record.",
     legislativeState: "passed_chamber",
+    issueIds: ["judiciary", "civil-rights"],
+    committeeIds: ["house-judiciary"],
     committeeNames: ["House Judiciary Committee"],
     majorVersions: ["Introduced", "House floor consideration", "Passed House"],
     lineage: {
@@ -132,6 +137,7 @@ export const curatedBills: BillContext[] = [
       "An appropriations and health extenders package used to continue federal funding and carry additional legislative provisions.",
     currentState: "Became law as Public Law 116-69.",
     legislativeState: "became_law",
+    issueIds: ["appropriations", "healthcare"],
     committeeNames: ["House Appropriations Committee"],
     majorVersions: ["House floor consideration", "Public Law 116-69"],
     lineage: {
@@ -174,6 +180,8 @@ export const curatedBills: BillContext[] = [
       "A bill concerning the admission of Washington, D.C., as a state.",
     currentState: "Introduced in the Senate and referred to committee.",
     legislativeState: "introduced",
+    issueIds: ["dc-governance"],
+    committeeIds: ["senate-hsgac"],
     committeeNames: ["Senate Homeland Security and Governmental Affairs Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {
@@ -209,6 +217,8 @@ export const curatedBills: BillContext[] = [
       "A bill concerning handgun purchase permit requirements at the federal level.",
     currentState: "Introduced in the Senate and referred to the Judiciary Committee.",
     legislativeState: "introduced",
+    issueIds: ["gun-policy", "judiciary"],
+    committeeIds: ["senate-judiciary"],
     committeeNames: ["Senate Judiciary Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {
@@ -245,6 +255,8 @@ export const curatedBills: BillContext[] = [
     currentState:
       "Introduced in the Senate and referred to the Banking, Housing, and Urban Affairs Committee.",
     legislativeState: "introduced",
+    issueIds: ["financial-regulation", "technology"],
+    committeeIds: ["senate-banking"],
     committeeNames: ["Senate Banking, Housing, and Urban Affairs Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {
@@ -281,6 +293,7 @@ export const curatedBills: BillContext[] = [
       "A continuing appropriations bill funding government operations and carrying extensions and policy provisions.",
     currentState: "Became law on March 15, 2025, as Public Law 119-4.",
     legislativeState: "became_law",
+    issueIds: ["appropriations"],
     committeeNames: ["House Appropriations Committee", "House Budget Committee"],
     majorVersions: ["Introduced in House", "Placed on Calendar Senate", "Enrolled bill", "Public Law 119-4"],
     lineage: {
@@ -323,6 +336,8 @@ export const curatedBills: BillContext[] = [
       "A bill to reauthorize a wildlife crossings program related to transportation and habitat safety.",
     currentState: "Introduced in the Senate and referred to committee.",
     legislativeState: "introduced",
+    issueIds: ["transportation-environment"],
+    committeeIds: ["senate-epw"],
     committeeNames: ["Senate Environment and Public Works Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {
@@ -360,6 +375,8 @@ export const curatedBills: BillContext[] = [
     currentState:
       "Introduced in the Senate and referred to the Homeland Security and Governmental Affairs Committee.",
     legislativeState: "introduced",
+    issueIds: ["workforce-government"],
+    committeeIds: ["senate-hsgac"],
     committeeNames: ["Senate Homeland Security and Governmental Affairs Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {
@@ -397,6 +414,8 @@ export const curatedBills: BillContext[] = [
     currentState:
       "Introduced in the Senate and referred to the Health, Education, Labor, and Pensions Committee.",
     legislativeState: "introduced",
+    issueIds: ["history-culture"],
+    committeeIds: ["senate-help"],
     committeeNames: ["Senate Health, Education, Labor, and Pensions Committee"],
     majorVersions: ["Introduced in Senate"],
     lineage: {

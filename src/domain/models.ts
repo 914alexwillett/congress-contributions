@@ -87,8 +87,25 @@ export interface EvidenceReference {
 }
 
 export interface CommitteeMembership {
+  committeeId?: string;
   committeeName: string;
   role: string;
+}
+
+export interface IssueArea {
+  id: string;
+  label: string;
+  description: string;
+}
+
+export interface CommitteeContext {
+  id: string;
+  chamber: Chamber;
+  name: string;
+  purpose: string;
+  whyItMatters: string;
+  responsibilities: string[];
+  sourceRecordIds: string[];
 }
 
 export interface Legislator {
@@ -154,6 +171,8 @@ export interface LegislativeContribution {
     laterOutcome?: string;
     nextStep?: string;
   };
+  issueIds: string[];
+  committeeIds?: string[];
   glossaryTermIds: GlossaryTermId[];
   textChange?: TextChangeSummary;
   outcome: LegislativeOutcome;
@@ -173,6 +192,8 @@ export interface BillContext {
   broadPurpose: string;
   currentState: string;
   legislativeState: LegislativeOutcome;
+  issueIds: string[];
+  committeeIds?: string[];
   committeeNames: string[];
   majorVersions?: string[];
   lineage?: LegislativeLineage;
@@ -204,4 +225,12 @@ export interface FutureContextRelationship {
   targetEntityType: "member" | "bill" | "issue" | "industry";
   strength: InfluenceRelationshipStrength;
   statement: string;
+}
+
+export interface DelegationChangeSummary {
+  totalRecentActions: number;
+  adoptedAmendments: number;
+  introducedBills: number;
+  billOutcomeAdvances: number;
+  enactedBillsTouched: number;
 }

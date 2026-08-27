@@ -6,11 +6,13 @@ import { LineageTrack } from "./LineageTrack";
 interface BillContextPanelProps {
   bill: BillContext | undefined;
   relatedContributions: LegislativeContribution[];
+  scopeLabel?: string;
 }
 
 export function BillContextPanel({
   bill,
   relatedContributions,
+  scopeLabel = "this member",
 }: BillContextPanelProps) {
   if (!bill) {
     return null;
@@ -74,7 +76,7 @@ export function BillContextPanel({
 
       <div className="detail-block">
         <div className="block-heading">
-          <strong>What this member did on this bill</strong>
+          <strong>What {scopeLabel} did on this bill</strong>
           <span>Only loaded, evidence-backed records are shown here.</span>
         </div>
         <ul className="related-list">

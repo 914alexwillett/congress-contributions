@@ -1,12 +1,16 @@
 import { curatedBills } from "../data/curated/bills";
+import { curatedCommittees } from "../data/curated/committees";
 import { buildCuratedContributions } from "../data/curated/contributions";
 import { curatedDelegationsByZip, supportedZipCodes } from "../data/curated/delegations";
 import { curatedInfluenceSnapshots } from "../data/curated/influence";
+import { curatedIssues } from "../data/curated/issues";
 import { curatedMembers } from "../data/curated/members";
 import { sourceRecords } from "../data/curated/sourceRecords";
 import type {
   BillContext,
+  CommitteeContext,
   FutureContextRelationship,
+  IssueArea,
   LegislativeContribution,
   Legislator,
   SourceRecord,
@@ -24,6 +28,12 @@ const billsById = Object.fromEntries(
 const membersById = Object.fromEntries(
   curatedMembers.map((member) => [member.id, member]),
 ) as Record<string, Legislator>;
+const committeesById = Object.fromEntries(
+  curatedCommittees.map((committee) => [committee.id, committee]),
+) as Record<string, CommitteeContext>;
+const issuesById = Object.fromEntries(
+  curatedIssues.map((issue) => [issue.id, issue]),
+) as Record<string, IssueArea>;
 
 const contributionSourceUrlById = Object.fromEntries(
   sourceRecords.map((record) => [record.id, record.sourceUrl]),
@@ -58,8 +68,34 @@ export function getContributionsByMember(memberId: string) {
     .sort((left, right) => right.date.localeCompare(left.date));
 }
 
+export function getMemberById(memberId: string) {
+  return membersById[memberId];
+}
+
+export function getMembersById() {
+  return membersById;
+}
+
+export function getContributionsForDelegation(memberIds: string[]) {
+  return contributions
+    .filter((entry) => memberIds.includes(entry.memberId))
+    .sort((left, right) => right.date.localeCompare(left.date));
+}
+
 export function getBillById(billId: string) {
   return billsById[billId];
+}
+
+export function getBillsForDelegation(memberIds: string[]) {
+  const billIds = new Set(
+    contributions
+      .filter((entry) => memberIds.includes(entry.memberId))
+      .map((entry) => entry.measureId),
+  );
+
+  return [...billIds]
+    .map((billId) => billsById[billId])
+    .filter(Boolean);
 }
 
 export function getBillForContribution(contribution: LegislativeContribution | undefined) {
@@ -104,4 +140,24 @@ export function getInfluenceSnapshotForMember(
         "No USAspending-linked award context is loaded yet for this member and the currently selected bill.",
     },
   };
+}
+
+export function getCommitteeById(committeeId: string) {
+  return committeesById[committeeId];
+}
+
+export function getCommitteesById() {
+  return committeesById;
+}
+
+export function getIssueById(issueId: string) {
+  return issuesById[issueId];
+}
+
+export function getAllIssues() {
+  return curatedIssues;
+}
+
+export function getIssuesById() {
+  return issuesById;
 }

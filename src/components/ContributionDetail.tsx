@@ -1,23 +1,27 @@
-import type { LegislativeContribution, Legislator } from "../domain/models";
+import type { BillContext, LegislativeContribution, Legislator } from "../domain/models";
 import {
   formatDisplayDate,
   getConfidenceLabel,
   getContributionLineageStages,
+  getContributionOutcomeSummary,
   getContributionTypeLabel,
   getGlossaryTerms,
   getOutcomeLabel,
 } from "../domain/presentation";
 import { EvidencePanel } from "./EvidencePanel";
 import { LineageTrack } from "./LineageTrack";
+import { getIssueById } from "../services/curatedRepository";
 
 interface ContributionDetailProps {
   legislator: Legislator;
   contribution: LegislativeContribution | undefined;
+  bill?: BillContext;
 }
 
 export function ContributionDetail({
   legislator,
   contribution,
+  bill,
 }: ContributionDetailProps) {
   if (!contribution) {
     return (
@@ -29,6 +33,7 @@ export function ContributionDetail({
   }
 
   const glossaryTerms = getGlossaryTerms(contribution.glossaryTermIds);
+  const outcomeSummary = getContributionOutcomeSummary(contribution, bill);
 
   return (
     <section className="panel detail-panel">
@@ -37,14 +42,31 @@ export function ContributionDetail({
 
       <div className="outcome-banner">
         <div>
-          <span className="label">Outcome</span>
+          <span className="label">Contribution outcome</span>
           <strong>{getOutcomeLabel(contribution.outcome)}</strong>
+        </div>
+        <div>
+          <span className="label">Bill outcome</span>
+          <strong>{outcomeSummary.billOutcome}</strong>
         </div>
         <div>
           <span className="label">Confidence</span>
           <strong className={`confidence confidence-${contribution.attribution.confidence}`}>
             {getConfidenceLabel(contribution.attribution.confidence)}
           </strong>
+        </div>
+      </div>
+
+      <div className="detail-block outcome-contrast">
+        <div className="outcome-contrast-card">
+          <span className="signal-label">This contribution</span>
+          <strong>{outcomeSummary.contributionOutcome}</strong>
+          <p>{contribution.context.immediateConsequence}</p>
+        </div>
+        <div className="outcome-contrast-card">
+          <span className="signal-label">Underlying bill</span>
+          <strong>{outcomeSummary.billOutcome}</strong>
+          <p>{outcomeSummary.billOutcomeDetail}</p>
         </div>
       </div>
 
@@ -120,6 +142,24 @@ export function ContributionDetail({
           </dd>
         </div>
       </dl>
+
+      <div className="detail-block">
+        <div className="block-heading">
+          <strong>Issue context</strong>
+          <span>Observed legislative attention, not ideology or endorsement.</span>
+        </div>
+        <div className="version-list">
+          {contribution.issueIds.map((issueId) => {
+            const issue = getIssueById(issueId);
+
+            return issue ? (
+              <span key={issue.id} className="version-pill">
+                {issue.label}
+              </span>
+            ) : null;
+          })}
+        </div>
+      </div>
 
       {contribution.textChange ? (
         <div className="detail-block">

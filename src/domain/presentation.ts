@@ -1,12 +1,16 @@
 import { proceduralGlossary } from "../glossary/terms";
 import type {
   BillContext,
+  CommitteeContext,
   ContributionFilter,
+  DelegationChangeSummary,
   EvidenceConfidence,
+  IssueArea,
   LegislativeContribution,
   LegislativeContributionType,
   LegislativeLineage,
   LegislativeOutcome,
+  Legislator,
 } from "./models";
 
 export function formatDisplayDate(date: string) {
@@ -149,4 +153,142 @@ export function getBillLineageStages(bill: BillContext) {
 
 export function getGlossaryTerms(termIds: LegislativeContribution["glossaryTermIds"]) {
   return termIds.map((termId) => proceduralGlossary[termId]);
+}
+
+export function getRelativeTimeLabel(date: string) {
+  const now = new Date();
+  const then = new Date(`${date}T00:00:00`);
+  const days = Math.floor((now.getTime() - then.getTime()) / (1000 * 60 * 60 * 24));
+
+  if (days <= 7) {
+    return "This week";
+  }
+
+  if (days <= 31) {
+    return "This month";
+  }
+
+  if (days <= 180) {
+    return "This half-year";
+  }
+
+  if (days <= 365) {
+    return "This year";
+  }
+
+  return "Earlier";
+}
+
+export function getOutcomeTone(outcome: LegislativeOutcome) {
+  switch (outcome) {
+    case "adopted":
+    case "passed_chamber":
+    case "became_law":
+      return "positive";
+    case "rejected":
+    case "withdrawn":
+    case "no_further_action":
+      return "negative";
+    default:
+      return "neutral";
+  }
+}
+
+export function getContributionOutcomeSummary(
+  contribution: LegislativeContribution,
+  bill: BillContext | undefined,
+) {
+  return {
+    contributionOutcome: getOutcomeLabel(contribution.outcome),
+    billOutcome: bill ? getOutcomeLabel(bill.legislativeState) : "Unknown",
+    billOutcomeDetail: bill?.currentState ?? "Bill context not loaded.",
+  };
+}
+
+export function buildDelegationChangeSummary(
+  contributions: LegislativeContribution[],
+  bills: BillContext[],
+): DelegationChangeSummary {
+  const recentActions = contributions.filter((entry) => {
+    const days =
+      (new Date().getTime() - new Date(`${entry.date}T00:00:00`).getTime()) /
+      (1000 * 60 * 60 * 24);
+
+    return days <= 730;
+  });
+
+  return {
+    totalRecentActions: recentActions.length,
+    adoptedAmendments: recentActions.filter((entry) => entry.outcome === "adopted").length,
+    introducedBills: recentActions.filter((entry) => entry.type === "bill_sponsorship").length,
+    billOutcomeAdvances: recentActions.filter((entry) =>
+      ["passed_chamber", "became_law"].includes(entry.outcome),
+    ).length,
+    enactedBillsTouched: bills.filter((bill) => bill.becameLaw === true).length,
+  };
+}
+
+export function buildIssueAttention(
+  contributions: LegislativeContribution[],
+  issuesById: Record<string, IssueArea>,
+) {
+  const counts = new Map<string, number>();
+
+  contributions.forEach((entry) => {
+    entry.issueIds.forEach((issueId) => {
+      counts.set(issueId, (counts.get(issueId) ?? 0) + 1);
+    });
+  });
+
+  return [...counts.entries()]
+    .map(([issueId, count]) => ({
+      issue: issuesById[issueId],
+      count,
+    }))
+    .filter((entry) => entry.issue)
+    .sort((left, right) => right.count - left.count);
+}
+
+export function buildActiveBillSummaries(
+  bills: BillContext[],
+  contributions: LegislativeContribution[],
+  membersById: Record<string, Legislator>,
+) {
+  return bills
+    .map((bill) => {
+      const related = contributions.filter((entry) => entry.measureId === bill.id);
+      const memberIds = [...new Set(related.map((entry) => entry.memberId))];
+      const latestDate = related[0]?.date;
+
+      return {
+        bill,
+        relatedContributionCount: related.length,
+        memberNames: memberIds.map((memberId) => membersById[memberId]?.name).filter(Boolean),
+        latestDate,
+      };
+    })
+    .sort((left, right) => (right.latestDate ?? "").localeCompare(left.latestDate ?? ""));
+}
+
+export function buildCommitteePowerSummaries(
+  member: Legislator,
+  committeesById: Record<string, CommitteeContext>,
+  contributions: LegislativeContribution[],
+) {
+  return member.committeeMemberships
+    .map((membership) => {
+      const committee = membership.committeeId
+        ? committeesById[membership.committeeId]
+        : undefined;
+      const relatedContributions = contributions.filter((entry) =>
+        entry.committeeIds?.includes(membership.committeeId ?? ""),
+      );
+
+      return {
+        membership,
+        committee,
+        relatedContributions,
+      };
+    })
+    .filter((entry) => entry.committee);
 }

@@ -18,6 +18,8 @@ interface CuratedContributionSeed {
     name?: string;
   };
   headline: string;
+  issueIds: string[];
+  committeeIds?: string[];
   glossaryTermIds: LegislativeContribution["glossaryTermIds"];
   actionText: string;
   proceduralMeaning?: string;
@@ -46,6 +48,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2021-07-01",
     venue: { type: "other", name: "House introduction" },
     headline: "Raskin introduced the PRESS Act.",
+    issueIds: ["press-freedom", "judiciary", "civil-rights"],
+    committeeIds: ["house-judiciary"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "He formally introduced H.R.4330, placing the measure into the House legislative process under his sponsorship.",
@@ -85,6 +89,7 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2021-01-11",
     venue: { type: "floor", name: "House floor" },
     headline: "Raskin introduced H.Res.21, and the House agreed to it the next day.",
+    issueIds: ["judiciary"],
     glossaryTermIds: ["bill_sponsorship", "final_passage"],
     actionText:
       "He sponsored the resolution and moved it into House consideration as the chamber's formal text.",
@@ -125,6 +130,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "floor", name: "House floor" },
     headline:
       "Raskin proposed adding security-clearance protections to the MORE Act, but the amendment failed.",
+    issueIds: ["judiciary", "civil-rights"],
+    committeeIds: ["house-judiciary"],
     glossaryTermIds: ["floor_amendment", "roll_call_vote"],
     actionText:
       "He offered H.Amdt.190 to say that cannabis use should not be the reason for denying or rescinding a security clearance.",
@@ -179,6 +186,7 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "floor", name: "House floor" },
     headline:
       "Raskin won House adoption of an appropriations amendment tied to military construction funding.",
+    issueIds: ["appropriations"],
     glossaryTermIds: ["floor_amendment", "appropriations"],
     actionText:
       "He offered H.Amdt.455 to shift $1,000,000 in military construction funding toward projects for facilities serving military communities with health and safety risks.",
@@ -232,6 +240,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2022-04-01",
     venue: { type: "floor", name: "House floor" },
     headline: "Raskin voted yes on House passage of the MORE Act.",
+    issueIds: ["judiciary", "civil-rights"],
+    committeeIds: ["house-judiciary"],
     glossaryTermIds: ["final_passage", "roll_call_vote"],
     actionText:
       "He cast a recorded Yea vote when the House voted on final passage of H.R.3617.",
@@ -271,6 +281,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2025-01-09",
     venue: { type: "other", name: "Senate introduction" },
     headline: "Van Hollen introduced the Washington, D.C. Admission Act in the Senate.",
+    issueIds: ["dc-governance"],
+    committeeIds: ["senate-hsgac"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "He formally introduced S.51 under his sponsorship, starting its Senate legislative path.",
@@ -308,6 +320,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2025-01-16",
     venue: { type: "other", name: "Senate introduction" },
     headline: "Van Hollen introduced the Handgun Permit to Purchase Act.",
+    issueIds: ["gun-policy", "judiciary"],
+    committeeIds: ["senate-judiciary"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "He formally introduced S.123 and sent it into the Senate process under his sponsorship.",
@@ -345,6 +359,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2025-06-03",
     venue: { type: "other", name: "Senate introduction" },
     headline: "Van Hollen introduced the VALID Act of 2025.",
+    issueIds: ["financial-regulation", "technology"],
+    committeeIds: ["senate-banking"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "He formally introduced S.1932 and became the measure's Senate sponsor of record.",
@@ -382,6 +398,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "floor", name: "Senate floor" },
     headline:
       "Van Hollen offered an amendment to bar DOGE from using appropriated funds, but the Senate rejected it.",
+    issueIds: ["appropriations"],
+    committeeIds: ["senate-appropriations"],
     glossaryTermIds: ["floor_amendment", "appropriations", "roll_call_vote"],
     actionText:
       "He offered S.Amdt.1272 to H.R.1968, with the stated purpose of prohibiting the use of appropriated amounts by DOGE.",
@@ -428,6 +446,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2025-03-14",
     venue: { type: "floor", name: "Senate floor" },
     headline: "Van Hollen voted no on final Senate passage of H.R.1968.",
+    issueIds: ["appropriations"],
+    committeeIds: ["senate-appropriations"],
     glossaryTermIds: ["final_passage", "roll_call_vote", "appropriations"],
     actionText:
       "He cast a recorded Nay vote when the Senate voted on passage of the continuing appropriations bill.",
@@ -476,6 +496,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "other", name: "Senate introduction" },
     headline:
       "Alsobrooks introduced the Wildlife Crossings Program Reauthorization Act of 2025.",
+    issueIds: ["transportation-environment"],
+    committeeIds: ["senate-epw"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "She formally introduced S.3556, becoming the measure's sponsor of record in the Senate.",
@@ -513,6 +535,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "other", name: "Senate introduction" },
     headline:
       "Alsobrooks introduced a bill ordering a GAO study on federal reductions in force.",
+    issueIds: ["workforce-government"],
+    committeeIds: ["senate-hsgac"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "She formally introduced S.3844 and placed the proposal into the Senate process under her sponsorship.",
@@ -551,6 +575,8 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "other", name: "Senate introduction" },
     headline:
       "Alsobrooks introduced a bill to establish a National Council on African American History and Culture.",
+    issueIds: ["history-culture"],
+    committeeIds: ["senate-help"],
     glossaryTermIds: ["bill_sponsorship", "authorization"],
     actionText:
       "She formally introduced S.3890 and became its sponsor of record.",
@@ -588,6 +614,7 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     venue: { type: "floor", name: "Senate floor" },
     headline:
       "Alsobrooks submitted an appropriations amendment about D.C. local funds during Senate consideration of H.R.1968.",
+    issueIds: ["appropriations", "dc-governance"],
     glossaryTermIds: ["floor_amendment", "appropriations"],
     actionText:
       "She submitted S.Amdt.1267 to let the District of Columbia spend local funds under its FY2025 local budget framework and to update a related appropriations reference.",
@@ -635,6 +662,7 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     date: "2025-03-14",
     venue: { type: "floor", name: "Senate floor" },
     headline: "Alsobrooks voted no on final Senate passage of H.R.1968.",
+    issueIds: ["appropriations"],
     glossaryTermIds: ["final_passage", "roll_call_vote", "appropriations"],
     actionText:
       "She cast a recorded Nay vote on final passage of the continuing appropriations bill.",
@@ -742,6 +770,8 @@ export function buildCuratedContributions(
       laterOutcome: seed.laterOutcome,
       nextStep: seed.nextStep,
     },
+    issueIds: seed.issueIds,
+    committeeIds: seed.committeeIds,
     glossaryTermIds: seed.glossaryTermIds,
     textChange: seed.textChange,
     outcome: seed.outcome,

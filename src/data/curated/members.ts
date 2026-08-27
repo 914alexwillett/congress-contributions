@@ -13,6 +13,7 @@ export const curatedMembers: Legislator[] = [
     bio: "Represents Maryland's 8th Congressional District in the U.S. House of Representatives.",
     committeeMemberships: [
       {
+        committeeId: "house-judiciary",
         committeeName: "House Committee on the Judiciary",
         role: "Ranking Member",
       },
@@ -30,18 +31,22 @@ export const curatedMembers: Legislator[] = [
     bio: "Serves Maryland in the U.S. Senate.",
     committeeMemberships: [
       {
+        committeeId: "senate-appropriations",
         committeeName: "Senate Appropriations Committee",
         role: "Member",
       },
       {
+        committeeId: "senate-foreign-relations",
         committeeName: "Senate Foreign Relations Committee",
         role: "Member",
       },
       {
+        committeeId: "senate-banking",
         committeeName: "Senate Banking, Housing, and Urban Affairs Committee",
         role: "Member",
       },
       {
+        committeeId: "senate-budget",
         committeeName: "Senate Budget Committee",
         role: "Member",
       },
@@ -59,18 +64,22 @@ export const curatedMembers: Legislator[] = [
     bio: "Serves Maryland in the U.S. Senate.",
     committeeMemberships: [
       {
+        committeeId: "senate-epw",
         committeeName: "Senate Environment and Public Works Committee",
         role: "Member",
       },
       {
+        committeeId: "senate-aging",
         committeeName: "Senate Special Committee on Aging",
         role: "Member",
       },
       {
+        committeeId: "senate-banking",
         committeeName: "Senate Banking, Housing, and Urban Affairs Committee",
         role: "Member",
       },
       {
+        committeeId: "senate-help",
         committeeName: "Senate Health, Education, Labor, and Pensions Committee",
         role: "Member",
       },
