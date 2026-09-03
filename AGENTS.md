@@ -369,6 +369,7 @@ Prefer:
 * deterministic logic;
 * minimal dependencies;
 * clear separation of data, domain logic, services, glossary, and UI.
+* frontend imports that prefer stable repository/service boundaries over storage-specific modules.
 
 Avoid:
 
@@ -411,6 +412,7 @@ The important separation is:
 * components/pages render the experience.
 
 Do not place raw third-party API payload handling directly inside UI components.
+Do not let frontend components depend on storage implementation details when a service or repository boundary can absorb them.
 
 ---
 

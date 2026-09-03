@@ -448,6 +448,7 @@ Do not place fabricated legislative data here merely to make the UI look full.
 Repository-like or query-like access to application data.
 
 The frontend should interact with stable project models rather than raw third-party API payloads.
+As the project prepares for future persistence, frontend components should prefer a storage-agnostic repository boundary rather than importing curated-data implementation details directly.
 
 ### `src/components/`
 
@@ -546,6 +547,10 @@ Frontend
 ```
 
 The frontend should not depend directly on third-party API response formats.
+
+For a more specific assessment of when to introduce PostgreSQL and how the migration should work, see:
+
+`docs/persistence-architecture.md`
 
 ---
 

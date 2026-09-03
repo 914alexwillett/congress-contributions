@@ -1,5 +1,5 @@
 import type { BillContext, Legislator } from "../domain/models";
-import { getInfluenceSnapshotForMember } from "../services/curatedRepository";
+import { congressDataRepository } from "../services/congressDataRepository";
 
 interface InfluencePanelProps {
   legislator: Legislator;
@@ -7,7 +7,10 @@ interface InfluencePanelProps {
 }
 
 export function InfluencePanel({ legislator, bill }: InfluencePanelProps) {
-  const snapshot = getInfluenceSnapshotForMember(legislator.id, bill?.id);
+  const snapshot = congressDataRepository.getInfluenceSnapshotForMember(
+    legislator.id,
+    bill?.id,
+  );
 
   if (!snapshot) {
     return null;

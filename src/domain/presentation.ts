@@ -1,5 +1,6 @@
 import { proceduralGlossary } from "../glossary/terms";
 import type {
+  ActivityRecordType,
   BillContext,
   CommitteeContext,
   ContributionFilter,
@@ -43,6 +44,25 @@ export function getContributionTypeLabel(type: LegislativeContributionType) {
       return "Final passage vote";
     case "other_documented_change":
       return "Other documented change";
+  }
+}
+
+export function getActivityTypeLabel(type: ActivityRecordType) {
+  switch (type) {
+    case "bill_introduction":
+      return "Bill introduction";
+    case "bill_cosponsorship":
+      return "Bill cosponsorship";
+    case "committee_movement":
+      return "Committee movement";
+    case "amendment_activity":
+      return "Amendment activity";
+    case "floor_vote":
+      return "Floor vote";
+    case "bill_status_change":
+      return "Bill status change";
+    case "other":
+      return "Other activity";
   }
 }
 

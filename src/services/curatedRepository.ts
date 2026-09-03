@@ -1,3 +1,4 @@
+import { buildCuratedActivityRecords } from "../data/curated/activity";
 import { curatedBills } from "../data/curated/bills";
 import { curatedCommittees } from "../data/curated/committees";
 import { buildCuratedContributions } from "../data/curated/contributions";
@@ -11,6 +12,7 @@ import { curatedIssues } from "../data/curated/issues";
 import { curatedMembers } from "../data/curated/members";
 import { sourceRecords } from "../data/curated/sourceRecords";
 import type {
+  ActivityRecord,
   BillContext,
   CommitteeContext,
   FutureContextRelationship,
@@ -44,6 +46,7 @@ const contributionSourceUrlById = Object.fromEntries(
 ) as Record<string, string>;
 
 const contributions = buildCuratedContributions(billsById, contributionSourceUrlById);
+const activityRecords = buildCuratedActivityRecords(billsById, contributionSourceUrlById);
 const influenceSnapshotsByMember = Object.fromEntries(
   curatedInfluenceSnapshots.map((snapshot) => [snapshot.memberId, snapshot]),
 ) as Record<string, InfluenceContextSnapshot>;
@@ -80,6 +83,12 @@ export function getContributionsByMember(memberId: string) {
     .sort((left, right) => right.date.localeCompare(left.date));
 }
 
+export function getActivityRecordsByMember(memberId: string) {
+  return activityRecords
+    .filter((entry) => entry.memberId === memberId)
+    .sort((left, right) => right.date.localeCompare(left.date));
+}
+
 export function getMemberById(memberId: string) {
   return membersById[memberId];
 }
@@ -90,6 +99,12 @@ export function getMembersById() {
 
 export function getContributionsForDelegation(memberIds: string[]) {
   return contributions
+    .filter((entry) => memberIds.includes(entry.memberId))
+    .sort((left, right) => right.date.localeCompare(left.date));
+}
+
+export function getActivityRecordsForDelegation(memberIds: string[]) {
+  return activityRecords
     .filter((entry) => memberIds.includes(entry.memberId))
     .sort((left, right) => right.date.localeCompare(left.date));
 }

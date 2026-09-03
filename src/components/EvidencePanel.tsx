@@ -1,5 +1,5 @@
-import { getSourceRecordById } from "../services/curatedRepository";
 import type { EvidenceReference } from "../domain/models";
+import { congressDataRepository } from "../services/congressDataRepository";
 
 interface EvidencePanelProps {
   title?: string;
@@ -21,7 +21,7 @@ export function EvidencePanel({
       <ul className="evidence-list">
         {evidence.map((source) => {
           const sourceRecord = source.sourceRecordId
-            ? getSourceRecordById(source.sourceRecordId)
+            ? congressDataRepository.getSourceRecordById(source.sourceRecordId)
             : undefined;
 
           return (

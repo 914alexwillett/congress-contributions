@@ -464,6 +464,34 @@ PostgreSQL should be preferred over a graph database unless a concrete requireme
 
 ---
 
+# Phase 11 â€” Persistence Readiness
+
+## Current Decision
+
+Remain frontend and curated-data driven for now while preparing the repository for a future PostgreSQL-backed data layer.
+
+## Immediate Preparation Work
+
+* preserve a storage-agnostic repository boundary between frontend components and data access;
+* formalize the difference between raw source records, canonical entities, and derived application records;
+* introduce first-class activity-record data once recent feeds need broader coverage than deep contribution records;
+* document the recommended PostgreSQL schema direction and seed/import path from curated data;
+* keep current curated records usable as future seed inputs rather than throwaway mock data.
+
+## Trigger To Start Real Persistence
+
+Begin a lightweight backend plus PostgreSQL when one or more of these becomes an active product requirement:
+
+* automated source ingestion;
+* repeated re-normalization of changing source payloads;
+* historical queries across many Congresses;
+* address- or district-resolution logic beyond static ZIP mappings;
+* bill-version or amendment-lineage processing that no longer fits cleanly in static files;
+* lobbying, finance, or spending joins across multiple datasets;
+* need for an internal data-explorer workflow that is too cumbersome against TypeScript seed files.
+
+---
+
 # Data Sources Roadmap
 
 ## Legislative

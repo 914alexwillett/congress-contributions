@@ -1,26 +1,24 @@
-import type { LegislativeContribution } from "../domain/models";
+import type { ActivityRecord } from "../domain/models";
 import {
+  getActivityTypeLabel,
   formatDisplayDate,
-  getContributionTypeLabel,
-  getOutcomeLabel,
-  getOutcomeTone,
   getRelativeTimeLabel,
 } from "../domain/presentation";
-import { getMemberById } from "../services/curatedRepository";
+import { congressDataRepository } from "../services/congressDataRepository";
 
 interface DelegationActivityFeedProps {
   title: string;
   subtitle: string;
-  contributions: LegislativeContribution[];
-  selectedContributionId: string;
+  activities: ActivityRecord[];
+  selectedActivityId: string;
   onSelect: (id: string) => void;
 }
 
 export function DelegationActivityFeed({
   title,
   subtitle,
-  contributions,
-  selectedContributionId,
+  activities,
+  selectedActivityId,
   onSelect,
 }: DelegationActivityFeedProps) {
   return (
@@ -32,32 +30,34 @@ export function DelegationActivityFeed({
       </div>
 
       <div className="activity-feed">
-        {contributions.map((contribution) => {
-          const member = getMemberById(contribution.memberId);
+        {activities.map((activity) => {
+          const member = congressDataRepository.getMemberById(activity.memberId);
 
           return (
             <button
-              key={contribution.id}
+              key={activity.id}
               type="button"
               className={`activity-item ${
-                selectedContributionId === contribution.id ? "activity-item-active" : ""
+                selectedActivityId === activity.id ? "activity-item-active" : ""
               }`}
-              onClick={() => onSelect(contribution.id)}
+              onClick={() => onSelect(activity.id)}
             >
               <div className="activity-topline">
                 <span className="activity-member">{member?.name ?? "Member"}</span>
                 <span className="activity-relative">
-                  {getRelativeTimeLabel(contribution.date)}
+                  {getRelativeTimeLabel(activity.date)}
                 </span>
               </div>
-              <strong>{contribution.headline}</strong>
-              <p>{contribution.context.proceduralMeaning}</p>
+              <strong>{activity.headline}</strong>
+              <p>{activity.summary}</p>
               <div className="activity-meta">
-                <span>{formatDisplayDate(contribution.date)}</span>
-                <span>{getContributionTypeLabel(contribution.type)}</span>
-                <span className={`activity-outcome tone-${getOutcomeTone(contribution.outcome)}`}>
-                  {getOutcomeLabel(contribution.outcome)}
-                </span>
+                <span>{formatDisplayDate(activity.date)}</span>
+                <span>{getActivityTypeLabel(activity.type)}</span>
+                {activity.outcomeLabel ? (
+                  <span className="activity-outcome tone-neutral">
+                    {activity.outcomeLabel}
+                  </span>
+                ) : null}
               </div>
             </button>
           );

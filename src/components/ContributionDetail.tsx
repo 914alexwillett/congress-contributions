@@ -8,9 +8,9 @@ import {
   getGlossaryTerms,
   getOutcomeLabel,
 } from "../domain/presentation";
+import { congressDataRepository } from "../services/congressDataRepository";
 import { EvidencePanel } from "./EvidencePanel";
 import { LineageTrack } from "./LineageTrack";
-import { getIssueById } from "../services/curatedRepository";
 
 interface ContributionDetailProps {
   legislator: Legislator;
@@ -150,7 +150,7 @@ export function ContributionDetail({
         </div>
         <div className="version-list">
           {contribution.issueIds.map((issueId) => {
-            const issue = getIssueById(issueId);
+            const issue = congressDataRepository.getIssueById(issueId);
 
             return issue ? (
               <span key={issue.id} className="version-pill">

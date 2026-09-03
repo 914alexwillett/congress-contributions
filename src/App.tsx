@@ -20,23 +20,9 @@ import {
   filterContributions,
 } from "./domain/presentation";
 import type { ContributionFilter } from "./domain/models";
-import {
-  getBillById,
-  getBillForContribution,
-  getBillsForDelegation,
-  getCommitteesById,
-  getConstituentAreaByZip,
-  getContributionsByMember,
-  getContributionsForDelegation,
-  getDelegationByZip,
-  getIssuesById,
-  getMembersById,
-  getRelatedContributionsForMemberAndBill,
-  getSupportedConstituentAreas,
-  isSupportedZip,
-} from "./services/curatedRepository";
+import { congressDataRepository } from "./services/congressDataRepository";
 
-const supportedAreas = getSupportedConstituentAreas();
+const supportedAreas = congressDataRepository.getSupportedConstituentAreas();
 const defaultZip = supportedAreas[0]?.zip ?? "";
 
 function App() {
@@ -44,17 +30,21 @@ function App() {
   const [submittedZip, setSubmittedZip] = useState(defaultZip);
   const [activeView, setActiveView] = useState<TopLevelView>("overview");
   const [selectedLegislatorId, setSelectedLegislatorId] = useState("");
+  const [selectedActivityId, setSelectedActivityId] = useState("");
   const [selectedContributionId, setSelectedContributionId] = useState("");
   const [selectedBillId, setSelectedBillId] = useState("");
   const [activeIssueId, setActiveIssueId] = useState("");
   const [memberFilter, setMemberFilter] = useState<ContributionFilter>("all");
 
-  const selectedArea = getConstituentAreaByZip(submittedZip);
-  const delegation = useMemo(() => getDelegationByZip(submittedZip), [submittedZip]);
+  const selectedArea = congressDataRepository.getConstituentAreaByZip(submittedZip);
+  const delegation = useMemo(
+    () => congressDataRepository.getDelegationByZip(submittedZip),
+    [submittedZip],
+  );
   const delegationMemberIds = delegation.map((member) => member.id);
-  const membersById = getMembersById();
-  const issuesById = getIssuesById();
-  const committeesById = getCommitteesById();
+  const membersById = congressDataRepository.getMembersById();
+  const issuesById = congressDataRepository.getIssuesById();
+  const committeesById = congressDataRepository.getCommitteesById();
 
   useEffect(() => {
     if (!delegation.length) {
@@ -70,17 +60,21 @@ function App() {
   const legislator = delegation.find((entry) => entry.id === selectedLegislatorId);
 
   const allDelegationContributions = useMemo(
-    () => getContributionsForDelegation(delegationMemberIds),
+    () => congressDataRepository.getContributionsForDelegation(delegationMemberIds),
+    [submittedZip, delegationMemberIds.join(",")],
+  );
+  const allDelegationActivity = useMemo(
+    () => congressDataRepository.getActivityRecordsForDelegation(delegationMemberIds),
     [submittedZip, delegationMemberIds.join(",")],
   );
 
   const allDelegationBills = useMemo(
-    () => getBillsForDelegation(delegationMemberIds),
+    () => congressDataRepository.getBillsForDelegation(delegationMemberIds),
     [submittedZip, delegationMemberIds.join(",")],
   );
 
   const allLegislatorContributions = useMemo(
-    () => getContributionsByMember(selectedLegislatorId),
+    () => congressDataRepository.getContributionsByMember(selectedLegislatorId),
     [selectedLegislatorId],
   );
 
@@ -88,6 +82,17 @@ function App() {
     () => filterContributions(allLegislatorContributions, memberFilter),
     [allLegislatorContributions, memberFilter],
   );
+
+  useEffect(() => {
+    if (!allDelegationActivity.length) {
+      setSelectedActivityId("");
+      return;
+    }
+
+    if (!allDelegationActivity.some((entry) => entry.id === selectedActivityId)) {
+      setSelectedActivityId(allDelegationActivity[0].id);
+    }
+  }, [allDelegationActivity, selectedActivityId]);
 
   useEffect(() => {
     if (!allDelegationContributions.length) {
@@ -116,6 +121,7 @@ function App() {
   const selectedContribution = allDelegationContributions.find(
     (entry) => entry.id === selectedContributionId,
   );
+  const selectedActivity = allDelegationActivity.find((entry) => entry.id === selectedActivityId);
 
   useEffect(() => {
     if (selectedContribution) {
@@ -124,20 +130,39 @@ function App() {
     }
   }, [selectedContribution?.id]);
 
+  useEffect(() => {
+    if (!selectedActivity) {
+      return;
+    }
+
+    setSelectedLegislatorId(selectedActivity.memberId);
+
+    if (selectedActivity.relatedContributionId) {
+      setSelectedContributionId(selectedActivity.relatedContributionId);
+    }
+
+    if (selectedActivity.measureId) {
+      setSelectedBillId(selectedActivity.measureId);
+    }
+  }, [selectedActivity?.id]);
+
   const selectedBill =
-    (selectedBillId ? getBillById(selectedBillId) : undefined) ??
-    getBillForContribution(selectedContribution);
+    (selectedBillId ? congressDataRepository.getBillById(selectedBillId) : undefined) ??
+    congressDataRepository.getBillForContribution(selectedContribution);
 
   const memberBillContributions =
     selectedBill && legislator
-      ? getRelatedContributionsForMemberAndBill(legislator.id, selectedBill.id)
+      ? congressDataRepository.getRelatedContributionsForMemberAndBill(
+          legislator.id,
+          selectedBill.id,
+        )
       : [];
 
   const delegationBillContributions = selectedBill
     ? allDelegationContributions.filter((entry) => entry.measureId === selectedBill.id)
     : [];
 
-  const recentDelegationActivity = allDelegationContributions.slice(0, 7);
+  const recentDelegationActivity = allDelegationActivity.slice(0, 7);
   const changeSummary = buildDelegationChangeSummary(
     allDelegationContributions,
     allDelegationBills,
@@ -148,9 +173,9 @@ function App() {
     allDelegationContributions,
     membersById,
   );
-  const activeIssueContributions = activeIssueId
-    ? allDelegationContributions.filter((entry) => entry.issueIds.includes(activeIssueId))
-    : allDelegationContributions.slice(0, 5);
+  const activeIssueActivity = activeIssueId
+    ? allDelegationActivity.filter((entry) => entry.issueIds.includes(activeIssueId))
+    : allDelegationActivity.slice(0, 5);
   const committeePower = legislator
     ? buildCommitteePowerSummaries(
         legislator,
@@ -171,6 +196,31 @@ function App() {
     setSelectedContributionId(contribution.id);
     setSelectedLegislatorId(contribution.memberId);
     setSelectedBillId(contribution.measureId);
+    const relatedActivity = allDelegationActivity.find(
+      (entry) => entry.relatedContributionId === contribution.id,
+    );
+    if (relatedActivity) {
+      setSelectedActivityId(relatedActivity.id);
+    }
+  };
+
+  const selectActivity = (activityId: string) => {
+    const activity = allDelegationActivity.find((entry) => entry.id === activityId);
+
+    if (!activity) {
+      return;
+    }
+
+    setSelectedActivityId(activity.id);
+    setSelectedLegislatorId(activity.memberId);
+
+    if (activity.measureId) {
+      setSelectedBillId(activity.measureId);
+    }
+
+    if (activity.relatedContributionId) {
+      setSelectedContributionId(activity.relatedContributionId);
+    }
   };
 
   return (
@@ -191,13 +241,14 @@ function App() {
         <ZipLookup
           value={zip}
           onChange={setZip}
-          isSupported={isSupportedZip(zip)}
+          isSupported={congressDataRepository.isSupportedZip(zip)}
           supportedAreas={supportedAreas}
           activeAreaZip={selectedArea?.zip}
           onSelectArea={(nextZip) => {
             setZip(nextZip);
             setSubmittedZip(nextZip);
             setActiveView("overview");
+            setSelectedActivityId("");
             setSelectedContributionId("");
             setSelectedBillId("");
             setActiveIssueId("");
@@ -206,6 +257,7 @@ function App() {
           onSubmit={() => {
             setSubmittedZip(zip);
             setActiveView("overview");
+            setSelectedActivityId("");
             setSelectedContributionId("");
             setSelectedBillId("");
             setActiveIssueId("");
@@ -266,9 +318,9 @@ function App() {
                   <DelegationActivityFeed
                     title="Recent legislative activity"
                     subtitle="Structured congressional actions from your House member and senators, not a generic political news feed."
-                    contributions={recentDelegationActivity}
-                    selectedContributionId={selectedContributionId}
-                    onSelect={selectContribution}
+                    activities={recentDelegationActivity}
+                    selectedActivityId={selectedActivityId}
+                    onSelect={selectActivity}
                   />
                   <div className="detail-column">
                     {legislator ? (
@@ -344,9 +396,9 @@ function App() {
                 <DelegationActivityFeed
                   title="All delegation activity"
                   subtitle="A chronological view of structured congressional actions by your delegation."
-                  contributions={allDelegationContributions}
-                  selectedContributionId={selectedContributionId}
-                  onSelect={selectContribution}
+                  activities={allDelegationActivity}
+                  selectedActivityId={selectedActivityId}
+                  onSelect={selectActivity}
                 />
                 <div className="detail-column">
                   {legislator ? (
@@ -397,9 +449,9 @@ function App() {
                         : "Issue-linked activity"
                     }
                     subtitle="Observed legislative attention in the current dataset, not ideology or preference."
-                    contributions={activeIssueContributions}
-                    selectedContributionId={selectedContributionId}
-                    onSelect={selectContribution}
+                    activities={activeIssueActivity}
+                    selectedActivityId={selectedActivityId}
+                    onSelect={selectActivity}
                   />
                   <div className="detail-column">
                     {legislator ? (
