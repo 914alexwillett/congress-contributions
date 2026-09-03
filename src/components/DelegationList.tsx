@@ -1,4 +1,5 @@
 import type { Legislator } from "../domain/models";
+import { LegislatorPortrait } from "./LegislatorPortrait";
 
 interface DelegationListProps {
   legislators: Legislator[];
@@ -30,7 +31,7 @@ export function DelegationList({
             }`}
             onClick={() => onSelect(legislator.id)}
           >
-            <img src={legislator.imageUrl} alt={legislator.name} />
+            <LegislatorPortrait legislator={legislator} />
             <div className="member-copy">
               <strong>{legislator.name}</strong>
               <span>{legislator.officeTitle}</span>

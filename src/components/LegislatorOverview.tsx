@@ -6,6 +6,7 @@ import type {
 import { getContributionCounts } from "../domain/presentation";
 import { ContributionFilters } from "./ContributionFilters";
 import { ContributionList } from "./ContributionList";
+import { LegislatorPortrait } from "./LegislatorPortrait";
 
 interface LegislatorOverviewProps {
   legislator: Legislator;
@@ -31,7 +32,7 @@ export function LegislatorOverview({
   return (
     <section className="panel">
       <div className="legislator-header">
-        <img src={legislator.imageUrl} alt={legislator.name} />
+        <LegislatorPortrait legislator={legislator} />
         <div>
           <div className="eyebrow">Member overview</div>
           <h2>{legislator.name}</h2>

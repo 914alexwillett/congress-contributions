@@ -363,6 +363,24 @@ button:hover {
   border-radius: 18px;
 }
 
+.portrait-fallback {
+  width: 82px;
+  height: 82px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(135deg, #173a4f 0%, #3e6a63 100%);
+  color: #f6f3ea;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  flex: 0 0 82px;
+}
+
+.portrait-fallback span {
+  font-size: 1.1rem;
+}
+
 .member-copy,
 .legislator-header {
   display: flex;

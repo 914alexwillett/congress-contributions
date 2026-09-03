@@ -60,7 +60,8 @@ export const curatedMembers: Legislator[] = [
     state: "Maryland",
     party: "Democratic",
     officeTitle: "Senator",
-    imageUrl: "https://www.congress.gov/img/member/a000382_200.jpg",
+    imageUrl:
+      "https://www.alsobrooks.senate.gov/wp-content/uploads/2025/11/official-portrait-scaled.jpg",
     bio: "Serves Maryland in the U.S. Senate.",
     committeeMemberships: [
       {
