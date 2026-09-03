@@ -185,6 +185,43 @@ export interface LegislativeContribution {
   evidence: EvidenceReference[];
 }
 
+export type ActivityRecordType =
+  | "bill_introduction"
+  | "bill_cosponsorship"
+  | "committee_movement"
+  | "amendment_activity"
+  | "floor_vote"
+  | "bill_status_change"
+  | "other";
+
+export type ActivityChangeTag =
+  | "new_activity"
+  | "bill_introduced"
+  | "cosponsorship_added"
+  | "committee_advanced"
+  | "amendment_adopted"
+  | "amendment_rejected"
+  | "floor_vote_cast"
+  | "bill_became_law"
+  | "bill_passed_chamber";
+
+export interface ActivityRecord {
+  id: string;
+  memberId: string;
+  date: string;
+  type: ActivityRecordType;
+  headline: string;
+  summary: string;
+  proceduralNote?: string;
+  measure?: MeasureReference;
+  measureId?: string;
+  issueIds: string[];
+  outcomeLabel?: string;
+  changeTags: ActivityChangeTag[];
+  evidence: EvidenceReference[];
+  relatedContributionId?: string;
+}
+
 export interface BillContext {
   id: string;
   measure: MeasureReference;
@@ -229,8 +266,9 @@ export interface FutureContextRelationship {
 
 export interface DelegationChangeSummary {
   totalRecentActions: number;
-  adoptedAmendments: number;
   introducedBills: number;
-  billOutcomeAdvances: number;
-  enactedBillsTouched: number;
+  cosponsorshipsAdded: number;
+  committeeAdvances: number;
+  floorVotes: number;
+  billOutcomeChanges: number;
 }
