@@ -590,8 +590,10 @@ button:hover {
 }
 
 .detail-panel {
-  position: sticky;
-  top: 16px;
+  position: static;
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  scrollbar-gutter: stable;
 }
 
 .bill-panel,
@@ -692,6 +694,53 @@ button:hover {
 
 .detail-block {
   margin-top: 20px;
+}
+
+.detail-sections {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.detail-disclosure {
+  background: #fbfcfc;
+  border: 1px solid rgba(16, 39, 63, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.detail-disclosure summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 16px 18px;
+  font-weight: 700;
+  color: #173247;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detail-disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+.detail-disclosure summary::after {
+  content: "+";
+  font-size: 1.1rem;
+  color: #547387;
+}
+
+.detail-disclosure[open] summary::after {
+  content: "−";
+}
+
+.detail-disclosure-body {
+  padding: 0 18px 18px;
+}
+
+.detail-disclosure-copy {
+  color: #476172;
+  margin-bottom: 14px;
 }
 
 .block-heading {
@@ -956,7 +1005,8 @@ button:hover {
   }
 
   .detail-panel {
-    position: static;
+    max-height: none;
+    overflow: visible;
   }
 
   .summary-hero,

@@ -161,56 +161,61 @@ export function ContributionDetail({
         </div>
       </div>
 
-      {contribution.textChange ? (
-        <div className="detail-block">
-          <div className="block-heading">
-            <strong>Text change snapshot</strong>
-            <span>
-              This is shown only where the available record supports a text-change description.
-            </span>
+      <div className="detail-sections">
+        {contribution.textChange ? (
+          <details className="detail-disclosure">
+            <summary>Text change snapshot</summary>
+            <div className="detail-disclosure-body">
+              <p className="detail-disclosure-copy">
+                This is shown only where the available record supports a text-change description.
+              </p>
+              <pre className="diff-card">
+                {contribution.textChange.previousText
+                  ? `- ${contribution.textChange.previousText}\n+ ${
+                      contribution.textChange.proposedText ?? "Proposed text not captured"
+                    }`
+                  : `+ ${contribution.textChange.proposedText ?? "Proposed text not captured"}`}
+                {contribution.textChange.resultingText
+                  ? `\n\nResulting text:\n${contribution.textChange.resultingText}`
+                  : ""}
+              </pre>
+              <p className="reconstruction-note">
+                Reconstruction method: {contribution.textChange.reconstructionMethod ?? "unknown"}.
+                Confidence: {getConfidenceLabel(contribution.textChange.confidence ?? "unknown")}.
+              </p>
+            </div>
+          </details>
+        ) : null}
+
+        <details className="detail-disclosure">
+          <summary>Procedural glossary</summary>
+          <div className="detail-disclosure-body">
+            <p className="detail-disclosure-copy">
+              Definitions come from a shared glossary rather than one-off component text.
+            </p>
+            <div className="glossary-grid">
+              {glossaryTerms.map((term) => (
+                <article key={term.id} className="glossary-card">
+                  <strong>{term.label}</strong>
+                  <p>{term.conciseDefinition}</p>
+                  <span>{term.beginnerExplanation}</span>
+                </article>
+              ))}
+            </div>
           </div>
-          <pre className="diff-card">
-            {contribution.textChange.previousText
-              ? `- ${contribution.textChange.previousText}\n+ ${
-                  contribution.textChange.proposedText ?? "Proposed text not captured"
-                }`
-              : `+ ${contribution.textChange.proposedText ?? "Proposed text not captured"}`}
-            {contribution.textChange.resultingText
-              ? `\n\nResulting text:\n${contribution.textChange.resultingText}`
-              : ""}
-          </pre>
-          <p className="reconstruction-note">
-            Reconstruction method: {contribution.textChange.reconstructionMethod ?? "unknown"}.
-            Confidence: {getConfidenceLabel(contribution.textChange.confidence ?? "unknown")}.
-          </p>
-        </div>
-      ) : null}
+        </details>
 
-      <div className="detail-block">
-        <div className="block-heading">
-          <strong>What do these procedural terms mean?</strong>
-          <span>Definitions come from a shared glossary rather than one-off component text.</span>
-        </div>
-        <div className="glossary-grid">
-          {glossaryTerms.map((term) => (
-            <article key={term.id} className="glossary-card">
-              <strong>{term.label}</strong>
-              <p>{term.conciseDefinition}</p>
-              <span>{term.beginnerExplanation}</span>
-            </article>
-          ))}
-        </div>
+        <details className="detail-disclosure">
+          <summary>Attribution and evidence</summary>
+          <div className="detail-disclosure-body">
+            <p className="detail-disclosure-copy">
+              The app separates formal action from unsupported assumptions about authorship.
+            </p>
+            <p className="attribution-copy">{contribution.attribution.statement}</p>
+            <EvidencePanel evidence={contribution.evidence} />
+          </div>
+        </details>
       </div>
-
-      <div className="detail-block">
-        <div className="block-heading">
-          <strong>Attribution caveat</strong>
-          <span>The app separates formal action from unsupported assumptions about authorship.</span>
-        </div>
-        <p className="attribution-copy">{contribution.attribution.statement}</p>
-      </div>
-
-      <EvidencePanel evidence={contribution.evidence} />
     </section>
   );
 }
