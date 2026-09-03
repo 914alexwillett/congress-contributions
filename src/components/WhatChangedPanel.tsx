@@ -20,20 +20,24 @@ export function WhatChangedPanel({ summary }: WhatChangedPanelProps) {
           <span>recent delegation actions</span>
         </article>
         <article className="change-card">
-          <strong>{summary.adoptedAmendments}</strong>
-          <span>adopted amendments</span>
-        </article>
-        <article className="change-card">
           <strong>{summary.introducedBills}</strong>
           <span>bills introduced</span>
         </article>
         <article className="change-card">
-          <strong>{summary.billOutcomeAdvances}</strong>
-          <span>actions that advanced to chamber passage or law</span>
+          <strong>{summary.cosponsorshipsAdded}</strong>
+          <span>cosponsorships added</span>
         </article>
         <article className="change-card">
-          <strong>{summary.enactedBillsTouched}</strong>
-          <span>enacted bills touched by the delegation</span>
+          <strong>{summary.committeeAdvances}</strong>
+          <span>committee-linked advances</span>
+        </article>
+        <article className="change-card">
+          <strong>{summary.floorVotes}</strong>
+          <span>floor votes in the loaded record</span>
+        </article>
+        <article className="change-card">
+          <strong>{summary.billOutcomeChanges}</strong>
+          <span>bills currently at chamber passage or law</span>
         </article>
       </div>
     </section>

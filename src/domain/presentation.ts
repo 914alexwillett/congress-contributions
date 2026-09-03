@@ -219,12 +219,20 @@ export function buildDelegationChangeSummary(
 
   return {
     totalRecentActions: recentActions.length,
-    adoptedAmendments: recentActions.filter((entry) => entry.outcome === "adopted").length,
     introducedBills: recentActions.filter((entry) => entry.type === "bill_sponsorship").length,
-    billOutcomeAdvances: recentActions.filter((entry) =>
-      ["passed_chamber", "became_law"].includes(entry.outcome),
+    cosponsorshipsAdded: recentActions.filter((entry) => entry.type === "cosponsorship").length,
+    committeeAdvances: recentActions.filter(
+      (entry) =>
+        entry.type === "committee_action" ||
+        (entry.venue?.type === "committee" &&
+          ["adopted", "passed_chamber", "became_law"].includes(entry.outcome)),
     ).length,
-    enactedBillsTouched: bills.filter((bill) => bill.becameLaw === true).length,
+    floorVotes: recentActions.filter((entry) =>
+      ["procedural_vote", "final_passage_vote"].includes(entry.type),
+    ).length,
+    billOutcomeChanges: bills.filter((bill) =>
+      ["passed_chamber", "became_law"].includes(bill.legislativeState),
+    ).length,
   };
 }
 
