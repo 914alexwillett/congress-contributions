@@ -269,9 +269,10 @@ Activity should be grounded in structured congressional actions.
 
 ## 10. Current Geographic Scope
 
-The current vertical slice supports ZIP code:
+The current vertical slice supports ZIP codes:
 
-`20852`
+* `20852`
+* `94102`
 
 with:
 
@@ -280,6 +281,11 @@ with:
 * Angela Alsobrooks — Senate — Maryland.
 
 Do not prematurely generalize nationally at the expense of depth.
+Supported delegations currently include:
+
+* Nancy Pelosi - House - California 11th District;
+* Alex Padilla - Senate - California;
+* Adam Schiff - Senate - California.
 
 Follow the project principle:
 
@@ -484,7 +490,7 @@ Use `PLANS.md` for the authoritative current task sequence.
 
 At the present stage, expect work to prioritize:
 
-* richer and more current activity for the three-member Maryland delegation;
+* richer and more current activity for the supported Maryland and California delegations;
 * recent activity / “What changed?” experiences;
 * stronger legislative contribution detail;
 * contribution outcome vs bill outcome;

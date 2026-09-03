@@ -487,6 +487,438 @@ export const curatedContributionSeeds: CuratedContributionSeed[] = [
     ],
   },
   {
+    id: "pelosi-hr7147-vote",
+    memberId: "nancy-pelosi",
+    chamber: "house",
+    type: "final_passage_vote",
+    measureId: "bill-hr7147",
+    date: "2026-01-22",
+    venue: { type: "floor", name: "House floor" },
+    headline: "Pelosi publicly recorded a no vote on the Homeland Security Appropriations Act of 2026.",
+    issueIds: ["appropriations", "immigration"],
+    glossaryTermIds: ["final_passage", "roll_call_vote", "appropriations"],
+    actionText:
+      "She stated that she was voting against H.R.7147 during House consideration of the annual Homeland Security appropriations measure.",
+    immediateConsequence:
+      "The loaded source set establishes Pelosi's vote position, but this POC does not yet reconstruct the chamber's full vote record for the bill.",
+    nextStep:
+      "A fuller implementation would connect this position to the House roll call and the bill's later legislative path.",
+    outcome: "unknown",
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: null,
+      senate: null,
+      enacted: null,
+    },
+    attribution: {
+      statement:
+        "Pelosi's official office statement directly supports her vote position on H.R.7147, but the current seed set does not add the complete official roll-call outcome.",
+      confidence: "high",
+      literalDraftingKnown: false,
+    },
+    evidence: [
+      {
+        label: "Pelosi statement on H.R.7147",
+        sourceRecordId: "source-pelosi-hr7147",
+        sourceType: "member_office",
+        supports: "Pelosi's stated vote position on the bill.",
+      },
+    ],
+  },
+  {
+    id: "pelosi-hr1329-letter",
+    memberId: "nancy-pelosi",
+    chamber: "house",
+    type: "other_documented_change",
+    measureId: "bill-hr1329",
+    date: "2026-04-17",
+    venue: { type: "other", name: "House leadership letter" },
+    headline: "Pelosi joined a House Democratic push to restore the bipartisan museum package tied to H.R.1329 and H.R.1330.",
+    issueIds: ["history-culture", "civil-rights"],
+    glossaryTermIds: ["procedural_vote"],
+    actionText:
+      "She joined 145 House Democrats in sending a letter urging House leadership to restore the longstanding bipartisan version of the Women's History Museum bill and pair it with the Latino Museum bill.",
+    immediateConsequence:
+      "The letter made the caucus position legible in the legislative fight, but this seed record does not claim that it resolved the bills' fate.",
+    nextStep:
+      "The next relevant step would be later House committee or floor action, which is not yet loaded here.",
+    outcome: "unknown",
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: null,
+      senate: null,
+      enacted: null,
+    },
+    attribution: {
+      statement:
+        "Pelosi's office directly documents her participation in the letter, while the broader legislative effect remains unresolved in this POC.",
+      confidence: "high",
+      literalDraftingKnown: false,
+    },
+    evidence: [
+      {
+        label: "Pelosi press release on the museum-bill letter",
+        sourceRecordId: "source-pelosi-hr1329-letter",
+        sourceType: "member_office",
+        supports: "Pelosi's participation in the House Democratic intervention tied to H.R.1329 and H.R.1330.",
+      },
+    ],
+  },
+  {
+    id: "pelosi-hr8595-amendment",
+    memberId: "nancy-pelosi",
+    chamber: "house",
+    type: "procedural_vote",
+    measureId: "bill-hr8595",
+    date: "2026-07-15",
+    venue: { type: "floor", name: "House floor" },
+    headline: "Pelosi said she would vote yes on Massie Amendment #8 during House consideration of H.R.8595.",
+    issueIds: ["appropriations"],
+    glossaryTermIds: ["roll_call_vote", "appropriations", "procedural_vote"],
+    actionText:
+      "She publicly stated support for Massie Amendment #8 during floor consideration of the fiscal year 2027 State and national-security appropriations bill.",
+    immediateConsequence:
+      "The loaded source set confirms Pelosi's floor position on the amendment, but it does not yet reconstruct whether the amendment was adopted.",
+    nextStep:
+      "A fuller record would connect this statement to the amendment vote result and the bill's later appropriations path.",
+    outcome: "unknown",
+    lineage: {
+      proposed: true,
+      committee: true,
+      house: null,
+      senate: null,
+      enacted: null,
+    },
+    attribution: {
+      statement:
+        "Pelosi's official statement supports her position on the amendment. The amendment's final disposition is not yet loaded in this seed set.",
+      confidence: "high",
+      literalDraftingKnown: false,
+    },
+    evidence: [
+      {
+        label: "Pelosi statement on Massie Amendment #8",
+        sourceRecordId: "source-pelosi-hr8595-amendment",
+        sourceType: "member_office",
+        supports: "Pelosi's stated position during amendment consideration.",
+      },
+    ],
+  },
+  {
+    id: "padilla-shield-act",
+    memberId: "alex-padilla",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-shield-our-elections",
+    date: "2026-07-23",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Padilla introduced the SHIELD Our Elections Act.",
+    issueIds: ["elections-democracy", "civil-rights", "judiciary"],
+    committeeIds: ["senate-rules"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation to create stronger federal enforcement tools against election interference and protect ballots and election administration.",
+    nextStep:
+      "The next formal step would be committee consideration and any later Senate action.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Padilla's official Senate press release directly supports introduction of the SHIELD Our Elections Act and describes its purpose.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Padilla press release on the SHIELD Our Elections Act",
+        sourceRecordId: "source-padilla-shield",
+        sourceType: "member_office",
+        supports: "Bill introduction, title, and purpose.",
+      },
+    ],
+  },
+  {
+    id: "padilla-land-of-free",
+    memberId: "alex-padilla",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-land-of-free",
+    date: "2026-06-16",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Padilla introduced the Land of the Free Act.",
+    issueIds: ["immigration", "civil-rights", "judiciary"],
+    committeeIds: ["senate-judiciary"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation to repeal a deportation provision that the sponsors describe as threatening protected speech and due process.",
+    nextStep:
+      "The next formal step would be Senate Judiciary consideration.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Padilla's official press release directly supports the bill's introduction and stated civil-liberties purpose.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Padilla press release on the Land of the Free Act",
+        sourceRecordId: "source-padilla-land-of-free",
+        sourceType: "member_office",
+        supports: "Bill introduction, title, and purpose.",
+      },
+    ],
+  },
+  {
+    id: "padilla-fair-elections",
+    memberId: "alex-padilla",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-fair-elections",
+    date: "2026-06-12",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Padilla introduced the FAIR Elections Act.",
+    issueIds: ["elections-democracy", "technology", "civil-rights"],
+    committeeIds: ["senate-rules"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation aimed at blocking AI-enabled voter suppression, election misinformation, and wrongful voter-roll removals.",
+    nextStep:
+      "The next formal step would be committee consideration in the Senate.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Padilla's official press release directly supports the FAIR Elections Act's introduction and stated election-security goals.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Padilla press release on the FAIR Elections Act",
+        sourceRecordId: "source-padilla-fair-elections",
+        sourceType: "member_office",
+        supports: "Bill introduction, title, and purpose.",
+      },
+    ],
+  },
+  {
+    id: "padilla-santini-burton",
+    memberId: "alex-padilla",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-santini-burton",
+    date: "2026-01-27",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Padilla introduced the Santini-Burton Modernization Act with California and Nevada senators.",
+    issueIds: ["environment-climate", "transportation-environment"],
+    committeeIds: ["senate-epw"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation to expand how existing Tahoe Basin funds can be used for conservation, land management, recreation, and wildfire-risk work.",
+    nextStep:
+      "The next formal step would be committee consideration and any later bipartisan movement in the Senate.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Padilla's official office press release directly supports introduction of the Santini-Burton Modernization Act and its stated environmental goals.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Padilla press release on the Santini-Burton Modernization Act",
+        sourceRecordId: "source-padilla-tahoe",
+        sourceType: "member_office",
+        supports: "Bill introduction, title, and purpose.",
+      },
+    ],
+  },
+  {
+    id: "schiff-s5368",
+    memberId: "adam-schiff",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-s5368",
+    date: "2026-08-25",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Schiff introduced the Water Cyber Shield Act of 2026.",
+    issueIds: ["technology", "environment-climate"],
+    committeeIds: ["senate-epw"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation focused on cybersecurity protections for water systems and related infrastructure resilience.",
+    nextStep:
+      "The next formal step shown in the loaded source set is referral to the Environment and Public Works Committee.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5368.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Schiff legislation page listing S.5368",
+        sourceRecordId: "source-schiff-water-cyber",
+        sourceType: "member_office",
+        supports: "Bill number, title, introduction date, and referral.",
+      },
+    ],
+  },
+  {
+    id: "schiff-s5276",
+    memberId: "adam-schiff",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-s5276",
+    date: "2026-08-24",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Schiff introduced the Reducing Red Tape for Rebuilding Act.",
+    issueIds: ["housing-disaster", "workforce-government"],
+    committeeIds: ["senate-hsgac"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation aimed at reducing procedural barriers that slow rebuilding and disaster recovery.",
+    nextStep:
+      "The next formal step shown in the loaded source set is referral to Homeland Security and Governmental Affairs.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5276.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Schiff legislation page listing S.5276",
+        sourceRecordId: "source-schiff-red-tape",
+        sourceType: "member_office",
+        supports: "Bill number, title, introduction date, and referral.",
+      },
+    ],
+  },
+  {
+    id: "schiff-s5234",
+    memberId: "adam-schiff",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-s5234",
+    date: "2026-08-24",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Schiff introduced the Human-Wildlife Conflict Reduction Act of 2026.",
+    issueIds: ["environment-climate", "transportation-environment"],
+    committeeIds: ["senate-epw"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation aimed at reducing human-wildlife conflict through federal conservation and land-management tools.",
+    nextStep:
+      "The next formal step shown in the loaded source set is referral to the Environment and Public Works Committee.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5234.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Schiff legislation page listing S.5234",
+        sourceRecordId: "source-schiff-human-wildlife",
+        sourceType: "member_office",
+        supports: "Bill number, title, introduction date, and referral.",
+      },
+    ],
+  },
+  {
+    id: "schiff-s5324",
+    memberId: "adam-schiff",
+    chamber: "senate",
+    type: "bill_sponsorship",
+    measureId: "bill-s5324",
+    date: "2026-08-19",
+    venue: { type: "other", name: "Senate introduction" },
+    headline: "Schiff introduced the Fairness to Freedom Act of 2026.",
+    issueIds: ["civil-rights", "judiciary"],
+    committeeIds: ["senate-judiciary"],
+    glossaryTermIds: ["bill_sponsorship", "authorization"],
+    actionText:
+      "He introduced legislation in a civil-liberties and legal-rights space, with the current source set showing referral to Judiciary.",
+    nextStep:
+      "The next formal step shown in the loaded source set is Senate Judiciary consideration.",
+    outcome: "introduced",
+    lineage: {
+      proposed: true,
+      committee: null,
+      house: null,
+      senate: null,
+      enacted: false,
+    },
+    attribution: {
+      statement:
+        "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5324.",
+      confidence: "high",
+      literalDraftingKnown: null,
+    },
+    evidence: [
+      {
+        label: "Schiff legislation page listing S.5324",
+        sourceRecordId: "source-schiff-fairness-to-freedom",
+        sourceType: "member_office",
+        supports: "Bill number, title, introduction date, and referral.",
+      },
+    ],
+  },
+  {
     id: "alsobrooks-s3556",
     memberId: "angela-alsobrooks",
     chamber: "senate",

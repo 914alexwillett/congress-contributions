@@ -98,6 +98,15 @@ export interface IssueArea {
   description: string;
 }
 
+export interface ConstituentArea {
+  zip: string;
+  label: string;
+  city: string;
+  state: string;
+  summary: string;
+  memberIds: string[];
+}
+
 export interface CommitteeContext {
   id: string;
   chamber: Chamber;

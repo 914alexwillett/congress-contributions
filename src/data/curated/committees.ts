@@ -77,6 +77,21 @@ export const curatedCommittees: CommitteeContext[] = [
     sourceRecordIds: ["source-vanhollen-about"],
   },
   {
+    id: "senate-rules",
+    chamber: "senate",
+    name: "Senate Rules and Administration Committee",
+    purpose:
+      "Handles federal election administration, Senate procedure, and internal congressional operations.",
+    whyItMatters:
+      "This committee shapes how federal elections are administered and how the Senate's own institutional rules operate.",
+    responsibilities: [
+      "Federal election administration",
+      "Senate procedure and internal operations",
+      "Oversight of Capitol-related administration",
+    ],
+    sourceRecordIds: ["source-padilla-committees"],
+  },
+  {
     id: "senate-epw",
     chamber: "senate",
     name: "Senate Environment and Public Works Committee",
@@ -90,6 +105,21 @@ export const curatedCommittees: CommitteeContext[] = [
       "Transportation-related environmental issues",
     ],
     sourceRecordIds: ["source-alsobrooks-about"],
+  },
+  {
+    id: "senate-energy",
+    chamber: "senate",
+    name: "Senate Energy and Natural Resources Committee",
+    purpose:
+      "Handles energy policy, public lands, natural resources, and related infrastructure resilience questions.",
+    whyItMatters:
+      "Members on Energy and Natural Resources can shape federal clean-energy, land-management, and resilience legislation before floor consideration.",
+    responsibilities: [
+      "Energy systems and grid policy",
+      "Public lands and natural resources",
+      "Climate resilience and federal resource management",
+    ],
+    sourceRecordIds: ["source-padilla-committees"],
   },
   {
     id: "senate-aging",
@@ -150,5 +180,35 @@ export const curatedCommittees: CommitteeContext[] = [
       "Civil liberties and immigration",
     ],
     sourceRecordIds: ["source-s123"],
+  },
+  {
+    id: "senate-agriculture",
+    chamber: "senate",
+    name: "Senate Agriculture, Nutrition, and Forestry Committee",
+    purpose:
+      "Handles agriculture, nutrition assistance, forestry, food systems, and related rural policy.",
+    whyItMatters:
+      "This committee helps shape farm, nutrition, and food-system legislation that can strongly affect California's agriculture and food-security interests.",
+    responsibilities: [
+      "Agriculture and food systems",
+      "Nutrition assistance and food security",
+      "Forestry and natural-resource management",
+    ],
+    sourceRecordIds: ["source-schiff-committees"],
+  },
+  {
+    id: "senate-small-business",
+    chamber: "senate",
+    name: "Senate Small Business and Entrepreneurship Committee",
+    purpose:
+      "Oversees small-business programs, federal lending support, and entrepreneurship policy.",
+    whyItMatters:
+      "Members here can influence how federal programs support small businesses, including disaster recovery and access to capital.",
+    responsibilities: [
+      "Small Business Administration oversight",
+      "Capital access and lending policy",
+      "Small-business disaster support",
+    ],
+    sourceRecordIds: ["source-schiff-committees"],
   },
 ];

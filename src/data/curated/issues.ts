@@ -73,4 +73,28 @@ export const curatedIssues: IssueArea[] = [
     description:
       "Legislation involving equal treatment, civil liberties, and legal protections.",
   },
+  {
+    id: "elections-democracy",
+    label: "Elections and democracy",
+    description:
+      "Legislation involving election administration, voting access, ballot security, and democratic safeguards.",
+  },
+  {
+    id: "immigration",
+    label: "Immigration",
+    description:
+      "Legislation involving immigration enforcement, due process, visas, deportation, or border-entry procedures.",
+  },
+  {
+    id: "housing-disaster",
+    label: "Housing and disaster resilience",
+    description:
+      "Legislation involving housing stability, disaster recovery, insurance resilience, or rebuilding capacity.",
+  },
+  {
+    id: "environment-climate",
+    label: "Environment and climate",
+    description:
+      "Legislation involving environmental protection, climate resilience, public lands, or pollution safeguards.",
+  },
 ];

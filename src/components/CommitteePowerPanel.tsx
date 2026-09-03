@@ -24,44 +24,50 @@ export function CommitteePowerPanel({
         before the full chamber acts. These cards connect structure to observable action.
       </p>
 
-      <div className="committee-context-grid">
-        {items.map(({ membership, committee, relatedContributions }) =>
-          committee ? (
-            <article key={committee.id} className="committee-context-card">
-              <div className="committee-context-top">
-                <strong>{committee.name}</strong>
-                <span>{membership.role}</span>
-              </div>
-              <p>{committee.purpose}</p>
-              <p className="committee-why">{committee.whyItMatters}</p>
-              <ul className="committee-list">
-                {committee.responsibilities.map((responsibility) => (
-                  <li key={responsibility}>{responsibility}</li>
-                ))}
-              </ul>
-              {relatedContributions.length ? (
-                <div className="committee-recent">
-                  <span>Recent activity here</span>
-                  {relatedContributions.slice(0, 2).map((contribution) => (
-                    <button
-                      key={contribution.id}
-                      type="button"
-                      className="committee-activity-link"
-                      onClick={() => onSelectContribution(contribution.id)}
-                    >
-                      {contribution.headline}
-                    </button>
+      {items.length ? (
+        <div className="committee-context-grid">
+          {items.map(({ membership, committee, relatedContributions }) =>
+            committee ? (
+              <article key={committee.id} className="committee-context-card">
+                <div className="committee-context-top">
+                  <strong>{committee.name}</strong>
+                  <span>{membership.role}</span>
+                </div>
+                <p>{committee.purpose}</p>
+                <p className="committee-why">{committee.whyItMatters}</p>
+                <ul className="committee-list">
+                  {committee.responsibilities.map((responsibility) => (
+                    <li key={responsibility}>{responsibility}</li>
                   ))}
-                </div>
-              ) : (
-                <div className="committee-recent">
-                  <span>No linked contribution records are loaded yet for {legislator.name} in this committee context.</span>
-                </div>
-              )}
-            </article>
-          ) : null,
-        )}
-      </div>
+                </ul>
+                {relatedContributions.length ? (
+                  <div className="committee-recent">
+                    <span>Recent activity here</span>
+                    {relatedContributions.slice(0, 2).map((contribution) => (
+                      <button
+                        key={contribution.id}
+                        type="button"
+                        className="committee-activity-link"
+                        onClick={() => onSelectContribution(contribution.id)}
+                      >
+                        {contribution.headline}
+                      </button>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="committee-recent">
+                    <span>No linked contribution records are loaded yet for {legislator.name} in this committee context.</span>
+                  </div>
+                )}
+              </article>
+            ) : null,
+          )}
+        </div>
+      ) : (
+        <p className="detail-summary">
+          Committee-power context is not yet loaded for this member in the current curated dataset.
+        </p>
+      )}
     </section>
   );
 }

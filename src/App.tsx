@@ -25,16 +25,19 @@ import {
   getBillForContribution,
   getBillsForDelegation,
   getCommitteesById,
+  getConstituentAreaByZip,
   getContributionsByMember,
   getContributionsForDelegation,
   getDelegationByZip,
   getIssuesById,
   getMembersById,
   getRelatedContributionsForMemberAndBill,
+  getSupportedConstituentAreas,
   isSupportedZip,
 } from "./services/curatedRepository";
 
-const defaultZip = "20852";
+const supportedAreas = getSupportedConstituentAreas();
+const defaultZip = supportedAreas[0]?.zip ?? "";
 
 function App() {
   const [zip, setZip] = useState(defaultZip);
@@ -46,6 +49,7 @@ function App() {
   const [activeIssueId, setActiveIssueId] = useState("");
   const [memberFilter, setMemberFilter] = useState<ContributionFilter>("all");
 
+  const selectedArea = getConstituentAreaByZip(submittedZip);
   const delegation = useMemo(() => getDelegationByZip(submittedZip), [submittedZip]);
   const delegationMemberIds = delegation.map((member) => member.id);
   const membersById = getMembersById();
@@ -188,9 +192,23 @@ function App() {
           value={zip}
           onChange={setZip}
           isSupported={isSupportedZip(zip)}
+          supportedAreas={supportedAreas}
+          activeAreaZip={selectedArea?.zip}
+          onSelectArea={(nextZip) => {
+            setZip(nextZip);
+            setSubmittedZip(nextZip);
+            setActiveView("overview");
+            setSelectedContributionId("");
+            setSelectedBillId("");
+            setActiveIssueId("");
+            setMemberFilter("all");
+          }}
           onSubmit={() => {
             setSubmittedZip(zip);
             setActiveView("overview");
+            setSelectedContributionId("");
+            setSelectedBillId("");
+            setActiveIssueId("");
             setMemberFilter("all");
           }}
         />
@@ -202,11 +220,15 @@ function App() {
             <section className="panel summary-hero">
               <div>
                 <div className="eyebrow">Your federal delegation</div>
-                <h2>Representation should be understandable between elections</h2>
+                <h2>
+                  {selectedArea
+                    ? `${selectedArea.city}, ${selectedArea.state}`
+                    : "Representation should be understandable between elections"}
+                </h2>
                 <p className="detail-summary">
-                  This view emphasizes ongoing congressional activity, what changed,
-                  what bills are moving, what issues are receiving attention, and
-                  which institutional positions shape influence.
+                  {selectedArea
+                    ? `This constituent view emphasizes ongoing congressional activity, what changed, which bills are moving, what issues are receiving attention, and which institutional positions shape influence for ${selectedArea.city}.`
+                    : "This view emphasizes ongoing congressional activity, what changed, what bills are moving, what issues are receiving attention, and which institutional positions shape influence."}
                 </p>
               </div>
               <div className="summary-hero-stats">
@@ -228,6 +250,7 @@ function App() {
             {(activeView === "overview" || activeView === "delegation") && (
               <DelegationList
                 legislators={delegation}
+                areaLabel={selectedArea?.label ?? submittedZip}
                 selectedId={selectedLegislatorId}
                 onSelect={(id) => {
                   setSelectedLegislatorId(id);
@@ -397,8 +420,8 @@ function App() {
           <section className="panel">
             <h2>ZIP code not yet supported</h2>
             <p>
-              This proof of concept intentionally supports only 20852 so the
-              delegation and evidence remain easy to inspect.
+              This proof of concept currently supports a small set of curated
+              constituent areas so the delegation and evidence remain easy to inspect.
             </p>
           </section>
         )}

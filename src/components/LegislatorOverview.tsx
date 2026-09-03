@@ -74,13 +74,19 @@ export function LegislatorOverview({
           <strong>Current committee memberships</strong>
           <span>Drawn from official member office pages or chamber records.</span>
         </div>
-        <ul className="committee-list">
-          {legislator.committeeMemberships.map((committee) => (
-            <li key={committee.committeeName}>
-              <strong>{committee.role}</strong> - {committee.committeeName}
-            </li>
-          ))}
-        </ul>
+        {legislator.committeeMemberships.length ? (
+          <ul className="committee-list">
+            {legislator.committeeMemberships.map((committee) => (
+              <li key={committee.committeeName}>
+                <strong>{committee.role}</strong> - {committee.committeeName}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="bio-copy">
+            Committee context is not yet loaded for this member in the current curated slice.
+          </p>
+        )}
       </div>
 
       <ContributionFilters

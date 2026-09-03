@@ -20,11 +20,10 @@ The next stage is:
 
 > Can we make congressional representation feel continuously observable and understandable between elections?
 
-The application currently remains intentionally narrow around ZIP code `20852` and three federal legislators:
+The application currently remains intentionally narrow around two curated ZIP codes and six federal legislators:
 
-* Jamie Raskin;
-* Chris Van Hollen;
-* Angela Alsobrooks.
+* `20852`: Jamie Raskin, Chris Van Hollen, Angela Alsobrooks;
+* `94102`: Nancy Pelosi, Alex Padilla, Adam Schiff.
 
 The next major gains should come from **depth, recency, and context**, not national geographic expansion.
 
@@ -57,7 +56,7 @@ Transform the existing member/profile-oriented POC into an experience centered m
 
 ## Success Criteria
 
-A user entering `20852` should be able to:
+A user entering a supported ZIP such as `20852` or `94102` should be able to:
 
 1. See the three-member federal delegation.
 2. See meaningful recent activity without opening each member individually.
@@ -84,7 +83,10 @@ Add substantially more recent records for:
 
 * Jamie Raskin;
 * Chris Van Hollen;
-* Angela Alsobrooks.
+* Angela Alsobrooks;
+* Nancy Pelosi;
+* Alex Padilla;
+* Adam Schiff.
 
 Target a useful working dataset rather than an arbitrary maximum.
 

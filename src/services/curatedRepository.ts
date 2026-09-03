@@ -1,7 +1,11 @@
 import { curatedBills } from "../data/curated/bills";
 import { curatedCommittees } from "../data/curated/committees";
 import { buildCuratedContributions } from "../data/curated/contributions";
-import { curatedDelegationsByZip, supportedZipCodes } from "../data/curated/delegations";
+import {
+  curatedConstituentAreas,
+  curatedDelegationsByZip,
+  supportedZipCodes,
+} from "../data/curated/delegations";
 import { curatedInfluenceSnapshots } from "../data/curated/influence";
 import { curatedIssues } from "../data/curated/issues";
 import { curatedMembers } from "../data/curated/members";
@@ -46,6 +50,14 @@ const influenceSnapshotsByMember = Object.fromEntries(
 
 export function getSupportedZipCodes() {
   return supportedZipCodes;
+}
+
+export function getSupportedConstituentAreas() {
+  return curatedConstituentAreas;
+}
+
+export function getConstituentAreaByZip(zip: string) {
+  return curatedConstituentAreas.find((area) => area.zip === zip);
 }
 
 export function isSupportedZip(zip: string) {

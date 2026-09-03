@@ -47,13 +47,21 @@ The app is an evidence interface, not a political recommender.
 
 ## Current Scope
 
-The current vertical slice supports only ZIP code `20852`.
+The current vertical slice supports two ZIP codes:
 
-That ZIP maps to:
+- `20852`
+- `94102`
 
-- Jamie Raskin, House, Maryland 8th District
-- Chris Van Hollen, Senate, Maryland
-- Angela Alsobrooks, Senate, Maryland
+Those ZIPs currently map to:
+
+- `20852`
+  - Jamie Raskin, House, Maryland 8th District
+  - Chris Van Hollen, Senate, Maryland
+  - Angela Alsobrooks, Senate, Maryland
+- `94102`
+  - Nancy Pelosi, House, California 11th District
+  - Alex Padilla, Senate, California
+  - Adam Schiff, Senate, California
 
 This limited geography is intentional. The product should expand vertically before expanding universally.
 

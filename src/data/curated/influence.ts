@@ -20,6 +20,63 @@ export interface InfluenceContextSnapshot {
 
 export const curatedInfluenceSnapshots: InfluenceContextSnapshot[] = [
   {
+    memberId: "nancy-pelosi",
+    campaignFinance: {
+      loadedRecords: 0,
+      summary:
+        "No FEC-backed campaign-finance relationships are loaded yet in this California constituent slice.",
+    },
+    lobbying: {
+      loadedRecords: 0,
+      summary:
+        "No lobbying-disclosure filings are loaded yet for Pelosi or the currently selected bills.",
+    },
+    federalSpending: {
+      loadedRecords: 0,
+      summary:
+        "No USAspending-linked award context is loaded yet for this member view.",
+    },
+    relationships: [],
+  },
+  {
+    memberId: "alex-padilla",
+    campaignFinance: {
+      loadedRecords: 0,
+      summary:
+        "No FEC-backed campaign-finance relationships are loaded yet in this California constituent slice.",
+    },
+    lobbying: {
+      loadedRecords: 0,
+      summary:
+        "No lobbying-disclosure filings are loaded yet for Padilla or the currently selected bills.",
+    },
+    federalSpending: {
+      loadedRecords: 0,
+      summary:
+        "No USAspending-linked award context is loaded yet for this member or bill view.",
+    },
+    relationships: [],
+  },
+  {
+    memberId: "adam-schiff",
+    campaignFinance: {
+      loadedRecords: 0,
+      summary:
+        "No FEC-backed campaign-finance relationships are loaded yet in this California constituent slice.",
+    },
+    lobbying: {
+      loadedRecords: 0,
+      summary:
+        "No lobbying-disclosure filings are loaded yet for Schiff or the currently selected bills.",
+    },
+    federalSpending: {
+      loadedRecords: 0,
+      summary:
+        "No USAspending-linked award context is loaded yet for this member or bill view.",
+    },
+    relationships: [],
+  },
+  {
     memberId: "jamie-raskin",
     campaignFinance: {
       loadedRecords: 0,

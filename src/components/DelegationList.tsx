@@ -3,12 +3,14 @@ import { LegislatorPortrait } from "./LegislatorPortrait";
 
 interface DelegationListProps {
   legislators: Legislator[];
+  areaLabel: string;
   selectedId: string;
   onSelect: (id: string) => void;
 }
 
 export function DelegationList({
   legislators,
+  areaLabel,
   selectedId,
   onSelect,
 }: DelegationListProps) {
@@ -17,7 +19,7 @@ export function DelegationList({
       <div className="section-heading">
         <div>
           <div className="eyebrow">Federal delegation</div>
-          <h2>20852 resolves to three federal representatives in this POC</h2>
+          <h2>{areaLabel} resolves to this federal delegation in the current POC</h2>
         </div>
       </div>
 

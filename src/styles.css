@@ -194,6 +194,64 @@ h3 {
   margin-top: 24px;
 }
 
+.supported-areas {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.supported-areas-label {
+  font-size: 0.88rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #dbe7ea;
+}
+
+.supported-area-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.supported-area-card {
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.1);
+  color: #f4f6f3;
+  padding: 16px;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.supported-area-card strong,
+.supported-area-card span,
+.supported-area-card p {
+  display: block;
+}
+
+.supported-area-card strong {
+  margin-bottom: 4px;
+}
+
+.supported-area-card span {
+  color: #d9e7ea;
+  font-size: 0.85rem;
+}
+
+.supported-area-card p {
+  margin: 10px 0 0;
+  color: #edf3f1;
+  font-size: 0.92rem;
+}
+
+.supported-area-card-active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.34);
+  box-shadow:
+    0 14px 30px rgba(10, 18, 27, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
 .field {
   display: grid;
   gap: 8px;

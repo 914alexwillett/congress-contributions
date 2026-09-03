@@ -1,8 +1,13 @@
+import type { ConstituentArea } from "../domain/models";
+
 interface ZipLookupProps {
   value: string;
   onChange: (value: string) => void;
   onSubmit: () => void;
   isSupported: boolean;
+  supportedAreas: ConstituentArea[];
+  activeAreaZip?: string;
+  onSelectArea: (zip: string) => void;
 }
 
 export function ZipLookup({
@@ -10,6 +15,9 @@ export function ZipLookup({
   onChange,
   onSubmit,
   isSupported,
+  supportedAreas,
+  activeAreaZip,
+  onSelectArea,
 }: ZipLookupProps) {
   return (
     <section className="panel hero-panel">
@@ -38,10 +46,34 @@ export function ZipLookup({
         </button>
       </div>
 
+      <div className="supported-areas">
+        <span className="supported-areas-label">Try a supported constituent area</span>
+        <div className="supported-area-grid">
+          {supportedAreas.map((area) => (
+            <button
+              key={area.zip}
+              type="button"
+              className={`supported-area-card ${
+                activeAreaZip === area.zip ? "supported-area-card-active" : ""
+              }`}
+              onClick={() => onSelectArea(area.zip)}
+            >
+              <strong>{area.label}</strong>
+              <span>{area.zip}</span>
+              <p>{area.summary}</p>
+            </button>
+          ))}
+        </div>
+      </div>
+
       <p className={`lookup-hint ${isSupported ? "supported" : "unsupported"}`}>
         {isSupported
-          ? "POC support is currently limited to ZIP code 20852."
-          : "This prototype currently supports only ZIP code 20852."}
+          ? `Current POC support includes ${supportedAreas
+              .map((area) => `${area.zip} (${area.city}, ${area.state})`)
+              .join(" and ")}.`
+          : `Supported ZIP codes currently include ${supportedAreas
+              .map((area) => area.zip)
+              .join(" and ")}.`}
       </p>
     </section>
   );

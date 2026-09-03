@@ -18,26 +18,36 @@ The application clarifies the record.
 
 Congress Contributions is currently an early vertical-slice application.
 
-The working geography is ZIP code:
+The working geography currently includes two curated ZIP codes:
 
 ```text
 20852
+94102
 ```
 
-which currently exposes:
+which currently expose:
 
-### U.S. House
+### 20852
 
 **Jamie Raskin**
 Maryland's 8th Congressional District
-
-### U.S. Senate
 
 **Chris Van Hollen**
 Maryland
 
 **Angela Alsobrooks**
 Maryland
+
+### 94102
+
+**Nancy Pelosi**
+California's 11th Congressional District
+
+**Alex Padilla**
+California
+
+**Adam Schiff**
+California
 
 The narrow geographic scope is intentional.
 
@@ -469,7 +479,10 @@ The near-term goal is to increase both the recency and density of data for:
 
 * Jamie Raskin;
 * Chris Van Hollen;
-* Angela Alsobrooks.
+* Angela Alsobrooks;
+* Nancy Pelosi;
+* Alex Padilla;
+* Adam Schiff.
 
 The project may distinguish between:
 
