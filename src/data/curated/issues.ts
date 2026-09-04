@@ -97,4 +97,22 @@ export const curatedIssues: IssueArea[] = [
     description:
       "Legislation involving environmental protection, climate resilience, public lands, or pollution safeguards.",
   },
+  {
+    id: "labor",
+    label: "Labor",
+    description:
+      "Legislation involving worker protections, compensation, leave, organizing, or workplace conditions.",
+  },
+  {
+    id: "taxation",
+    label: "Taxation",
+    description:
+      "Legislation involving tax rates, credits, deductions, enforcement, or revenue policy.",
+  },
+  {
+    id: "defense",
+    label: "Defense",
+    description:
+      "Legislation involving war powers, national defense, military support, or security policy.",
+  },
 ];

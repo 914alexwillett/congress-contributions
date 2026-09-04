@@ -1,5 +1,6 @@
 import { proceduralGlossary } from "../glossary/terms";
 import type {
+  ActivityRecord,
   ActivityRecordType,
   BillContext,
   CommitteeContext,
@@ -62,7 +63,7 @@ export function getActivityTypeLabel(type: ActivityRecordType) {
     case "bill_status_change":
       return "Bill status change";
     case "other":
-      return "Other activity";
+      return "Other legislative activity";
   }
 }
 
@@ -181,19 +182,19 @@ export function getRelativeTimeLabel(date: string) {
   const days = Math.floor((now.getTime() - then.getTime()) / (1000 * 60 * 60 * 24));
 
   if (days <= 7) {
-    return "This week";
+    return "Last 7 days";
   }
 
   if (days <= 31) {
-    return "This month";
+    return "Last 30 days";
   }
 
   if (days <= 180) {
-    return "This half-year";
+    return "Last 6 months";
   }
 
   if (days <= 365) {
-    return "This year";
+    return "Last 12 months";
   }
 
   return "Earlier";
@@ -226,43 +227,45 @@ export function getContributionOutcomeSummary(
 }
 
 export function buildDelegationChangeSummary(
-  contributions: LegislativeContribution[],
-  bills: BillContext[],
+  activities: ActivityRecord[],
 ): DelegationChangeSummary {
-  const recentActions = contributions.filter((entry) => {
+  const recentActions = activities.filter((entry) => {
     const days =
       (new Date().getTime() - new Date(`${entry.date}T00:00:00`).getTime()) /
       (1000 * 60 * 60 * 24);
 
-    return days <= 730;
+    return days <= 365;
   });
 
   return {
     totalRecentActions: recentActions.length,
-    introducedBills: recentActions.filter((entry) => entry.type === "bill_sponsorship").length,
-    cosponsorshipsAdded: recentActions.filter((entry) => entry.type === "cosponsorship").length,
-    committeeAdvances: recentActions.filter(
-      (entry) =>
-        entry.type === "committee_action" ||
-        (entry.venue?.type === "committee" &&
-          ["adopted", "passed_chamber", "became_law"].includes(entry.outcome)),
+    introducedBills: recentActions.filter((entry) =>
+      entry.changeTags.includes("bill_introduced"),
+    ).length,
+    cosponsorshipsAdded: recentActions.filter((entry) =>
+      entry.changeTags.includes("cosponsorship_added"),
+    ).length,
+    committeeAdvances: recentActions.filter((entry) =>
+      entry.changeTags.includes("committee_advanced"),
     ).length,
     floorVotes: recentActions.filter((entry) =>
-      ["procedural_vote", "final_passage_vote"].includes(entry.type),
+      entry.changeTags.includes("floor_vote_cast"),
     ).length,
-    billOutcomeChanges: bills.filter((bill) =>
-      ["passed_chamber", "became_law"].includes(bill.legislativeState),
+    billOutcomeChanges: recentActions.filter(
+      (entry) =>
+        entry.changeTags.includes("bill_passed_chamber") ||
+        entry.changeTags.includes("bill_became_law"),
     ).length,
   };
 }
 
 export function buildIssueAttention(
-  contributions: LegislativeContribution[],
+  entries: Array<{ issueIds: string[] }>,
   issuesById: Record<string, IssueArea>,
 ) {
   const counts = new Map<string, number>();
 
-  contributions.forEach((entry) => {
+  entries.forEach((entry) => {
     entry.issueIds.forEach((issueId) => {
       counts.set(issueId, (counts.get(issueId) ?? 0) + 1);
     });
@@ -281,16 +284,26 @@ export function buildActiveBillSummaries(
   bills: BillContext[],
   contributions: LegislativeContribution[],
   membersById: Record<string, Legislator>,
+  activities: ActivityRecord[] = [],
 ) {
   return bills
     .map((bill) => {
       const related = contributions.filter((entry) => entry.measureId === bill.id);
-      const memberIds = [...new Set(related.map((entry) => entry.memberId))];
-      const latestDate = related[0]?.date;
+      const relatedActivities = activities.filter(
+        (entry) =>
+          entry.measureId === bill.id ||
+          (!entry.measureId && `lightweight-${entry.measure?.id ?? entry.id}` === bill.id),
+      );
+      const memberIds = [...new Set([
+        ...related.map((entry) => entry.memberId),
+        ...relatedActivities.map((entry) => entry.memberId),
+      ])];
+      const latestDate = [...related.map((entry) => entry.date), ...relatedActivities.map((entry) => entry.date)]
+        .sort((left, right) => right.localeCompare(left))[0];
 
       return {
         bill,
-        relatedContributionCount: related.length,
+        relatedContributionCount: related.length + relatedActivities.length,
         memberNames: memberIds.map((memberId) => membersById[memberId]?.name).filter(Boolean),
         latestDate,
       };

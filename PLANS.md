@@ -99,6 +99,31 @@ These are working targets, not quotas.
 
 Prefer accuracy over volume.
 
+## Recovery Audit Status — September 4, 2026
+
+Repository audit result after migration recovery:
+
+* Complete:
+* two supported ZIP codes remain data-driven (`20852` and `94102`);
+* delegation-wide recent activity, What Changed, issue attention, bill context, lineage, evidence, and contribution outcome vs bill outcome are implemented in the UI;
+* curated data is separated into members, delegations, bills, issues, committees, contributions, activity, and source records;
+* Completed during recovery:
+* lightweight activity records are now meaningfully distinct from deep contributions instead of being only a 1:1 derived mirror;
+* both supported delegations now have materially denser recent activity from official member-office and legislation pages;
+* activity selection now falls back to an activity-detail view when no deep contribution exists, preventing stale contribution or bill detail from lingering across selections;
+* overview and member stats now distinguish activity-record volume from deep-contribution volume;
+* Completed during final Phase 1 pass:
+* each supported member now has at least 15 recent, source-backed activity records;
+* the added record mix includes bill introductions, documented cosponsorships, committee markup activity, floor action, bill-status changes, and congressional oversight letters;
+* the activity layer now includes cross-delegation links where one official release names multiple supported members;
+* Active Bills now also exposes lightweight measures with a clear incomplete-context state, rather than silently omitting them;
+* Remaining data limits, represented in the interface rather than concealed:
+* not every lightweight activity item has a complete bill dossier, roll-call record, or legislative-lineage reconstruction;
+* some Pelosi items remain official statements or floor remarks because that is the level of evidence currently curated;
+* comprehensive national ingestion and a full historical record remain out of scope.
+
+Phase 1 is complete. Phase 2 can build on this source-backed current dataset.
+
 ## Activity Types
 
 Include a useful mix of:

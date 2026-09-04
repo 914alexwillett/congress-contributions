@@ -10,6 +10,7 @@ import { LegislatorPortrait } from "./LegislatorPortrait";
 
 interface LegislatorOverviewProps {
   legislator: Legislator;
+  activityCount: number;
   contributions: LegislativeContribution[];
   visibleContributions: LegislativeContribution[];
   selectedContributionId: string;
@@ -20,6 +21,7 @@ interface LegislatorOverviewProps {
 
 export function LegislatorOverview({
   legislator,
+  activityCount,
   contributions,
   visibleContributions,
   selectedContributionId,
@@ -48,7 +50,11 @@ export function LegislatorOverview({
 
       <div className="stats-grid">
         <article>
-          <span>Loaded records</span>
+          <span>Activity records</span>
+          <strong>{activityCount}</strong>
+        </article>
+        <article>
+          <span>Deep contributions</span>
           <strong>{counts.total}</strong>
         </article>
         <article>

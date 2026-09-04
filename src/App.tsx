@@ -19,7 +19,7 @@ import {
   buildIssueAttention,
   filterContributions,
 } from "./domain/presentation";
-import type { ContributionFilter } from "./domain/models";
+import type { ActivityRecord, ContributionFilter } from "./domain/models";
 import { congressDataRepository } from "./services/congressDataRepository";
 
 const supportedAreas = congressDataRepository.getSupportedConstituentAreas();
@@ -139,10 +139,14 @@ function App() {
 
     if (selectedActivity.relatedContributionId) {
       setSelectedContributionId(selectedActivity.relatedContributionId);
+    } else {
+      setSelectedContributionId("");
     }
 
     if (selectedActivity.measureId) {
       setSelectedBillId(selectedActivity.measureId);
+    } else {
+      setSelectedBillId("");
     }
   }, [selectedActivity?.id]);
 
@@ -163,15 +167,13 @@ function App() {
     : [];
 
   const recentDelegationActivity = allDelegationActivity.slice(0, 7);
-  const changeSummary = buildDelegationChangeSummary(
-    allDelegationContributions,
-    allDelegationBills,
-  );
-  const issueAttention = buildIssueAttention(allDelegationContributions, issuesById);
+  const changeSummary = buildDelegationChangeSummary(allDelegationActivity);
+  const issueAttention = buildIssueAttention(allDelegationActivity, issuesById);
   const activeBills = buildActiveBillSummaries(
     allDelegationBills,
     allDelegationContributions,
     membersById,
+    allDelegationActivity,
   );
   const activeIssueActivity = activeIssueId
     ? allDelegationActivity.filter((entry) => entry.issueIds.includes(activeIssueId))
@@ -216,12 +218,18 @@ function App() {
 
     if (activity.measureId) {
       setSelectedBillId(activity.measureId);
+    } else {
+      setSelectedBillId("");
     }
 
     if (activity.relatedContributionId) {
       setSelectedContributionId(activity.relatedContributionId);
+    } else {
+      setSelectedContributionId("");
     }
   };
+
+  const selectedDetailActivity: ActivityRecord | undefined = selectedActivity;
 
   return (
     <div className="app-shell">
@@ -289,12 +297,16 @@ function App() {
                   <span>federal representatives</span>
                 </article>
                 <article>
-                  <strong>{allDelegationContributions.length}</strong>
-                  <span>loaded actions</span>
+                  <strong>{allDelegationActivity.length}</strong>
+                  <span>activity records</span>
                 </article>
                 <article>
                   <strong>{allDelegationBills.length}</strong>
                   <span>active measures</span>
+                </article>
+                <article>
+                  <strong>{allDelegationContributions.length}</strong>
+                  <span>deep contributions</span>
                 </article>
               </div>
             </section>
@@ -326,6 +338,7 @@ function App() {
                     {legislator ? (
                       <ContributionDetail
                         legislator={legislator}
+                        activity={selectedDetailActivity}
                         contribution={selectedContribution}
                         bill={selectedBill}
                       />
@@ -358,6 +371,7 @@ function App() {
                 <div className="workspace-grid">
                   <LegislatorOverview
                     legislator={legislator}
+                    activityCount={congressDataRepository.getActivityRecordsByMember(legislator.id).length}
                     contributions={allLegislatorContributions}
                     visibleContributions={visibleMemberContributions}
                     selectedContributionId={selectedContributionId}
@@ -368,6 +382,7 @@ function App() {
                   <div className="detail-column">
                     <ContributionDetail
                       legislator={legislator}
+                      activity={selectedDetailActivity}
                       contribution={selectedContribution}
                       bill={selectedBill}
                     />
@@ -404,6 +419,7 @@ function App() {
                   {legislator ? (
                     <ContributionDetail
                       legislator={legislator}
+                      activity={selectedDetailActivity}
                       contribution={selectedContribution}
                       bill={selectedBill}
                     />
@@ -457,6 +473,7 @@ function App() {
                     {legislator ? (
                       <ContributionDetail
                         legislator={legislator}
+                        activity={selectedDetailActivity}
                         contribution={selectedContribution}
                         bill={selectedBill}
                       />

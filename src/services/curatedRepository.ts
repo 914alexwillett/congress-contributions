@@ -47,6 +47,35 @@ const contributionSourceUrlById = Object.fromEntries(
 
 const contributions = buildCuratedContributions(billsById, contributionSourceUrlById);
 const activityRecords = buildCuratedActivityRecords(billsById, contributionSourceUrlById);
+const lightweightBills = activityRecords.reduce<Record<string, BillContext>>((records, activity) => {
+  if (!activity.measure || activity.measureId) {
+    return records;
+  }
+
+  const id = `lightweight-${activity.measure.id ?? activity.id}`;
+  if (records[id]) {
+    return records;
+  }
+
+  const member = membersById[activity.memberId];
+  records[id] = {
+    id,
+    measure: activity.measure,
+    originChamber: member?.chamber ?? "senate",
+    broadPurpose: activity.summary,
+    currentState:
+      "This measure appears in a source-backed activity record. Its fuller bill status and lineage have not yet been loaded.",
+    legislativeState: "unknown",
+    issueIds: activity.issueIds,
+    committeeNames: [],
+    majorVersions: ["Activity record loaded"],
+    lineage: { proposed: true, committee: null, house: null, senate: null, enacted: null },
+    becameLaw: null,
+    evidence: activity.evidence,
+  };
+  return records;
+}, {});
+const allBillsById = { ...billsById, ...lightweightBills };
 const influenceSnapshotsByMember = Object.fromEntries(
   curatedInfluenceSnapshots.map((snapshot) => [snapshot.memberId, snapshot]),
 ) as Record<string, InfluenceContextSnapshot>;
@@ -110,7 +139,7 @@ export function getActivityRecordsForDelegation(memberIds: string[]) {
 }
 
 export function getBillById(billId: string) {
-  return billsById[billId];
+  return allBillsById[billId];
 }
 
 export function getBillsForDelegation(memberIds: string[]) {
@@ -120,8 +149,12 @@ export function getBillsForDelegation(memberIds: string[]) {
       .map((entry) => entry.measureId),
   );
 
+  activityRecords
+    .filter((entry) => memberIds.includes(entry.memberId) && entry.measure && !entry.measureId)
+    .forEach((entry) => billIds.add(`lightweight-${entry.measure?.id ?? entry.id}`));
+
   return [...billIds]
-    .map((billId) => billsById[billId])
+    .map((billId) => allBillsById[billId])
     .filter(Boolean);
 }
 
