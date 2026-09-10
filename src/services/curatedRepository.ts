@@ -168,8 +168,10 @@ export function getBillsForDelegation(memberIds: string[]) {
   );
 
   activityRecords
-    .filter((entry) => memberIds.includes(entry.memberId) && entry.measure && !entry.measureId)
-    .forEach((entry) => billIds.add(`lightweight-${entry.measure?.id ?? entry.id}`));
+    .filter((entry) => memberIds.includes(entry.memberId) && entry.measure)
+    .forEach((entry) => {
+      billIds.add(entry.measureId ?? `lightweight-${entry.measure?.id ?? entry.id}`);
+    });
 
   return [...billIds]
     .map((billId) => allBillsById[billId])

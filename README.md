@@ -597,7 +597,7 @@ npm run build
 
 should complete successfully.
 
-## Congress.gov Ingestion
+## Congress.gov Ingestion And Persistence
 
 Routine activity can be refreshed locally from the Congress.gov API without a backend or database. Create an API key through the [Congress.gov API sign-up page](https://api.congress.gov/sign-up), then set it in your shell:
 
@@ -608,7 +608,19 @@ npm run ingest:congress
 
 The command fetches a bounded current-Congress sponsorship and cosponsorship slice for the six supported members. It writes uncommitted raw payloads to `data/raw/` and regenerates the committed normalized frontend dataset at `src/data/generated/congress.ts`. Generated activity remains lightweight; curated `LegislativeContribution` records continue to provide richer attribution, lineage, and procedural context.
 
-Run `npm test`, `npm run typecheck`, and `npm run build` after refreshing data. The Vercel build remains static and does not require an API key.
+For PostgreSQL-backed historical persistence, add a server-only `DATABASE_URL` to `.env` using the template in `.env.example`. The project uses direct `pg` SQL and explicit migrations rather than an ORM. Run:
+
+```powershell
+npm run db:migrate
+npm run db:seed
+npm run db:inspect
+```
+
+When `DATABASE_URL` is present, `npm run ingest:congress` also creates an ingestion run and persists full raw source payloads, source versions, canonical members and bills, bill actions, and routine activity. Without it, the Phase 2 file-based path still works and reports that persistence was skipped. The frontend never receives `DATABASE_URL` or raw payloads.
+
+`npm run db:reset` is destructive. It only runs when `CONFIRM_DB_RESET=RESET_CONGRESS_CONTRIBUTIONS` is set for that command.
+
+Run `npm test`, `npm run typecheck`, and `npm run build` after refreshing data. The Vercel build remains static and does not require an API key or database connection; a future server-side API can consume the persistence repository.
 
 If the application uses client-side routes that need SPA fallback behavior, deployment configuration may need to provide the appropriate rewrite.
 

@@ -126,9 +126,15 @@ Phase 1 is complete. Phase 2 can build on this source-backed current dataset.
 
 ## Phase 2 — Semi-Automated Congress.gov Ingestion
 
-Phase 2 is complete as a bounded, file-based ingestion proof. `npm run ingest:congress` fetches current-119th-Congress sponsored and cosponsored legislation for the six supported members, stores local raw source payloads, and regenerates normalized bills, activity, and provenance records for the frontend. Curated deep contributions are retained and linked when a generated activity shares a known canonical bill.
+Phase 2 is complete as a bounded ingestion proof. `npm run ingest:congress` fetches current-119th-Congress sponsored and cosponsored legislation for the six supported members, stores local raw source payloads, and regenerates normalized bills, activity, and provenance records for the frontend. Curated deep contributions are retained and linked when a generated activity shares a known canonical bill.
 
-The current boundary is intentional: no database, scheduled jobs, national ingestion, automatic deep-contribution generation, or live API dependency in the app build. Bill actions, amendments, and votes remain future adapter extensions; the command reports those as not fetched rather than implying coverage.
+Live verification on September 10, 2026 processed all six members with no API errors, yielding 138 valid bills and 168 routine activity records from the bounded current-Congress pass. Generated activities now participate in both the delegation feed and Active Bills, while matching curated deep contributions remain available as enrichments.
+
+The app build still has no live API dependency. Phase 3 adds optional PostgreSQL persistence for ingestion runs, complete raw payloads and versions, canonical members/bills, bill actions, and routine activities. Curated deep contributions remain file-backed for this phase. Scheduled jobs, a database-facing backend/API, national ingestion, automatic deep-contribution generation, amendments, and votes remain future work.
+
+## Phase 3 — Persistent Data Foundation
+
+Implemented a PostgreSQL persistence prototype with explicit SQL migrations, source payload hashing and version history, ingestion-run metrics, deterministic canonical identities, bill actions, routine activity records, constituent-area membership, and change events. `npm run db:migrate`, `npm run db:seed`, `npm run db:inspect`, and guarded `npm run db:reset` provide the local workflow. The public Vite frontend intentionally remains static and storage-agnostic until a server-side API is introduced. A real PostgreSQL `DATABASE_URL` and server-side deployment/scheduling remain required for production ingestion operations.
 
 ## Activity Types
 

@@ -61,8 +61,14 @@ export function normalizeLegislation({ memberId, chamber, kind, bill, retrievedA
       title: `${measure.id} - ${measure.title}`,
       sourceUrl: bill.url ?? sourceUrl(bill),
       retrievedAt,
-      sourceUpdatedAt: bill.updateDate,
-      payload: bill,
+      sourceUpdatedAt: typeof bill.updateDate === "string" ? bill.updateDate : undefined,
+      // The complete Congress.gov response is retained in data/raw. Keep the
+      // browser-facing source record compact while preserving its identity.
+      payload: {
+        congress: bill.congress,
+        type: bill.type,
+        number: bill.number,
+      },
     },
     bill: {
       id: billId(bill), measure, originChamber: chamber,
