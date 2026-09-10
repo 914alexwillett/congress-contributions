@@ -20,6 +20,7 @@ import {
   filterContributions,
 } from "./domain/presentation";
 import type { ActivityRecord, ContributionFilter } from "./domain/models";
+import { fetchDelegationRoutineData } from "./services/apiClient";
 import { congressDataRepository } from "./services/congressDataRepository";
 
 const supportedAreas = congressDataRepository.getSupportedConstituentAreas();
@@ -35,6 +36,23 @@ function App() {
   const [selectedBillId, setSelectedBillId] = useState("");
   const [activeIssueId, setActiveIssueId] = useState("");
   const [memberFilter, setMemberFilter] = useState<ContributionFilter>("all");
+  const [routineDataVersion, setRoutineDataVersion] = useState(0);
+
+  useEffect(() => {
+    let active = true;
+    fetchDelegationRoutineData(submittedZip)
+      .then((data) => {
+        if (active && data) {
+          congressDataRepository.setRoutineApiData(data);
+          setRoutineDataVersion((version) => version + 1);
+        }
+      })
+      // Keep the generated-data path usable for static deployments without an API.
+      .catch(() => undefined);
+    return () => {
+      active = false;
+    };
+  }, [submittedZip]);
 
   const selectedArea = congressDataRepository.getConstituentAreaByZip(submittedZip);
   const delegation = useMemo(
@@ -61,16 +79,16 @@ function App() {
 
   const allDelegationContributions = useMemo(
     () => congressDataRepository.getContributionsForDelegation(delegationMemberIds),
-    [submittedZip, delegationMemberIds.join(",")],
+    [submittedZip, delegationMemberIds.join(","), routineDataVersion],
   );
   const allDelegationActivity = useMemo(
     () => congressDataRepository.getActivityRecordsForDelegation(delegationMemberIds),
-    [submittedZip, delegationMemberIds.join(",")],
+    [submittedZip, delegationMemberIds.join(","), routineDataVersion],
   );
 
   const allDelegationBills = useMemo(
     () => congressDataRepository.getBillsForDelegation(delegationMemberIds),
-    [submittedZip, delegationMemberIds.join(",")],
+    [submittedZip, delegationMemberIds.join(","), routineDataVersion],
   );
 
   const allLegislatorContributions = useMemo(

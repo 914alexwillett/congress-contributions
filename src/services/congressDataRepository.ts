@@ -19,6 +19,7 @@ import {
   getSupportedZipCodes,
   getBillsForDelegation,
   isSupportedZip,
+  setRoutineApiData,
 } from "./curatedRepository";
 
 export interface CongressDataRepository {
@@ -42,6 +43,7 @@ export interface CongressDataRepository {
   getSupportedConstituentAreas: typeof getSupportedConstituentAreas;
   getSupportedZipCodes: typeof getSupportedZipCodes;
   isSupportedZip: typeof isSupportedZip;
+  setRoutineApiData: typeof setRoutineApiData;
 }
 
 export const congressDataRepository: CongressDataRepository = {
@@ -65,4 +67,5 @@ export const congressDataRepository: CongressDataRepository = {
   getSupportedConstituentAreas,
   getSupportedZipCodes,
   isSupportedZip,
+  setRoutineApiData,
 };

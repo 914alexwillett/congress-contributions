@@ -456,6 +456,10 @@ Do not duplicate entire sections across all four documents unnecessarily.
 
 Routine Congress.gov ingestion belongs in the source adapter and normalization tooling, not React components. Keep raw payloads local under `data/raw/`, keep generated frontend data clearly marked, and do not hand-edit generated files. Preserve stable source IDs and provenance. Curated deep contributions remain authoritative when they contain richer verified context.
 
+### API Boundary
+
+The browser must access persisted routine activity through the application/API boundary, never through `pg`, `DATABASE_URL`, or raw source payloads. Keep SQL in server-side query modules and map database rows to project-domain DTOs before HTTP responses. Curated deep contributions may remain file-backed, but expose them through the same server/application boundary and regenerate `data/generated/curated-contributions.json` with `npm run data:export-curated-api` after curated contribution changes. Do not expose secrets or raw upstream snapshots in API responses.
+
 ---
 
 ## 16. Working Process

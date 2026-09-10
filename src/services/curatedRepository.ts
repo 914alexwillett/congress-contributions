@@ -28,6 +28,41 @@ import type {
 } from "../domain/models";
 import type { InfluenceContextSnapshot } from "../data/curated/influence";
 
+export interface RoutineApiData {
+  activities: ActivityRecord[];
+  bills: BillContext[];
+  sources: SourceRecord[];
+}
+
+let apiRoutineData: RoutineApiData | undefined;
+
+// Keep rich curated records local while allowing the routine layer to refresh from the API.
+export function setRoutineApiData(data: RoutineApiData | undefined) {
+  apiRoutineData = data;
+}
+
+function getAllSourceRecords() {
+  return [...(apiRoutineData?.sources ?? generatedCongressSourceRecords), ...sourceRecords];
+}
+
+function getAllBills() {
+  return [...(apiRoutineData?.bills ?? generatedCongressBills), ...curatedBills];
+}
+
+function getActivityRecords() {
+  const allSourceRecords = getAllSourceRecords();
+  const billsById = Object.fromEntries(getAllBills().map((bill) => [bill.id, bill])) as Record<string, BillContext>;
+  const sourceUrlById = Object.fromEntries(allSourceRecords.map((record) => [record.id, record.sourceUrl])) as Record<string, string>;
+  const curatedActivityRecords = buildCuratedActivityRecords(billsById, sourceUrlById);
+  const generated = apiRoutineData?.activities ?? generatedCongressActivity;
+  return [...generated, ...curatedActivityRecords]
+    .map((activity) => ({
+      ...activity,
+      relatedContributionId: activity.relatedContributionId ?? curatedContributionByMeasureIdentity.get(activity.measure?.id ?? ""),
+    }))
+    .filter((activity, index, entries) => entries.findIndex((entry) => entry.id === activity.id) === index);
+}
+
 const allSourceRecords = [...generatedCongressSourceRecords, ...sourceRecords];
 const sourceRecordById = Object.fromEntries(
   allSourceRecords.map((record) => [record.id, record]),
@@ -121,7 +156,7 @@ export function getDelegationByZip(zip: string) {
 }
 
 export function getSourceRecordById(sourceRecordId: string) {
-  return sourceRecordById[sourceRecordId];
+  return Object.fromEntries(getAllSourceRecords().map((record) => [record.id, record]))[sourceRecordId] as SourceRecord | undefined;
 }
 
 export function getContributionsByMember(memberId: string) {
@@ -131,7 +166,7 @@ export function getContributionsByMember(memberId: string) {
 }
 
 export function getActivityRecordsByMember(memberId: string) {
-  return activityRecords
+  return getActivityRecords()
     .filter((entry) => entry.memberId === memberId)
     .sort((left, right) => right.date.localeCompare(left.date));
 }
@@ -151,30 +186,33 @@ export function getContributionsForDelegation(memberIds: string[]) {
 }
 
 export function getActivityRecordsForDelegation(memberIds: string[]) {
-  return activityRecords
+  return getActivityRecords()
     .filter((entry) => memberIds.includes(entry.memberId))
     .sort((left, right) => right.date.localeCompare(left.date));
 }
 
 export function getBillById(billId: string) {
-  return allBillsById[billId];
+  const bills = Object.fromEntries(getAllBills().map((bill) => [bill.id, bill])) as Record<string, BillContext>;
+  return bills[billId] ?? allBillsById[billId];
 }
 
 export function getBillsForDelegation(memberIds: string[]) {
+  const currentActivities = getActivityRecords();
+  const currentBills = Object.fromEntries(getAllBills().map((bill) => [bill.id, bill])) as Record<string, BillContext>;
   const billIds = new Set(
     contributions
       .filter((entry) => memberIds.includes(entry.memberId))
       .map((entry) => entry.measureId),
   );
 
-  activityRecords
+  currentActivities
     .filter((entry) => memberIds.includes(entry.memberId) && entry.measure)
     .forEach((entry) => {
       billIds.add(entry.measureId ?? `lightweight-${entry.measure?.id ?? entry.id}`);
     });
 
   return [...billIds]
-    .map((billId) => allBillsById[billId])
+    .map((billId) => currentBills[billId] ?? allBillsById[billId])
     .filter(Boolean);
 }
 

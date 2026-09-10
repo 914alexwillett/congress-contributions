@@ -136,6 +136,10 @@ The app build still has no live API dependency. Phase 3 adds optional PostgreSQL
 
 Implemented a PostgreSQL persistence prototype with explicit SQL migrations, source payload hashing and version history, ingestion-run metrics, deterministic canonical identities, bill actions, routine activity records, constituent-area membership, and change events. `npm run db:migrate`, `npm run db:seed`, `npm run db:inspect`, and guarded `npm run db:reset` provide the local workflow. The public Vite frontend intentionally remains static and storage-agnostic until a server-side API is introduced. A real PostgreSQL `DATABASE_URL` and server-side deployment/scheduling remain required for production ingestion operations.
 
+## Phase 4 — Backend/API Read Boundary
+
+Implemented a small Node read API over the Phase 3 PostgreSQL store. `server/db/readRepository.mjs` owns explicit PostgreSQL queries and maps rows to product-shaped records; `server/app.mjs` owns HTTP behavior and deterministic errors. The Vite frontend uses relative API requests for generated routine activity and retains static generated data as a fallback. Curated deep contributions remain file-backed behind the same application repository so the UI continues to distinguish routine activity from richer research. Hosted PostgreSQL and a server runtime remain future deployment work.
+
 ## Activity Types
 
 Include a useful mix of:

@@ -1,0 +1,1591 @@
+[
+  {
+    "id": "raskin-hamdt190",
+    "memberId": "jamie-raskin",
+    "chamber": "house",
+    "type": "floor_amendment",
+    "measureId": "bill-hr3617",
+    "measure": {
+      "id": "H.R.3617",
+      "congress": 117,
+      "type": "bill",
+      "number": "3617",
+      "title": "Marijuana Opportunity Reinvestment and Expungement Act",
+      "shortTitle": "MORE Act"
+    },
+    "date": "2022-04-01",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Raskin proposed adding security-clearance protections to the MORE Act, but the amendment failed.",
+    "context": {
+      "plainEnglishAction": "He offered H.Amdt.190 to say that cannabis use should not be the reason for denying or rescinding a security clearance.",
+      "proceduralMeaning": "An amendment is an effort to change legislative text during consideration of a broader measure.",
+      "immediateConsequence": "Because the amendment was rejected, the proposed language was not added during that floor action.",
+      "laterOutcome": "The House still passed the underlying bill later that day without this change.",
+      "nextStep": "The bill moved forward in the House in its post-amendment form, but not with Raskin's rejected language."
+    },
+    "issueIds": [
+      "judiciary",
+      "civil-rights"
+    ],
+    "committeeIds": [
+      "house-judiciary"
+    ],
+    "glossaryTermIds": [
+      "floor_amendment",
+      "roll_call_vote"
+    ],
+    "textChange": {
+      "proposedText": "Cannabis use should not be the reason for denying or rescinding a security clearance.",
+      "reconstructionMethod": "manual_research",
+      "confidence": "high"
+    },
+    "outcome": "rejected",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": false,
+      "senate": false,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov identifies Raskin as the amendment sponsor and records that the amendment failed by recorded vote.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov amendment page for H.Amdt.190",
+        "url": "https://www.congress.gov/amendment/117th-congress/house-amendment/190",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-hamdt190",
+        "supports": "Sponsor, amendment purpose, and rejection."
+      },
+      {
+        "label": "Congress.gov actions for H.R.3617",
+        "url": "https://www.congress.gov/bill/117th-congress/house-bill/3617/all-actions",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-hr3617-actions",
+        "supports": "Placement of the amendment within House consideration of the bill."
+      }
+    ]
+  },
+  {
+    "id": "raskin-more-vote",
+    "memberId": "jamie-raskin",
+    "chamber": "house",
+    "type": "final_passage_vote",
+    "measureId": "bill-hr3617",
+    "measure": {
+      "id": "H.R.3617",
+      "congress": 117,
+      "type": "bill",
+      "number": "3617",
+      "title": "Marijuana Opportunity Reinvestment and Expungement Act",
+      "shortTitle": "MORE Act"
+    },
+    "date": "2022-04-01",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Raskin voted yes on House passage of the MORE Act.",
+    "context": {
+      "plainEnglishAction": "He cast a recorded Yea vote when the House voted on final passage of H.R.3617.",
+      "proceduralMeaning": "A final-passage vote decides whether the chamber will approve the measure in its current form.",
+      "immediateConsequence": "The House passed the bill, so the chamber sent its version onward in the process.",
+      "nextStep": "After House passage, the bill still needed Senate action to continue toward enactment."
+    },
+    "issueIds": [
+      "judiciary",
+      "civil-rights"
+    ],
+    "committeeIds": [
+      "house-judiciary"
+    ],
+    "glossaryTermIds": [
+      "final_passage",
+      "roll_call_vote"
+    ],
+    "outcome": "passed_chamber",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": true,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "The official House Clerk roll call names Raskin and records his Yea vote.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "House Roll Call 107 on H.R.3617",
+        "url": "https://clerk.house.gov/Votes/2022107",
+        "sourceType": "house",
+        "sourceRecordId": "source-house-vote-2022107",
+        "supports": "Raskin's recorded Yea vote and the House-passage result."
+      }
+    ]
+  },
+  {
+    "id": "raskin-press-act",
+    "memberId": "jamie-raskin",
+    "chamber": "house",
+    "type": "bill_sponsorship",
+    "measureId": "bill-hr4330",
+    "measure": {
+      "id": "H.R.4330",
+      "congress": 117,
+      "type": "bill",
+      "number": "4330",
+      "title": "Protect Reporters from Exploitative State Spying Act",
+      "shortTitle": "PRESS Act"
+    },
+    "date": "2021-07-01",
+    "venue": {
+      "type": "other",
+      "name": "House introduction"
+    },
+    "headline": "Raskin introduced the PRESS Act.",
+    "context": {
+      "plainEnglishAction": "He formally introduced H.R.4330, placing the measure into the House legislative process under his sponsorship.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The chamber approved the measure in that form.",
+      "laterOutcome": "Congress.gov shows the bill later passed the House.",
+      "nextStep": "After House passage, the bill still needed Senate action to continue toward enactment."
+    },
+    "issueIds": [
+      "press-freedom",
+      "judiciary",
+      "civil-rights"
+    ],
+    "committeeIds": [
+      "house-judiciary"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "passed_chamber",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": true,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov directly supports the claim that Raskin sponsored and introduced H.R.4330.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for H.R.4330",
+        "url": "https://www.congress.gov/bill/117th-congress/house-bill/4330",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-hr4330",
+        "supports": "Formal sponsorship and House-passage status."
+      }
+    ]
+  },
+  {
+    "id": "raskin-hres21",
+    "memberId": "jamie-raskin",
+    "chamber": "house",
+    "type": "bill_sponsorship",
+    "measureId": "bill-hres21",
+    "measure": {
+      "id": "H.Res.21",
+      "congress": 117,
+      "type": "resolution",
+      "number": "21",
+      "title": "Calling on Vice President Michael R. Pence to convene and mobilize the principal officers of the executive departments of the Cabinet to activate section 4 of the 25th Amendment",
+      "shortTitle": "H.Res.21"
+    },
+    "date": "2021-01-11",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Raskin introduced H.Res.21, and the House agreed to it the next day.",
+    "context": {
+      "plainEnglishAction": "He sponsored the resolution and moved it into House consideration as the chamber's formal text.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The chamber approved the measure in that form.",
+      "laterOutcome": "The House agreed to the resolution on January 12, 2021.",
+      "nextStep": "Because this was a House resolution, House agreement completed the chamber action described in the source set."
+    },
+    "issueIds": [
+      "judiciary"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "final_passage"
+    ],
+    "outcome": "passed_chamber",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": true,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "The official resolution page supports sponsorship and House agreement, but does not establish who drafted each line of text.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov resolution page for H.Res.21",
+        "url": "https://www.congress.gov/bill/117th-congress/house-resolution/21",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-hres21",
+        "supports": "Sponsor, text, and House action."
+      }
+    ]
+  },
+  {
+    "id": "raskin-hamdt455",
+    "memberId": "jamie-raskin",
+    "chamber": "house",
+    "type": "appropriations_provision",
+    "measureId": "bill-hr3055",
+    "measure": {
+      "id": "H.R.3055",
+      "congress": 116,
+      "type": "bill",
+      "number": "3055",
+      "title": "Further Continuing Appropriations Act, 2020, and Further Health Extenders Act of 2019",
+      "shortTitle": "Further Continuing Appropriations Act, 2020"
+    },
+    "date": "2019-06-21",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Raskin won House adoption of an appropriations amendment tied to military construction funding.",
+    "context": {
+      "plainEnglishAction": "He offered H.Amdt.455 to shift $1,000,000 in military construction funding toward projects for facilities serving military communities with health and safety risks.",
+      "proceduralMeaning": "Appropriations activity concerns how federal money may be provided, restricted, or redirected in a funding measure.",
+      "immediateConsequence": "Because the House agreed to the amendment by voice vote, the funding language was accepted during floor consideration.",
+      "laterOutcome": "The larger appropriations vehicle later became law, though this POC does not reconstruct the exact survival of the amendment text through later versions.",
+      "nextStep": "The amended House package continued through the appropriations process after the amendment was adopted."
+    },
+    "issueIds": [
+      "appropriations"
+    ],
+    "glossaryTermIds": [
+      "floor_amendment",
+      "appropriations"
+    ],
+    "textChange": {
+      "proposedText": "Increase and decrease funding by $1,000,000 for Military Construction, Navy and Marine Corps to support projects addressing health and safety risks.",
+      "reconstructionMethod": "manual_research",
+      "confidence": "high"
+    },
+    "outcome": "adopted",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": true,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "Congress.gov supports that Raskin offered the amendment and that the House agreed to it by voice vote.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov actions for H.R.3055",
+        "url": "https://www.congress.gov/bill/116th-congress/house-bill/3055/all-actions",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-hr3055-actions",
+        "supports": "Official record of amendment offer and adoption."
+      },
+      {
+        "label": "GovInfo statute compilation for the enacted appropriations law",
+        "url": "https://www.govinfo.gov/app/details/COMPS-15520",
+        "sourceType": "govinfo",
+        "sourceRecordId": "source-govinfo-comps-15520",
+        "supports": "Later enacted status of the larger vehicle."
+      }
+    ]
+  },
+  {
+    "id": "vanhollen-s1932",
+    "memberId": "chris-van-hollen",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s1932",
+    "measure": {
+      "id": "S.1932",
+      "congress": 119,
+      "type": "bill",
+      "number": "1932",
+      "title": "VALID Act of 2025",
+      "shortTitle": "VALID Act of 2025"
+    },
+    "date": "2025-06-03",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Van Hollen introduced the VALID Act of 2025.",
+    "context": {
+      "plainEnglishAction": "He formally introduced S.1932 and became the measure's Senate sponsor of record.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next official step in the loaded record is referral to the Banking Committee."
+    },
+    "issueIds": [
+      "financial-regulation",
+      "technology"
+    ],
+    "committeeIds": [
+      "senate-banking"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov directly documents formal sponsorship.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.1932",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/1932",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s1932",
+        "supports": "Sponsor and committee referral."
+      }
+    ]
+  },
+  {
+    "id": "vanhollen-samdt1272",
+    "memberId": "chris-van-hollen",
+    "chamber": "senate",
+    "type": "appropriations_provision",
+    "measureId": "bill-hr1968",
+    "measure": {
+      "id": "H.R.1968",
+      "congress": 119,
+      "type": "bill",
+      "number": "1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "shortTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025"
+    },
+    "date": "2025-03-14",
+    "venue": {
+      "type": "floor",
+      "name": "Senate floor"
+    },
+    "headline": "Van Hollen offered an amendment to bar DOGE from using appropriated funds, but the Senate rejected it.",
+    "context": {
+      "plainEnglishAction": "He offered S.Amdt.1272 to H.R.1968, with the stated purpose of prohibiting the use of appropriated amounts by DOGE.",
+      "proceduralMeaning": "Appropriations activity concerns how federal money may be provided, restricted, or redirected in a funding measure.",
+      "immediateConsequence": "Because the amendment was rejected, that restriction was not added through this Senate vote.",
+      "laterOutcome": "The Senate later passed the underlying appropriations bill without adopting this amendment.",
+      "nextStep": "The chamber moved on to other amendments and then final passage of the bill."
+    },
+    "issueIds": [
+      "appropriations"
+    ],
+    "committeeIds": [
+      "senate-appropriations"
+    ],
+    "glossaryTermIds": [
+      "floor_amendment",
+      "appropriations",
+      "roll_call_vote"
+    ],
+    "textChange": {
+      "proposedText": "Prohibit the use of appropriated amounts by DOGE.",
+      "reconstructionMethod": "official_text",
+      "confidence": "high"
+    },
+    "outcome": "rejected",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": false,
+      "senate": false,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "The official Senate roll call identifies Van Hollen's amendment number, its purpose, and the rejection vote.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Senate Roll Call Vote 131 on Van Hollen Amendment 1272",
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00131.htm",
+        "sourceType": "senate",
+        "sourceRecordId": "source-samdt1272-vote",
+        "supports": "Amendment sponsor, purpose, vote result, and recorded positions."
+      }
+    ]
+  },
+  {
+    "id": "vanhollen-hr1968-vote",
+    "memberId": "chris-van-hollen",
+    "chamber": "senate",
+    "type": "final_passage_vote",
+    "measureId": "bill-hr1968",
+    "measure": {
+      "id": "H.R.1968",
+      "congress": 119,
+      "type": "bill",
+      "number": "1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "shortTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025"
+    },
+    "date": "2025-03-14",
+    "venue": {
+      "type": "floor",
+      "name": "Senate floor"
+    },
+    "headline": "Van Hollen voted no on final Senate passage of H.R.1968.",
+    "context": {
+      "plainEnglishAction": "He cast a recorded Nay vote when the Senate voted on passage of the continuing appropriations bill.",
+      "proceduralMeaning": "A final-passage vote decides whether the chamber will approve the measure in its current form.",
+      "immediateConsequence": "The bill still passed the Senate despite his vote.",
+      "laterOutcome": "GovInfo links H.R.1968 to Public Law 119-4, meaning the measure later became law.",
+      "nextStep": "After Senate passage, the bill moved to enrollment and enactment."
+    },
+    "issueIds": [
+      "appropriations"
+    ],
+    "committeeIds": [
+      "senate-appropriations"
+    ],
+    "glossaryTermIds": [
+      "final_passage",
+      "roll_call_vote",
+      "appropriations"
+    ],
+    "outcome": "became_law",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": true,
+      "senate": true,
+      "enacted": true
+    },
+    "attribution": {
+      "statement": "The official Senate roll call records Van Hollen's Nay vote and the chamber's passage result.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "Senate Roll Call Vote 133 on H.R.1968",
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00133.htm",
+        "sourceType": "senate",
+        "sourceRecordId": "source-hr1968-vote",
+        "supports": "Van Hollen's recorded vote and Senate-passage result."
+      },
+      {
+        "label": "GovInfo law status for H.R.1968",
+        "url": "https://www.govinfo.gov/app/details/COMPS-15644",
+        "sourceType": "govinfo",
+        "sourceRecordId": "source-hr1968-law",
+        "supports": "Later enacted status as Public Law 119-4."
+      }
+    ]
+  },
+  {
+    "id": "vanhollen-s123",
+    "memberId": "chris-van-hollen",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s123",
+    "measure": {
+      "id": "S.123",
+      "congress": 119,
+      "type": "bill",
+      "number": "123",
+      "title": "Handgun Permit to Purchase Act",
+      "shortTitle": "Handgun Permit to Purchase Act"
+    },
+    "date": "2025-01-16",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Van Hollen introduced the Handgun Permit to Purchase Act.",
+    "context": {
+      "plainEnglishAction": "He formally introduced S.123 and sent it into the Senate process under his sponsorship.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The bill was then referred to the Judiciary Committee."
+    },
+    "issueIds": [
+      "gun-policy",
+      "judiciary"
+    ],
+    "committeeIds": [
+      "senate-judiciary"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "The official bill page supports sponsorship and referral, but not any claim of complete drafting authorship.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.123",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/123",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s123",
+        "supports": "Sponsor and committee referral."
+      }
+    ]
+  },
+  {
+    "id": "vanhollen-s51",
+    "memberId": "chris-van-hollen",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s51",
+    "measure": {
+      "id": "S.51",
+      "congress": 119,
+      "type": "bill",
+      "number": "51",
+      "title": "Washington, D.C. Admission Act",
+      "shortTitle": "Washington, D.C. Admission Act"
+    },
+    "date": "2025-01-09",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Van Hollen introduced the Washington, D.C. Admission Act in the Senate.",
+    "context": {
+      "plainEnglishAction": "He formally introduced S.51 under his sponsorship, starting its Senate legislative path.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "After introduction, the next formal step was committee consideration."
+    },
+    "issueIds": [
+      "dc-governance"
+    ],
+    "committeeIds": [
+      "senate-hsgac"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov supports formal sponsorship and committee referral.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.51",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/51",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s51",
+        "supports": "Sponsor and introduced status."
+      }
+    ]
+  },
+  {
+    "id": "alsobrooks-s3890",
+    "memberId": "angela-alsobrooks",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s3890",
+    "measure": {
+      "id": "S.3890",
+      "congress": 119,
+      "type": "bill",
+      "number": "3890",
+      "title": "A bill to establish a National Council on African American History and Culture within the National Endowment for the Humanities, and for other purposes",
+      "shortTitle": "National Council on African American History and Culture bill"
+    },
+    "date": "2026-02-12",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Alsobrooks introduced a bill to establish a National Council on African American History and Culture.",
+    "context": {
+      "plainEnglishAction": "She formally introduced S.3890 and became its sponsor of record.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The bill was referred to the Health, Education, Labor, and Pensions Committee."
+    },
+    "issueIds": [
+      "history-culture"
+    ],
+    "committeeIds": [
+      "senate-help"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov supports sponsorship and referral.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.3890",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3890",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s3890",
+        "supports": "Sponsor and committee referral."
+      }
+    ]
+  },
+  {
+    "id": "alsobrooks-s3844",
+    "memberId": "angela-alsobrooks",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s3844",
+    "measure": {
+      "id": "S.3844",
+      "congress": 119,
+      "type": "bill",
+      "number": "3844",
+      "title": "A bill to require the Comptroller General of the United States to conduct a study of the impact of Federal reductions in force on State and local governments, and for other purposes",
+      "shortTitle": "GAO study on federal reductions in force"
+    },
+    "date": "2026-02-11",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Alsobrooks introduced a bill ordering a GAO study on federal reductions in force.",
+    "context": {
+      "plainEnglishAction": "She formally introduced S.3844 and placed the proposal into the Senate process under her sponsorship.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The bill was referred to the Homeland Security and Governmental Affairs Committee."
+    },
+    "issueIds": [
+      "workforce-government"
+    ],
+    "committeeIds": [
+      "senate-hsgac"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "The official bill page supports sponsorship and committee referral only.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.3844",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3844",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s3844",
+        "supports": "Sponsor and committee referral."
+      }
+    ]
+  },
+  {
+    "id": "alsobrooks-s3556",
+    "memberId": "angela-alsobrooks",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s3556",
+    "measure": {
+      "id": "S.3556",
+      "congress": 119,
+      "type": "bill",
+      "number": "3556",
+      "title": "Wildlife Crossings Program Reauthorization Act of 2025",
+      "shortTitle": "Wildlife Crossings Program Reauthorization Act of 2025"
+    },
+    "date": "2025-12-17",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Alsobrooks introduced the Wildlife Crossings Program Reauthorization Act of 2025.",
+    "context": {
+      "plainEnglishAction": "She formally introduced S.3556, becoming the measure's sponsor of record in the Senate.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next step shown in the official record is committee referral."
+    },
+    "issueIds": [
+      "transportation-environment"
+    ],
+    "committeeIds": [
+      "senate-epw"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Congress.gov supports sponsorship and referral.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov bill page for S.3556",
+        "url": "https://www.congress.gov/bill/119th-congress/senate-bill/3556",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-s3556",
+        "supports": "Formal sponsorship and referral."
+      }
+    ]
+  },
+  {
+    "id": "alsobrooks-hr1968-vote",
+    "memberId": "angela-alsobrooks",
+    "chamber": "senate",
+    "type": "final_passage_vote",
+    "measureId": "bill-hr1968",
+    "measure": {
+      "id": "H.R.1968",
+      "congress": 119,
+      "type": "bill",
+      "number": "1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "shortTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025"
+    },
+    "date": "2025-03-14",
+    "venue": {
+      "type": "floor",
+      "name": "Senate floor"
+    },
+    "headline": "Alsobrooks voted no on final Senate passage of H.R.1968.",
+    "context": {
+      "plainEnglishAction": "She cast a recorded Nay vote on final passage of the continuing appropriations bill.",
+      "proceduralMeaning": "A final-passage vote decides whether the chamber will approve the measure in its current form.",
+      "immediateConsequence": "The Senate still passed the bill despite her vote.",
+      "laterOutcome": "GovInfo later links the measure to Public Law 119-4, meaning it became law.",
+      "nextStep": "After Senate passage, the bill moved toward enrollment and enactment."
+    },
+    "issueIds": [
+      "appropriations"
+    ],
+    "glossaryTermIds": [
+      "final_passage",
+      "roll_call_vote",
+      "appropriations"
+    ],
+    "outcome": "became_law",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": true,
+      "senate": true,
+      "enacted": true
+    },
+    "attribution": {
+      "statement": "The official Senate roll call identifies Alsobrooks by name and records her Nay vote on passage.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "Senate Roll Call Vote 133 on H.R.1968",
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1191/vote_119_1_00133.htm",
+        "sourceType": "senate",
+        "sourceRecordId": "source-hr1968-vote",
+        "supports": "Alsobrooks' recorded vote and Senate-passage result."
+      },
+      {
+        "label": "GovInfo law status for H.R.1968",
+        "url": "https://www.govinfo.gov/app/details/COMPS-15644",
+        "sourceType": "govinfo",
+        "sourceRecordId": "source-hr1968-law",
+        "supports": "Later enacted status as Public Law 119-4."
+      }
+    ]
+  },
+  {
+    "id": "alsobrooks-samdt1267",
+    "memberId": "angela-alsobrooks",
+    "chamber": "senate",
+    "type": "appropriations_provision",
+    "measureId": "bill-hr1968",
+    "measure": {
+      "id": "H.R.1968",
+      "congress": 119,
+      "type": "bill",
+      "number": "1968",
+      "title": "Full-Year Continuing Appropriations and Extensions Act, 2025",
+      "shortTitle": "Full-Year Continuing Appropriations and Extensions Act, 2025"
+    },
+    "date": "2025-03-12",
+    "venue": {
+      "type": "floor",
+      "name": "Senate floor"
+    },
+    "headline": "Alsobrooks submitted an appropriations amendment about D.C. local funds during Senate consideration of H.R.1968.",
+    "context": {
+      "plainEnglishAction": "She submitted S.Amdt.1267 to let the District of Columbia spend local funds under its FY2025 local budget framework and to update a related appropriations reference.",
+      "proceduralMeaning": "Appropriations activity concerns how federal money may be provided, restricted, or redirected in a funding measure.",
+      "immediateConsequence": "The source set confirms the amendment was officially submitted, but this POC does not load a later adoption record for it.",
+      "laterOutcome": "The underlying appropriations bill later became law, but the survival of this specific submitted language is not established here.",
+      "nextStep": "Without a recorded adoption in the current seed set, the safest next-step description is unknown."
+    },
+    "issueIds": [
+      "appropriations",
+      "dc-governance"
+    ],
+    "glossaryTermIds": [
+      "floor_amendment",
+      "appropriations"
+    ],
+    "textChange": {
+      "proposedText": "Permit the District of Columbia to expend local funds under the Fiscal Year 2025 Local Budget Act of 2024 and update a related fiscal year reference.",
+      "reconstructionMethod": "official_text",
+      "confidence": "high"
+    },
+    "outcome": "unknown",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "Congress.gov directly links Alsobrooks to the submitted amendment text. The later path of that specific language remains unknown in this seed record.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Congress.gov amendment page for S.Amdt.1267",
+        "url": "https://www.congress.gov/amendment/119th-congress/senate-amendment/1267",
+        "sourceType": "congress_gov",
+        "sourceRecordId": "source-samdt1267",
+        "supports": "Amendment sponsor and submitted text context."
+      }
+    ]
+  },
+  {
+    "id": "pelosi-hr8595-amendment",
+    "memberId": "nancy-pelosi",
+    "chamber": "house",
+    "type": "procedural_vote",
+    "measureId": "bill-hr8595",
+    "measure": {
+      "id": "H.R.8595",
+      "congress": 119,
+      "type": "bill",
+      "number": "8595",
+      "title": "National Security, Department of State, and Related Programs Appropriations Act of 2027",
+      "shortTitle": "State and National Security Appropriations Act of 2027"
+    },
+    "date": "2026-07-15",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Pelosi said she would vote yes on Massie Amendment #8 during House consideration of H.R.8595.",
+    "context": {
+      "plainEnglishAction": "She publicly stated support for Massie Amendment #8 during floor consideration of the fiscal year 2027 State and national-security appropriations bill.",
+      "proceduralMeaning": "This is a vote about process rather than a final yes-or-no decision on the whole bill.",
+      "immediateConsequence": "The loaded source set confirms Pelosi's floor position on the amendment, but it does not yet reconstruct whether the amendment was adopted.",
+      "nextStep": "A fuller record would connect this statement to the amendment vote result and the bill's later appropriations path."
+    },
+    "issueIds": [
+      "appropriations"
+    ],
+    "glossaryTermIds": [
+      "roll_call_vote",
+      "appropriations",
+      "procedural_vote"
+    ],
+    "outcome": "unknown",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": null,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "Pelosi's official statement supports her position on the amendment. The amendment's final disposition is not yet loaded in this seed set.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "Pelosi statement on Massie Amendment #8",
+        "url": "https://pelosi.house.gov/news/press-releases/pelosi-statement-massie-amendment-8",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-pelosi-hr8595-amendment",
+        "supports": "Pelosi's stated position during amendment consideration."
+      }
+    ]
+  },
+  {
+    "id": "pelosi-hr1329-letter",
+    "memberId": "nancy-pelosi",
+    "chamber": "house",
+    "type": "other_documented_change",
+    "measureId": "bill-hr1329",
+    "measure": {
+      "id": "H.R.1329",
+      "congress": 119,
+      "type": "bill",
+      "number": "1329",
+      "title": "Smithsonian American Women's History Museum Act",
+      "shortTitle": "Women's History Museum Act"
+    },
+    "date": "2026-04-17",
+    "venue": {
+      "type": "other",
+      "name": "House leadership letter"
+    },
+    "headline": "Pelosi joined a House Democratic push to restore the bipartisan museum package tied to H.R.1329 and H.R.1330.",
+    "context": {
+      "plainEnglishAction": "She joined 145 House Democrats in sending a letter urging House leadership to restore the longstanding bipartisan version of the Women's History Museum bill and pair it with the Latino Museum bill.",
+      "proceduralMeaning": "The record shows a documented legislative action, but the procedural significance depends on the source context.",
+      "immediateConsequence": "The letter made the caucus position legible in the legislative fight, but this seed record does not claim that it resolved the bills' fate.",
+      "nextStep": "The next relevant step would be later House committee or floor action, which is not yet loaded here."
+    },
+    "issueIds": [
+      "history-culture",
+      "civil-rights"
+    ],
+    "glossaryTermIds": [
+      "procedural_vote"
+    ],
+    "outcome": "unknown",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": null,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "Pelosi's office directly documents her participation in the letter, while the broader legislative effect remains unresolved in this POC.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "Pelosi press release on the museum-bill letter",
+        "url": "https://pelosi.house.gov/news/press-releases/pelosi-house-democrats-slam-republican-rewrite-womens-history-museum-bill",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-pelosi-hr1329-letter",
+        "supports": "Pelosi's participation in the House Democratic intervention tied to H.R.1329 and H.R.1330."
+      }
+    ]
+  },
+  {
+    "id": "pelosi-hr7147-vote",
+    "memberId": "nancy-pelosi",
+    "chamber": "house",
+    "type": "final_passage_vote",
+    "measureId": "bill-hr7147",
+    "measure": {
+      "id": "H.R.7147",
+      "congress": 119,
+      "type": "bill",
+      "number": "7147",
+      "title": "Department of Homeland Security Appropriations Act of 2026",
+      "shortTitle": "Homeland Security Appropriations Act of 2026"
+    },
+    "date": "2026-01-22",
+    "venue": {
+      "type": "floor",
+      "name": "House floor"
+    },
+    "headline": "Pelosi publicly recorded a no vote on the Homeland Security Appropriations Act of 2026.",
+    "context": {
+      "plainEnglishAction": "She stated that she was voting against H.R.7147 during House consideration of the annual Homeland Security appropriations measure.",
+      "proceduralMeaning": "A final-passage vote decides whether the chamber will approve the measure in its current form.",
+      "immediateConsequence": "The loaded source set establishes Pelosi's vote position, but this POC does not yet reconstruct the chamber's full vote record for the bill.",
+      "nextStep": "A fuller implementation would connect this position to the House roll call and the bill's later legislative path."
+    },
+    "issueIds": [
+      "appropriations",
+      "immigration"
+    ],
+    "glossaryTermIds": [
+      "final_passage",
+      "roll_call_vote",
+      "appropriations"
+    ],
+    "outcome": "unknown",
+    "lineage": {
+      "proposed": true,
+      "committee": true,
+      "house": null,
+      "senate": null,
+      "enacted": null
+    },
+    "attribution": {
+      "statement": "Pelosi's official office statement directly supports her vote position on H.R.7147, but the current seed set does not add the complete official roll-call outcome.",
+      "confidence": "high",
+      "literalDraftingKnown": false
+    },
+    "evidence": [
+      {
+        "label": "Pelosi statement on H.R.7147",
+        "url": "https://pelosi.house.gov/news/press-releases/pelosi-statement-homeland-security-appropriations-act",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-pelosi-hr7147",
+        "supports": "Pelosi's stated vote position on the bill."
+      }
+    ]
+  },
+  {
+    "id": "padilla-shield-act",
+    "memberId": "alex-padilla",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-shield-our-elections",
+    "measure": {
+      "id": "SHIELD Act",
+      "congress": 119,
+      "type": "bill",
+      "title": "Stop Harassment and Intimidations in Elections through Legal Defenses Our Elections Act",
+      "shortTitle": "SHIELD Our Elections Act"
+    },
+    "date": "2026-07-23",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Padilla introduced the SHIELD Our Elections Act.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation to create stronger federal enforcement tools against election interference and protect ballots and election administration.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step would be committee consideration and any later Senate action."
+    },
+    "issueIds": [
+      "elections-democracy",
+      "civil-rights",
+      "judiciary"
+    ],
+    "committeeIds": [
+      "senate-rules"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Padilla's official Senate press release directly supports introduction of the SHIELD Our Elections Act and describes its purpose.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Padilla press release on the SHIELD Our Elections Act",
+        "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-unveils-legislation-to-counter-trumps-attacks-on-american-elections/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-padilla-shield",
+        "supports": "Bill introduction, title, and purpose."
+      }
+    ]
+  },
+  {
+    "id": "padilla-land-of-free",
+    "memberId": "alex-padilla",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-land-of-free",
+    "measure": {
+      "id": "Land of the Free Act",
+      "congress": 119,
+      "type": "bill",
+      "title": "Land of the Free Act",
+      "shortTitle": "Land of the Free Act"
+    },
+    "date": "2026-06-16",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Padilla introduced the Land of the Free Act.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation to repeal a deportation provision that the sponsors describe as threatening protected speech and due process.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step would be Senate Judiciary consideration."
+    },
+    "issueIds": [
+      "immigration",
+      "civil-rights",
+      "judiciary"
+    ],
+    "committeeIds": [
+      "senate-judiciary"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Padilla's official press release directly supports the bill's introduction and stated civil-liberties purpose.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Padilla press release on the Land of the Free Act",
+        "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-welch-introduce-legislation-to-repeal-trump-deportation-provision-targeting-first-amendment-right-to-free-speech/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-padilla-land-of-free",
+        "supports": "Bill introduction, title, and purpose."
+      }
+    ]
+  },
+  {
+    "id": "padilla-fair-elections",
+    "memberId": "alex-padilla",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-fair-elections",
+    "measure": {
+      "id": "FAIR Elections Act",
+      "congress": 119,
+      "type": "bill",
+      "title": "Fraudulent Artificial Intelligence Regulations Elections Act",
+      "shortTitle": "FAIR Elections Act"
+    },
+    "date": "2026-06-12",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Padilla introduced the FAIR Elections Act.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation aimed at blocking AI-enabled voter suppression, election misinformation, and wrongful voter-roll removals.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step would be committee consideration in the Senate."
+    },
+    "issueIds": [
+      "elections-democracy",
+      "technology",
+      "civil-rights"
+    ],
+    "committeeIds": [
+      "senate-rules"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Padilla's official press release directly supports the FAIR Elections Act's introduction and stated election-security goals.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Padilla press release on the FAIR Elections Act",
+        "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-merkley-seek-new-election-safeguards-amid-growing-misuse-of-ai-to-suppress-voting-and-spread-misinformation/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-padilla-fair-elections",
+        "supports": "Bill introduction, title, and purpose."
+      }
+    ]
+  },
+  {
+    "id": "padilla-santini-burton",
+    "memberId": "alex-padilla",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-santini-burton",
+    "measure": {
+      "id": "Santini-Burton Act",
+      "congress": 119,
+      "type": "bill",
+      "title": "Santini-Burton Modernization Act",
+      "shortTitle": "Santini-Burton Modernization Act"
+    },
+    "date": "2026-01-27",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Padilla introduced the Santini-Burton Modernization Act with California and Nevada senators.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation to expand how existing Tahoe Basin funds can be used for conservation, land management, recreation, and wildfire-risk work.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step would be committee consideration and any later bipartisan movement in the Senate."
+    },
+    "issueIds": [
+      "environment-climate",
+      "transportation-environment"
+    ],
+    "committeeIds": [
+      "senate-epw"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Padilla's official office press release directly supports introduction of the Santini-Burton Modernization Act and its stated environmental goals.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Padilla press release on the Santini-Burton Modernization Act",
+        "url": "https://www.padilla.senate.gov/newsroom/press-releases/padilla-schiff-cortez-masto-rosen-introduce-legislation-to-support-lake-tahoe-conservation-efforts/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-padilla-tahoe",
+        "supports": "Bill introduction, title, and purpose."
+      }
+    ]
+  },
+  {
+    "id": "schiff-s5368",
+    "memberId": "adam-schiff",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s5368",
+    "measure": {
+      "id": "S.5368",
+      "congress": 119,
+      "type": "bill",
+      "number": "5368",
+      "title": "Water Cyber Shield Act of 2026",
+      "shortTitle": "Water Cyber Shield Act of 2026"
+    },
+    "date": "2026-08-25",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Schiff introduced the Water Cyber Shield Act of 2026.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation focused on cybersecurity protections for water systems and related infrastructure resilience.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step shown in the loaded source set is referral to the Environment and Public Works Committee."
+    },
+    "issueIds": [
+      "technology",
+      "environment-climate"
+    ],
+    "committeeIds": [
+      "senate-epw"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5368.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Schiff legislation page listing S.5368",
+        "url": "https://www.schiff.senate.gov/about/legislation/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-schiff-water-cyber",
+        "supports": "Bill number, title, introduction date, and referral."
+      }
+    ]
+  },
+  {
+    "id": "schiff-s5276",
+    "memberId": "adam-schiff",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s5276",
+    "measure": {
+      "id": "S.5276",
+      "congress": 119,
+      "type": "bill",
+      "number": "5276",
+      "title": "Reducing Red Tape for Rebuilding Act",
+      "shortTitle": "Reducing Red Tape for Rebuilding Act"
+    },
+    "date": "2026-08-24",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Schiff introduced the Reducing Red Tape for Rebuilding Act.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation aimed at reducing procedural barriers that slow rebuilding and disaster recovery.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step shown in the loaded source set is referral to Homeland Security and Governmental Affairs."
+    },
+    "issueIds": [
+      "housing-disaster",
+      "workforce-government"
+    ],
+    "committeeIds": [
+      "senate-hsgac"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5276.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Schiff legislation page listing S.5276",
+        "url": "https://www.schiff.senate.gov/about/legislation/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-schiff-red-tape",
+        "supports": "Bill number, title, introduction date, and referral."
+      }
+    ]
+  },
+  {
+    "id": "schiff-s5234",
+    "memberId": "adam-schiff",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s5234",
+    "measure": {
+      "id": "S.5234",
+      "congress": 119,
+      "type": "bill",
+      "number": "5234",
+      "title": "Human-Wildlife Conflict Reduction Act of 2026",
+      "shortTitle": "Human-Wildlife Conflict Reduction Act of 2026"
+    },
+    "date": "2026-08-24",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Schiff introduced the Human-Wildlife Conflict Reduction Act of 2026.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation aimed at reducing human-wildlife conflict through federal conservation and land-management tools.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step shown in the loaded source set is referral to the Environment and Public Works Committee."
+    },
+    "issueIds": [
+      "environment-climate",
+      "transportation-environment"
+    ],
+    "committeeIds": [
+      "senate-epw"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5234.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Schiff legislation page listing S.5234",
+        "url": "https://www.schiff.senate.gov/about/legislation/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-schiff-human-wildlife",
+        "supports": "Bill number, title, introduction date, and referral."
+      }
+    ]
+  },
+  {
+    "id": "schiff-s5324",
+    "memberId": "adam-schiff",
+    "chamber": "senate",
+    "type": "bill_sponsorship",
+    "measureId": "bill-s5324",
+    "measure": {
+      "id": "S.5324",
+      "congress": 119,
+      "type": "bill",
+      "number": "5324",
+      "title": "Fairness to Freedom Act of 2026",
+      "shortTitle": "Fairness to Freedom Act of 2026"
+    },
+    "date": "2026-08-19",
+    "venue": {
+      "type": "other",
+      "name": "Senate introduction"
+    },
+    "headline": "Schiff introduced the Fairness to Freedom Act of 2026.",
+    "context": {
+      "plainEnglishAction": "He introduced legislation in a civil-liberties and legal-rights space, with the current source set showing referral to Judiciary.",
+      "proceduralMeaning": "Sponsoring a bill or resolution means the member formally introduced the measure into the chamber's process.",
+      "immediateConsequence": "The action placed the measure or proposal into the legislative process, but it did not by itself change law.",
+      "nextStep": "The next formal step shown in the loaded source set is Senate Judiciary consideration."
+    },
+    "issueIds": [
+      "civil-rights",
+      "judiciary"
+    ],
+    "committeeIds": [
+      "senate-judiciary"
+    ],
+    "glossaryTermIds": [
+      "bill_sponsorship",
+      "authorization"
+    ],
+    "outcome": "introduced",
+    "lineage": {
+      "proposed": true,
+      "committee": null,
+      "house": null,
+      "senate": null,
+      "enacted": false
+    },
+    "attribution": {
+      "statement": "Schiff's official legislation page directly supports sponsorship, title, date, and committee referral for S.5324.",
+      "confidence": "high",
+      "literalDraftingKnown": null
+    },
+    "evidence": [
+      {
+        "label": "Schiff legislation page listing S.5324",
+        "url": "https://www.schiff.senate.gov/about/legislation/",
+        "sourceType": "member_office",
+        "sourceRecordId": "source-schiff-fairness-to-freedom",
+        "supports": "Bill number, title, introduction date, and referral."
+      }
+    ]
+  }
+]

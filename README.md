@@ -597,7 +597,7 @@ npm run build
 
 should complete successfully.
 
-## Congress.gov Ingestion And Persistence
+## Congress.gov Ingestion, Persistence, And API
 
 Routine activity can be refreshed locally from the Congress.gov API without a backend or database. Create an API key through the [Congress.gov API sign-up page](https://api.congress.gov/sign-up), then set it in your shell:
 
@@ -619,6 +619,25 @@ npm run db:inspect
 When `DATABASE_URL` is present, `npm run ingest:congress` also creates an ingestion run and persists full raw source payloads, source versions, canonical members and bills, bill actions, and routine activity. Without it, the Phase 2 file-based path still works and reports that persistence was skipped. The frontend never receives `DATABASE_URL` or raw payloads.
 
 `npm run db:reset` is destructive. It only runs when `CONFIRM_DB_RESET=RESET_CONGRESS_CONTRIBUTIONS` is set for that command.
+
+### Local database-backed development
+
+The API is a server-side read boundary over PostgreSQL. It exposes compact product records and official source links, never `DATABASE_URL`, API keys, or raw Congress.gov payloads. Start PostgreSQL, then run:
+
+```powershell
+npm run db:migrate
+npm run db:seed
+npm run dev:server
+npm run dev
+```
+
+Vite proxies relative `/api` requests to the local server. The browser uses the API for generated routine activity and retains the static generated-data path as a deployment fallback when no API is available. Curated deep contributions remain file-backed in this phase and continue to merge with routine activity through the application repository.
+
+After changing curated deep-contribution data, run `npm run data:export-curated-api` before starting the API so its server-only curated export is current.
+
+Current read endpoints are `GET /api/health`, `GET /api/delegation?zip=20852`, `GET /api/members/:memberId`, `GET /api/members/:memberId/activity`, `GET /api/members/:memberId/contributions`, and `GET /api/bills/:billId`.
+
+For a future database-backed Vercel deployment, provide a hosted server-side PostgreSQL URL and deploy the API as a server runtime. The local Docker database is development infrastructure and must not be referenced by browser code.
 
 Run `npm test`, `npm run typecheck`, and `npm run build` after refreshing data. The Vercel build remains static and does not require an API key or database connection; a future server-side API can consume the persistence repository.
 

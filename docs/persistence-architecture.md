@@ -6,7 +6,7 @@ Date: 2026-09-10
 
 Phase 3 uses PostgreSQL through the lightweight `pg` client and explicit SQL migrations. This project does not need an ORM yet: the schema is small enough to be understandable as SQL, queries remain visible, and the repository can be exercised with a PostgreSQL-compatible isolated test database.
 
-The public Vite application remains on the generated-data repository for now. No browser connects to PostgreSQL and no backend API was introduced. This is a deliberate temporary hybrid: it keeps Vercel's static deployment simple while `scripts/` owns server-only ingestion and persistence. A future API can implement the existing project-owned repository contract without UI churn.
+The public Vite application does not connect to PostgreSQL. Phase 4 adds a small Node API and explicit read-query repository under `server/`; the browser makes only relative `/api` requests. The API maps PostgreSQL rows to compact project-domain DTOs, keeps raw source payloads server-side, and returns official source URLs as evidence. Curated deep contributions remain file-backed behind the application repository while generated routine activity is refreshed through the API. Static generated data remains a deployment fallback until a hosted API and PostgreSQL service are configured.
 
 ## Data Layers
 
