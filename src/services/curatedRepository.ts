@@ -11,6 +11,11 @@ import { curatedInfluenceSnapshots } from "../data/curated/influence";
 import { curatedIssues } from "../data/curated/issues";
 import { curatedMembers } from "../data/curated/members";
 import { sourceRecords } from "../data/curated/sourceRecords";
+import {
+  generatedCongressActivity,
+  generatedCongressBills,
+  generatedCongressSourceRecords,
+} from "../data/generated/congress";
 import type {
   ActivityRecord,
   BillContext,
@@ -23,12 +28,13 @@ import type {
 } from "../domain/models";
 import type { InfluenceContextSnapshot } from "../data/curated/influence";
 
+const allSourceRecords = [...generatedCongressSourceRecords, ...sourceRecords];
 const sourceRecordById = Object.fromEntries(
-  sourceRecords.map((record) => [record.id, record]),
+  allSourceRecords.map((record) => [record.id, record]),
 ) as Record<string, SourceRecord>;
 
 const billsById = Object.fromEntries(
-  curatedBills.map((bill) => [bill.id, bill]),
+  [...generatedCongressBills, ...curatedBills].map((bill) => [bill.id, bill]),
 ) as Record<string, BillContext>;
 
 const membersById = Object.fromEntries(
@@ -42,11 +48,23 @@ const issuesById = Object.fromEntries(
 ) as Record<string, IssueArea>;
 
 const contributionSourceUrlById = Object.fromEntries(
-  sourceRecords.map((record) => [record.id, record.sourceUrl]),
+  allSourceRecords.map((record) => [record.id, record.sourceUrl]),
 ) as Record<string, string>;
 
 const contributions = buildCuratedContributions(billsById, contributionSourceUrlById);
-const activityRecords = buildCuratedActivityRecords(billsById, contributionSourceUrlById);
+const curatedActivityRecords = buildCuratedActivityRecords(billsById, contributionSourceUrlById);
+const curatedContributionByMeasureIdentity = new Map(
+  contributions
+    .filter((contribution) => contribution.measure.id)
+    .map((contribution) => [contribution.measure.id, contribution.id]),
+);
+const activityRecords = [...generatedCongressActivity, ...curatedActivityRecords]
+  .map((activity) => ({
+    ...activity,
+    relatedContributionId:
+      activity.relatedContributionId ?? curatedContributionByMeasureIdentity.get(activity.measure?.id ?? ""),
+  }))
+  .filter((activity, index, entries) => entries.findIndex((entry) => entry.id === activity.id) === index);
 const lightweightBills = activityRecords.reduce<Record<string, BillContext>>((records, activity) => {
   if (!activity.measure || activity.measureId) {
     return records;

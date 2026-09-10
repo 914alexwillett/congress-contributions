@@ -452,6 +452,10 @@ Update documentation when changes materially alter the project.
 
 Do not duplicate entire sections across all four documents unnecessarily.
 
+### Generated Ingestion Data
+
+Routine Congress.gov ingestion belongs in the source adapter and normalization tooling, not React components. Keep raw payloads local under `data/raw/`, keep generated frontend data clearly marked, and do not hand-edit generated files. Preserve stable source IDs and provenance. Curated deep contributions remain authoritative when they contain richer verified context.
+
 ---
 
 ## 16. Working Process

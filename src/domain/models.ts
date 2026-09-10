@@ -75,6 +75,7 @@ export interface SourceRecord {
   sourceUrl: string;
   retrievedAt: string;
   sourceUpdatedAt?: string;
+  resourceType?: "member" | "bill" | "amendment" | "bill_action" | "committee" | "other";
   payload: unknown;
 }
 

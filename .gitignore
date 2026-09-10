@@ -2,3 +2,5 @@ dist
 node_modules
 .npm-cache
 .local-tools
+data/raw/
+.env

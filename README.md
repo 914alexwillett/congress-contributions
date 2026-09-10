@@ -597,6 +597,19 @@ npm run build
 
 should complete successfully.
 
+## Congress.gov Ingestion
+
+Routine activity can be refreshed locally from the Congress.gov API without a backend or database. Create an API key through the [Congress.gov API sign-up page](https://api.congress.gov/sign-up), then set it in your shell:
+
+```powershell
+$env:CONGRESS_API_KEY = "your-key"
+npm run ingest:congress
+```
+
+The command fetches a bounded current-Congress sponsorship and cosponsorship slice for the six supported members. It writes uncommitted raw payloads to `data/raw/` and regenerates the committed normalized frontend dataset at `src/data/generated/congress.ts`. Generated activity remains lightweight; curated `LegislativeContribution` records continue to provide richer attribution, lineage, and procedural context.
+
+Run `npm test`, `npm run typecheck`, and `npm run build` after refreshing data. The Vercel build remains static and does not require an API key.
+
 If the application uses client-side routes that need SPA fallback behavior, deployment configuration may need to provide the appropriate rewrite.
 
 Do not migrate the project to another framework solely for deployment.

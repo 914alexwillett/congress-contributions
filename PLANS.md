@@ -124,6 +124,12 @@ Repository audit result after migration recovery:
 
 Phase 1 is complete. Phase 2 can build on this source-backed current dataset.
 
+## Phase 2 — Semi-Automated Congress.gov Ingestion
+
+Phase 2 is complete as a bounded, file-based ingestion proof. `npm run ingest:congress` fetches current-119th-Congress sponsored and cosponsored legislation for the six supported members, stores local raw source payloads, and regenerates normalized bills, activity, and provenance records for the frontend. Curated deep contributions are retained and linked when a generated activity shares a known canonical bill.
+
+The current boundary is intentional: no database, scheduled jobs, national ingestion, automatic deep-contribution generation, or live API dependency in the app build. Bill actions, amendments, and votes remain future adapter extensions; the command reports those as not fetched rather than implying coverage.
+
 ## Activity Types
 
 Include a useful mix of:
