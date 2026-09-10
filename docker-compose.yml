@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: congress-contributions-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: congress
+      POSTGRES_PASSWORD: congress_dev
+      POSTGRES_DB: congress_contributions
+    ports:
+      - "5432:5432"
+    volumes:
+      - congress_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  congress_postgres_data:

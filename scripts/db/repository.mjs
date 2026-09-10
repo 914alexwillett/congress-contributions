@@ -165,6 +165,13 @@ export async function persistCongressIngestion(pool, { members, constituentAreas
     return { runId, metrics };
   } catch (error) {
     await client.query("ROLLBACK");
+    // Preserve the operational failure after rolling back partial domain writes.
+    await pool.query(
+      `INSERT INTO ingestion_runs (id, source, started_at, completed_at, status, records_seen, records_skipped, errors_json)
+       VALUES ($1, 'congress_gov', $2, $3, 'failed', $4, $5, $6::jsonb)
+       ON CONFLICT (id) DO UPDATE SET completed_at = EXCLUDED.completed_at, status = EXCLUDED.status, errors_json = EXCLUDED.errors_json`,
+      [runId, startedAt, new Date().toISOString(), normalized.length, skippedRecords, JSON.stringify([...errors, { message: error.message }])],
+    );
     throw error;
   } finally {
     client.release();

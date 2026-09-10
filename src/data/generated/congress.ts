@@ -9,7 +9,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9874",
     "title": "HR.9874 - Get Foreign Money Out of United States Elections Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9874?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -23,7 +23,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8831",
     "title": "HR.8831 - Protecting Our Democracy Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8831?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -37,7 +37,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8802",
     "title": "HR.8802 - January 6th Law Enforcement Heroes Compensation Fund Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8802?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -51,7 +51,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8732",
     "title": "HR.8732 - Pensions for Retired Uniformed Servicemembers Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8732?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -65,7 +65,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1266",
     "title": "HRES.1266 - Expressing support for the designation of May 4, 2026, as a \"National Day of Reason\" and recognizing the central importance of reason in the betterment of humanity.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1266?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -79,7 +79,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1185",
     "title": "HRES.1185 - Expressing the sense of the House of Representatives that the Department of Justice must comply with the Domestic Emoluments Clause of the Constitution by refusing to administratively settle the billions of dollars in legal claims filed against the United States by President Donald Trump.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1185?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -93,7 +93,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1186",
     "title": "HRES.1186 - Expressing the sense of the House of Representatives that President Donald Trump, his Special Envoy Steven Witkoff, and all Federal officials must comply with the Foreign Emoluments Clause of the Constitution by immediately turning over to the Department of the Treasury any payments received from the United Arab Emirates or any other foreign state and divest from all business interests linked to foreign governments.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1186?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -107,7 +107,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8309",
     "title": "HR.8309 - To amend title 28, United States Code, to prohibit Presidents and Vice Presidents from receiving damages payments from the United States, and for other purposes.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8309?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -121,7 +121,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8275",
     "title": "HR.8275 - Commission on Presidential Capacity to Discharge the Powers and Duties of the Office Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8275?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -135,7 +135,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9688",
     "title": "HR.9688 - High Court Gift Ban Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9688?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -149,7 +149,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9600",
     "title": "HR.9600 - Common Sense 250 Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9600?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -163,7 +163,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1363",
     "title": "HRES.1363 - Providing for consideration of the bill (H.R. 7007) to govern on behalf of the American people.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1363?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -177,7 +177,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9210",
     "title": "HR.9210 - BLANCHE Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9210?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -191,7 +191,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8992",
     "title": "HR.8992 - SCCOTUS Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8992?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -205,7 +205,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8993",
     "title": "HR.8993 - Federal Funding Protection Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8993?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -219,7 +219,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8991",
     "title": "HR.8991 - SHADOW Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8991?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -233,7 +233,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8914",
     "title": "HR.8914 - No Taxpayer-Funded Settlement Slush Funds Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8914?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -247,7 +247,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8122",
     "title": "HR.8122 - 9–8–8 Connect Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8122?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -261,7 +261,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8123",
     "title": "HR.8123 - STOP Corrupt Bets Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8123?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -275,7 +275,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8124",
     "title": "HR.8124 - STOP Suicide Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8124?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -289,7 +289,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-925",
     "title": "HRES.925 - Condemning the Government of Iran's state-sponsored persecution of the Baha'i minority in Iran and the continued violation of the Universal Declaration of Human Rights and the International Covenant on Civil and Political Rights.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/925?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -303,7 +303,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-4382",
     "title": "HR.4382 - America’s Olympic and Paralympic Games Commemorative Coins Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4382?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -317,7 +317,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-10280",
     "title": "HR.10280 - 9–8–8 Implementation Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/10280?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -331,7 +331,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-5658",
     "title": "HR.5658 - Child Care for Every Community Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/5658?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -345,7 +345,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9745",
     "title": "HR.9745 - Orlin’s Law",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9745?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -359,7 +359,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-3243",
     "title": "HR.3243 - Therapeutic Fraud Prevention Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3243?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -373,7 +373,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1286",
     "title": "HRES.1286 - Calling for a trade policy that supports workers, consumers, independent farmers, small businesses, and the environment.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1286?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -387,7 +387,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-7853",
     "title": "HR.7853 - PrEP Access and Coverage Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7853?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -401,7 +401,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-3415",
     "title": "HR.3415 - Nurse Staffing Standards for Hospital Patient Safety and Quality Care Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/3415?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -415,7 +415,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-2531",
     "title": "HR.2531 - Workplace Violence Prevention for Health Care and Social Service Workers Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2531?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -429,7 +429,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-1227",
     "title": "HR.1227 - Alternatives to PAIN Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1227?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -443,7 +443,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-10063",
     "title": "HR.10063 - Green New Deal for Public Housing Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/10063?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -457,7 +457,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8592",
     "title": "HR.8592 - No WAR Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8592?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -471,7 +471,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-7867",
     "title": "HR.7867 - Infant Formula Safety Modernization Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/7867?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -485,7 +485,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1270",
     "title": "HRES.1270 - Expressing support for the designation of July 15, 2026, as \"Glioblastoma Awareness Day\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1270?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -499,7 +499,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-430",
     "title": "HR.430 - SALT Deductibility Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/430?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -513,7 +513,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-30",
     "title": "HRES.30 - Honoring the life, achievements, legacy, and public service of former President James Earl \"Jimmy\" Carter, Jr.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/30?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -527,7 +527,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-601",
     "title": "HRES.601 - Recognizing the duty of the Federal Government to lead the world in biomedical research.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/601?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -541,7 +541,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-4708",
     "title": "HR.4708 - Spotted Lanternfly Research and Development Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4708?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -555,7 +555,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-4632",
     "title": "HR.4632 - Fair Representation Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4632?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -569,7 +569,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-3270",
     "title": "S.3270 - A bill to designate the facility of the United States Postal Service located at 3570 Olney Laytonsville Road in Olney, Maryland, as the \"Edward L. Ramsey Olney Post Office Building\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3270?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -583,7 +583,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-3981",
     "title": "S.3981 - BRAVE Burma Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/3981?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -597,7 +597,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5298",
     "title": "S.5298 - Delivering Americans Affordable Homes Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5298?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -611,7 +611,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5019",
     "title": "S.5019 - Disclosure of Tax Havens and Offshoring Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5019?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -625,7 +625,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4989",
     "title": "S.4989 - Saving Lives and Reducing Health Care Waste by Improving Diagnosis in Medicine Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4989?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -639,7 +639,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-1289",
     "title": "S.1289 - 25th Anniversary of 9/11 Commemorative Coin Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1289?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -653,7 +653,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5304",
     "title": "S.5304 - Fairness for Farm Workers Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5304?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -667,7 +667,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-837",
     "title": "SRES.837 - A resolution designating the week of August 22 through August 30, 2026, as \"National Park Week\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/837?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -681,7 +681,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5285",
     "title": "S.5285 - Visitable Inclusive Tax credits for Accessible Living (VITAL) Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5285?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -695,7 +695,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5339",
     "title": "S.5339 - Back-to-School Supplies Affordability Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5339?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -709,7 +709,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5320",
     "title": "S.5320 - Insider Trading Prohibition Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5320?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -723,7 +723,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5283",
     "title": "S.5283 - Momnibus Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5283?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -737,7 +737,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sjres-211",
     "title": "SJRES.211 - A joint resolution to direct the removal of United States Armed Forces from hostilities within or against the Islamic Republic of Iran that have not been authorized by Congress.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/211?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SJRES",
@@ -751,7 +751,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5357",
     "title": "S.5357 - TABOO Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5357?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -765,7 +765,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5288",
     "title": "S.5288 - Protecting Pentagon Press Access Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5288?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -779,7 +779,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5319",
     "title": "S.5319 - Nurse Overtime and Patient Safety Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5319?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -793,7 +793,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5341",
     "title": "S.5341 - Strengthening Coast Guard Communities Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5341?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -807,7 +807,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5273",
     "title": "S.5273 - Fisheries Science Modernization Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5273?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -821,7 +821,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5300",
     "title": "S.5300 - Honoring the Sacrifice of Troops in War Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5300?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -835,7 +835,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5268",
     "title": "S.5268 - Double the Wage for Overtime Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5268?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -849,7 +849,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5216",
     "title": "S.5216 - Senior Accessible Housing Tax Credit Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5216?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -863,7 +863,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5089",
     "title": "S.5089 - Medicare Dental Benefit Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5089?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -877,7 +877,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5091",
     "title": "S.5091 - Medicaid Dental Benefit Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5091?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -891,7 +891,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5088",
     "title": "S.5088 - Ensuring Kids Have Access to Medically Necessary Dental Care Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5088?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -905,7 +905,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5080",
     "title": "S.5080 - Modal Parity in Permitting Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5080?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -919,7 +919,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4888",
     "title": "S.4888 - PREVENT Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4888?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -933,7 +933,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4820",
     "title": "S.4820 - Regional Export Promotion Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4820?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -947,7 +947,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5321",
     "title": "S.5321 - HCBS Access Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5321?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -961,7 +961,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-1663",
     "title": "S.1663 - Therapeutic Fraud Prevention Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1663?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -975,7 +975,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-2006",
     "title": "S.2006 - Fit to Serve Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2006?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -989,7 +989,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-841",
     "title": "SRES.841 - A resolution celebrating the 35th anniversary of the independence of Ukraine from the former Soviet Union.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/841?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1003,7 +1003,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5217",
     "title": "S.5217 - RECOVER PII Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5217?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1017,7 +1017,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5189",
     "title": "S.5189 - A bill to amend title 10, United States Code, and the National Defense Authorization Act for Fiscal Year 1994, to codify and clarify gender neutral standards for members of certain Armed Forces, and for other purposes.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5189?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1031,7 +1031,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-823",
     "title": "SRES.823 - A resolution designating the week of August 2 through August 8, 2026, as \"National Farmers Market Week\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/823?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1045,7 +1045,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5201",
     "title": "S.5201 - Lori Jackson-Nicolette Elias Domestic Violence Survivor Protection Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5201?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1059,7 +1059,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5108",
     "title": "S.5108 - Right to IVF Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5108?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1073,7 +1073,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4935",
     "title": "S.4935 - Next Generation Shipping Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4935?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1087,7 +1087,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5052",
     "title": "S.5052 - Lainie Jones Comprehensive Cancer Survivorship Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5052?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1101,7 +1101,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-807",
     "title": "SRES.807 - A resolution directing the Senate Legal Counsel to bring a civil action in the name of the Senate to enforce the Foreign Emoluments Clause contained in clause 8 of section 9 of article I of the Constitution of the United States.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/807?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1115,7 +1115,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1511",
     "title": "HRES.1511 - Recognizing the 25th anniversary of the terrorist attacks of September 11, 2001, honoring the memory of the victims, recognizing the courage and sacrifice of the heroes who answered the call to serve, acknowledging the charitable organizations that continue to support survivors and victims' families, and reaffirming the enduring commitment of the United States to never forget.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1511?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -1129,7 +1129,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-6056",
     "title": "HR.6056 - International Human Rights Defense Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/6056?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1143,7 +1143,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-10131",
     "title": "HR.10131 - National Archives Protection Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/10131?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1157,7 +1157,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-5486",
     "title": "HR.5486 - Tyler Clementi Higher Education Anti-Harassment Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/5486?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1171,7 +1171,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-6151",
     "title": "HR.6151 - Global Respect Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/6151?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1185,7 +1185,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-6164",
     "title": "HR.6164 - To designate the facility of the United States Postal Service located at 28201 Franklin Parkway in Santa Clarita, California, as the \"Deputy Ryan Clinkunbroomer Post Office Building\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/6164?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1199,7 +1199,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9941",
     "title": "HR.9941 - Right to IVF Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9941?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1213,7 +1213,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-9944",
     "title": "HR.9944 - TPS Review Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/9944?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1227,7 +1227,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-4405",
     "title": "HR.4405 - Epstein Files Transparency Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4405?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1241,7 +1241,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-4611",
     "title": "HR.4611 - EACH Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/4611?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1255,7 +1255,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-581",
     "title": "HRES.581 - Providing for consideration of the bill (H.R. 185) to advance responsible policies.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/581?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -1269,7 +1269,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-8712",
     "title": "HR.8712 - Uyghur Forced Labor Disclosure Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/8712?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1283,7 +1283,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1170",
     "title": "HRES.1170 - Supporting the designation of April 10 as \"Dolores Huerta Day\", in honor of the accomplishments and legacy of the trailblazing labor and civil rights leader Dolores Huerta.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1170?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -1297,7 +1297,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-2368",
     "title": "HR.2368 - Raise the Age Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/2368?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1311,7 +1311,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-1380",
     "title": "HRES.1380 - Commemorating 50 years of women at the service academies.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/1380?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -1325,7 +1325,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hr-1423",
     "title": "HR.1423 - Guard and Reserve GI Bill Parity Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hr/1423?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HR",
@@ -1339,7 +1339,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-hres-843",
     "title": "HRES.843 - Supporting the designation of October 30 as the \"International Day of Political Prisoners\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/hres/843?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "HRES",
@@ -1353,7 +1353,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-2265",
     "title": "S.2265 - America's Olympic and Paralympic Games Commemorative Coins Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2265?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1367,7 +1367,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5221",
     "title": "S.5221 - Stop Corrupt Trading Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5221?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1381,7 +1381,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5352",
     "title": "S.5352 - Desalination Reauthorization Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5352?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1395,7 +1395,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5301",
     "title": "S.5301 - Voice for Farm Workers Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5301?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1409,7 +1409,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5303",
     "title": "S.5303 - Supporting Our Farm and Food System Workforce Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5303?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1423,7 +1423,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5309",
     "title": "S.5309 - COWS Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5309?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1437,7 +1437,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-822",
     "title": "SRES.822 - A resolution designating July 2026 as \"American Grown Flower and Foliage Month\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/822?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1451,7 +1451,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5124",
     "title": "S.5124 - Stop Harassment and Intimidations in Elections through Legal Defenses (SHIELD) Our Elections Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5124?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1465,7 +1465,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5066",
     "title": "S.5066 - A bill to improve the health of minority individuals, and for other purposes.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5066?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1479,7 +1479,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5020",
     "title": "S.5020 - Improving Housing Performance Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5020?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1493,7 +1493,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4436",
     "title": "S.4436 - Protecting Human Rights and Public Health in Foreign Assistance Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4436?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1507,7 +1507,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5378",
     "title": "S.5378 - Outer Continental Shelf Lease Restoration Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5378?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1521,7 +1521,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-606",
     "title": "SRES.606 - A resolution condemning the Government of Iran for its suppression of the right of Iranians to peacefully assemble.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/606?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1535,7 +1535,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4443",
     "title": "S.4443 - Eastern Mediterranean Gateway Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4443?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1549,7 +1549,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5284",
     "title": "S.5284 - Green New Deal for Public Housing Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5284?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1563,7 +1563,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5324",
     "title": "S.5324 - Fairness to Freedom Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5324?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1577,7 +1577,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5331",
     "title": "S.5331 - Protect American Values Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5331?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1591,7 +1591,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5317",
     "title": "S.5317 - INSPIRES Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5317?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1605,7 +1605,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5280",
     "title": "S.5280 - Guaranteed Paid Vacation Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5280?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1619,7 +1619,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5036",
     "title": "S.5036 - Judicial Integrity Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5036?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1633,7 +1633,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5368",
     "title": "S.5368 - Water Cyber Shield Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5368?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1647,7 +1647,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-2432",
     "title": "S.2432 - A bill to designate the facility of the United States Postal Service located at 6444 San Fernando Road in Glendale, California, as the \"Paul Ignatius Post Office\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/2432?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1661,7 +1661,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5276",
     "title": "S.5276 - Reducing Red Tape for Rebuilding Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5276?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1675,7 +1675,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5291",
     "title": "S.5291 - Small Business Cybersecurity Assistance Evaluation Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5291?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1689,7 +1689,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5297",
     "title": "S.5297 - American Pharmaceutical Security Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5297?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1703,7 +1703,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5234",
     "title": "S.5234 - Human-Wildlife Conflict Reduction Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5234?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1717,7 +1717,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sjres-204",
     "title": "SJRES.204 - A joint resolution providing for congressional disapproval under chapter 8 of title 5, United States Code, of the rule submitted by the United States Fish and Wildlife Service and the National Oceanic and Atmospheric Administration relating to \"Rescinding the Definition of 'Harm' Under the Endangered Species Act\".",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sjres/204?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SJRES",
@@ -1731,7 +1731,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5182",
     "title": "S.5182 - Tracking Plastic Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5182?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1745,7 +1745,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5136",
     "title": "S.5136 - Promoting Authenticity with Influencer Disclaimers Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5136?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1759,7 +1759,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5135",
     "title": "S.5135 - AI Ads Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5135?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1773,7 +1773,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5102",
     "title": "S.5102 - Closing Bribery Loopholes Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5102?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1787,7 +1787,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5103",
     "title": "S.5103 - Stop MUSK Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5103?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1801,7 +1801,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5105",
     "title": "S.5105 - Collaboration on Adversarial Threats and Security Risks Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5105?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1815,7 +1815,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5107",
     "title": "S.5107 - No Corporate Crooks Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5107?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1829,7 +1829,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5070",
     "title": "S.5070 - MAIL Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5070?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1843,7 +1843,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5064",
     "title": "S.5064 - Higher Education Accreditation Accountability Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5064?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1857,7 +1857,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-sres-843",
     "title": "SRES.843 - A resolution expressing support for the designation of the first week of August 2026, as \"National Community Health Center Week\", encouraging all people of the United States to participate by visiting their local community health center, and celebrating the important partnership between community health centers and the communities they serve.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/sres/843?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "SRES",
@@ -1871,7 +1871,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5260",
     "title": "S.5260 - Stroke Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5260?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1885,7 +1885,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5219",
     "title": "S.5219 - Compassionate Care Act",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5219?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1899,7 +1899,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-5256",
     "title": "S.5256 - Abuse of the Pardon Prevention Act of 2026",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/5256?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1913,7 +1913,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-1541",
     "title": "S.1541 - SHIPS for America Act of 2025",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/1541?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",
@@ -1927,7 +1927,7 @@ export const generatedCongressSourceRecords: SourceRecord[] = [
     "externalId": "119-s-4814",
     "title": "S.4814 - A bill to require the Secretary of Homeland Security to designate Haiti for temporary protected status.",
     "sourceUrl": "https://api.congress.gov/v3/bill/119/s/4814?format=json",
-    "retrievedAt": "2026-09-10T14:16:38.125Z",
+    "retrievedAt": "2026-09-10T20:59:36.998Z",
     "payload": {
       "congress": 119,
       "type": "S",

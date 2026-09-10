@@ -4,3 +4,4 @@ node_modules
 .local-tools
 data/raw/
 .env
+.env.local

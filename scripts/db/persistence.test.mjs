@@ -56,3 +56,20 @@ test("tracks a changed official payload as a new source version", async () => {
     await pool.end();
   }
 });
+
+test("records a failed ingestion run after rolling back incomplete writes", async () => {
+  const pool = await database();
+  try {
+    const normalized = normalizedFor(rawBill);
+    normalized[0].activity.evidence = [];
+    await assert.rejects(
+      persistCongressIngestion(pool, { members: [member], normalized, rawBillsBySourceId: new Map([[normalized[0].sourceRecord.id, rawBill]]), startedAt: "2026-09-10T00:00:02.000Z", errors: [], skippedRecords: 0 }),
+      /has no source record/,
+    );
+    const run = await pool.query("SELECT status FROM ingestion_runs WHERE status = 'failed'");
+    assert.equal(run.rows[0].status, "failed");
+    assert.equal((await pool.query("SELECT COUNT(*)::int AS count FROM activity_records")).rows[0].count, 0);
+  } finally {
+    await pool.end();
+  }
+});
